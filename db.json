@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "item": "eggs"
+    },
+    {
+      "id": 2,
+      "item": "updating #2 I hope"
+    },
+    {
+      "id": 3,
+      "item": "number 3"
+    }
+  ]
+}
