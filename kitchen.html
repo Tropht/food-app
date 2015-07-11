@@ -1,3 +1,25 @@
+<section id="listKitchen">
+    <h2>What's in my Kitchen?</h2>
+    <div ng-repeat="items in kitchen">
+        <div>
+            <p>#{{items.id}} 
+            {{ items.item }}
+            <a href="" class="edit" ng-click="uHide(items.id, items.item)">Edit</a>
+            <span class="delete glyphicon glyphicon-trash" ng-click="delete(items.id)"></span>
+            </p>
+            
+
+        </div>
+    </div>
+</section>
+<section id="updateKitchen" ng-hide="hideUpdate">
+                <p>Update {{ updatedItem.item }}</p>
+                <div class="input-group">
+                    <label for="item">item:</label>
+                    <input class="form-control" type="text" name="item" ng-model="updatedItem.item">
+                </div>
+                <button class="btn btn-success" ng-click="update(updatedItem.id)">Update</button>
+            </section>
 <section id="addItemsToKitchen">
     <h2>Create</h2>
     <div class="input-group">
@@ -10,24 +32,4 @@
     </div>
     <button class="btn btn-success" ng-click="create()">Create</button>
 </section>
-<section id="updateItemsInKitchen">
-    <h2>Update</h2>
-    <div class="input-group">
-        <label for="id">id:</label>
-        <input class="form-control" type="number" name="id" ng-model="updatedItem.id">
-    </div>
-    <div class="input-group">
-        <label for="title">item:</label>
-        <input class="form-control" type="text" name="title" ng-model="updatedItem.item">
-    </div>
-    <button class="btn btn-success" ng-click="update()">Update</button>
-</section>
-<section id="listKitchen">
-    <h2>What's in my Kitchen?</h2>
-    <div ng-repeat="item in inventory">
-        <div>
-            <h3># {{inventory.id}} <span style="float:right" class="delete glyphicon glyphicon-trash" ng-click="delete(inventory.id)"></span></h3>
-            <p>{{inventory.item}}</p>
-        </div>
-    </div>
-</section>
+
