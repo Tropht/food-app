@@ -15,6 +15,10 @@ app.config(function($stateProvider, $urlRouterProvider){
 		url:'/menu',
 		templateUrl:'menu.html'
 	})
+	.state('recipe',{
+		url:'/recipe',
+		templateUrl:'recipe.html'
+	})
 	.state('kitchen',{
 		url:'/kitchen',
 		templateUrl:'kitchen.html'
@@ -45,7 +49,7 @@ app.service('inventory', ['$http', function ($http) {
 
 app.controller('myCtrl', ['$scope', 'inventory', function ($scope, inventory) {
 	inventory.getInventory().success(function(data){
-		$scope.inventory = data;
+		$scope.kitchen = data;
 	});
 
 	$scope.updatedItem = {};
