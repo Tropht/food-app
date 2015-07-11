@@ -9,8 +9,21 @@
         <script src="app.js"></script>
 
     </head>
-    <body ng-app=''>
-        <div class="container" ng-controller=''>
+    <body ng-app='app'>
+        <div class="container" ng-controller='myCtrl'>
+
+        <section id="addItemsToKitchen">
+                <h2>Update</h2>
+                <div class="input-group">
+                    <label for="id">id:</label>
+                    <input class="form-control" type="number" name="id" ng-model="updatedItem.id">
+                </div>
+                <div class="input-group">
+                    <label for="title">item:</label>
+                    <input class="form-control" type="text" name="title" ng-model="updatedItem.item">
+                </div>
+                <button class="btn btn-success" ng-click="update()">Update</button>
+            </section>
 
         </div>
     </body>
