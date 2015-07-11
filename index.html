@@ -3,13 +3,14 @@
     <head>
         <meta charset="utf-8">
         <title>Food App</title>
-        <link rel="stylesheet" href="main.css">
         <!-- Scripts -->
         <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
         <script src="app.js"></script>
         <!-- Style -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://bootswatch.com/lumen/bootstrap.min.css">
+        <link rel="stylesheet" href="main.css">
     </head>
     <body ng-app="app">
         <div class="container" ng-controller="myCtrl">
@@ -23,7 +24,7 @@
             </div>
             <footer>
                 <ul class="nav nav-tabs">
-                    <li role="presentation" class="active"><a ui-sref="home">Home</a></li>
+                    <li role="presentation"><a ui-sref="home">Home</a></li>
                     <li role="presentation"><a ui-sref="menu">Menu</a></li>
                     <li role="presentation"><a ui-sref="kitchen">Kitchen</a></li>
                     <li role="presentation"><a ui-sref="grocery">Grocery List</a></li>
