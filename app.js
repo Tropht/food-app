@@ -23,6 +23,10 @@ app.config(function($stateProvider, $urlRouterProvider){
 		url:'/grocery',
 		templateUrl:'grocery.html'
 	})
+	.state('recipe',{
+		url:'/recipe',
+		templateUrl:'recipe.html'
+	})
 })
 
 app.service('inventory', ['$http', function ($http) {
