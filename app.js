@@ -11,6 +11,18 @@ app.config(function($stateProvider, $urlRouterProvider){
 		url: '/home',
 		templateUrl:'home.html'
 	})
+	.state('menu',{
+		url:'/menu',
+		templateUrl:'menu.html'
+	})
+	.state('kitchen',{
+		url:'/kitchen',
+		templateUrl:'kitchen.html'
+	})
+	.state('grocery',{
+		url:'/grocery',
+		templateUrl:'grocery.html'
+	})
 })
 
 app.service('inventory', ['$http', function ($http) {
