@@ -1,22 +1,20 @@
+<div class="page-header">
+    <h1>What's in my Kitchen?</h1>
+</div>
 <section id="listKitchen">
-    <h2>What's in my Kitchen?</h2>
     <div ng-repeat="items in kitchen">
-        <div>
-            <p>#{{items.id}} 
-            {{ items.item }}
-            {{ items.quanityNum }}
-            {{ items.quanityType }}
-            ${{ items.price }}
-            <a href="" class="edit" ng-click="uHide(items)">Edit</a>
-            <span class="delete glyphicon glyphicon-trash" ng-click="delete(items.id)"></span>
-            </p>
-            
-
+        <div class="row">
+            <div class="col-lg-2 col-sm-2">#{{items.id}} </div>
+            <div class="col-lg-2 col-sm-2">{{ items.item }}</div>
+            <div class="col-lg-2 col-sm-2">{{ items.quanityNum }} {{ items.quanityType }}</div>
+            <div class="col-lg-2 col-sm-2">${{ items.price }}</div>
+            <div class="col-lg-4 col-sm-4"><a href="" class="edit" ng-click="uHide(items)">Edit</a>
+            <span class="delete glyphicon glyphicon-trash" ng-click="delete(items.id)"></span></div>
         </div>
     </div>
 </section>
 <section id="updateKitchen" ng-hide="hideUpdate">
-    <p>Update {{ updatedItem.item }}</p>
+    <h3>Update</h3>
     <div class="input-group">
         <label for="item">item:</label>
         <input class="form-control" type="text" name="item" ng-model="updatedItem.item">
@@ -38,7 +36,7 @@
     <button class="btn btn-success" ng-click="update(updatedItem.id)">Update</button>
 </section>
 <section id="addItemsToKitchen" ng-hide="!hideUpdate">
-    <h2>Add new item</h2>
+    <h3>Add new item</h3>
     <div class="input-group">
         <label for="id">id:</label>
         <input class="form-control" type="number" name="id" ng-model="newItem.id">
