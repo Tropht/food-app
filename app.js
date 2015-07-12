@@ -68,8 +68,10 @@ app.controller('myCtrl', ['$scope', 'inventory', 'recipe', function ($scope, inv
 	inventory.getInventory().success(function(data){
 		$scope.kitchen = data;
 	});
-	$scope.hideUpdate = true;
+	$scope.unitOptions = ["item(s)", "ounce(s)", "cup(s)", "TableSpoon(s)", "teaspoon(s)"];
 	$scope.updatedItem = {};
+	$scope.newItem = {};
+	$scope.hideUpdate = true;
 
 	$scope.newItem = {};
 	$scope.getRecipeSearch = function(terms) {
@@ -79,32 +81,34 @@ app.controller('myCtrl', ['$scope', 'inventory', 'recipe', function ($scope, inv
 	}
 	$scope.getRecipeGet = recipe.getRecipeGet;
 
-	$scope.uHide = function(id, item){
-		if($scope.hideUpdate == true){
-			$scope.hideUpdate = false;
-			$scope.updatedItem.id = id;
-			$scope.updatedItem.item = item;
-		}else {
-			$scope.hideUpdate = true;
-			$scope.updatedItem = {};
-		}
+	
+	//creating-adding, updating, and deleting items in the Inventory (kitchen list)
+	$scope.create = function(){
+		inventory.createInventory($scope.newItem);
+		$scope.newItem = {};
+	};
+
+	$scope.update = function(id){
+		inventory.updateInventory($scope.updatedItem, id);
+		$scope.updatedItem = {};
+		$scope.hideUpdate = true;
 	};
 
 	$scope.delete = function(id){
 		inventory.deleteInventory(id);
 	};
 
-	$scope.update = function(id){
-		inventory.updateInventory($scope.updatedItem, id);
-		$scope.updatedItem = {};
-	}
-
-	$scope.create = function(){
-		inventory.createInventory($scope.newItem);
-		$scope.newItem = {};
-
-	}
-
+	$scope.uHide = function(item){
+		if($scope.hideUpdate == true){
+			$scope.hideUpdate = false;
+			$scope.updatedItem = item;
+		}else if($scope.hideUpdate == false && $scope.updatedItem != item){
+			$scope.updatedItem = item;
+		}else {
+			$scope.hideUpdate = true;
+			$scope.updatedItem = {};
+		}
+	};
 
 
 }])
