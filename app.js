@@ -47,7 +47,21 @@ app.service('inventory', ['$http', function ($http) {
 	}
 }])
 
-app.controller('myCtrl', ['$scope', 'inventory', function ($scope, inventory) {
+app.service('recipe', ['$http', function ($http) {
+	this.getRecipeSearch = function(terms){
+		return $http.get('recipeSearch.json', {method:'GET', url:'recipeSearch.json', params:{_app_id:"",_app_key:"",q:terms}});
+		//'https://api.yummly.com/v1'
+	}
+
+	
+	this.getRecipeGet = function(){
+		return $http.get('recipeGet.json')
+		//'https://api.yummly.com/v1'
+	}
+
+}])
+
+app.controller('myCtrl', ['$scope', 'inventory', 'recipe', function ($scope, inventory, recipe) {
 	inventory.getInventory().success(function(data){
 		$scope.kitchen = data;
 	});
@@ -55,6 +69,8 @@ app.controller('myCtrl', ['$scope', 'inventory', function ($scope, inventory) {
 	$scope.updatedItem = {};
 	$scope.newItem = {};
 	$scope.hideUpdate = true;
+
+	$scope.getRecipeGet = recipe.getRecipeGet;
 
 
 	//creating-adding, updating, and deleting items in the Inventory (kitchen list)
