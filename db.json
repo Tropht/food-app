@@ -2,23 +2,52 @@
   "foodItems": [
     {
       "id": 1,
-      "item": "eggs"
+      "item": "eggs",
+      "quanityNum": 3,
+      "quanityType": "units()",
+      "price": 5
     },
     {
       "id": 2,
-      "item": "bacon"
+      "item": "bacon",
+      "quanityNum": 1,
+      "quanityType": "item",
+      "price": 1
     },
     {
       "id": 3,
-      "item": "cucumber"
-    },
-    {
-      "id": 4,
-      "item": "This is a new item"
+      "item": "cucumber",
+      "quanityNum": 1,
+      "quanityType": "item",
+      "price": 1
     },
     {
       "id": 5,
-      "item": "salad"
+      "item": "salad",
+      "quanityNum": 1,
+      "quanityType": "item",
+      "price": 1
+    },
+    {
+      "id": 6,
+      "item": "potatos",
+      "quanityNum": 1,
+      "quanityType": "item",
+      "price": 1
+    },
+    {
+      "id": 7,
+      "item": "new item",
+      "quanityNum": 1,
+      "quanityType": 2,
+      "price": 3
+    },
+    {
+      "id": 8,
+      "item": "Banana",
+      "quanityNum": 4,
+      "quanityType": "item(s)",
+      "price": 3.99
     }
   ],
   "menu": [
