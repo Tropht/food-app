@@ -1,14 +1,21 @@
 
 <container>
 <h1>Search for recipes and add to menu</h1>
-<p>Meow</p>
- <form class="input" role="search">
-        <div class="form-group">
-           
-           <input type="text" placeholder="Search">
-        </div>
+
+ 
+
+           <section id="searchRecipes">
+                <div class="input-group">
+                   
+                    <input class="form-control" type="text" ng-model="searchinput" placeholder="Search">
+                </div>
+                <button class="btn btn-success" ng-click="getRecipeSearch(searchinput)">Search</button>
+                
+                <div ng-repeat="result in searchResults">
+                    {{result.recipeName}}
+                </div>
+            </section> 
        
-      </form>
       
         </li>
       </ul>

@@ -45,9 +45,26 @@ app.service('inventory', ['$http', function ($http) {
 	this.createInventory = function(newItem){
 		$http.post('http://localhost:3000/foodItems', newItem);
 	}
+
+
 }])
 
-app.controller('myCtrl', ['$scope', 'inventory', function ($scope, inventory) {
+app.service('recipe', ['$http', function ($http) {
+	this.getRecipeSearch = function(terms){
+		return $http.get('recipeSearch.json', {method:'GET', url:'recipeSearch.json', params:{_app_id:"",_app_key:"",q:terms}});
+		//'https://api.yummly.com/v1'
+	}
+
+	
+	this.getRecipeGet = function(){
+		return $http.get('recipeGet.json')
+		//'https://api.yummly.com/v1'
+	}
+
+}])
+
+
+app.controller('myCtrl', ['$scope', 'inventory', 'recipe', function ($scope, inventory, recipe) {
 	inventory.getInventory().success(function(data){
 		$scope.kitchen = data;
 	});
@@ -55,6 +72,12 @@ app.controller('myCtrl', ['$scope', 'inventory', function ($scope, inventory) {
 	$scope.updatedItem = {};
 
 	$scope.newItem = {};
+	$scope.getRecipeSearch = function(terms) {
+		recipe.getRecipeSearch(terms).success(function(data) {
+			$scope.searchResults = data.matches;
+		});
+	}
+	$scope.getRecipeGet = recipe.getRecipeGet;
 
 	$scope.uHide = function(id, item){
 		if($scope.hideUpdate == true){
@@ -81,4 +104,7 @@ app.controller('myCtrl', ['$scope', 'inventory', function ($scope, inventory) {
 		$scope.newItem = {};
 
 	}
+
+
+
 }])
