@@ -1,3 +1,19 @@
 <div class="page-header">
 	<h1>Recipes</h1>
 </div>
+
+<container>
+	<h4>Search for recipes and add to your menu!</h4>
+	<section id="searchRecipes">
+		<div class="input-group">
+			<input class="form-control" type="text" ng-model="searchinput" placeholder="Search">
+		</div>
+		<button class="btn btn-success" ng-click="getRecipeSearch(searchinput)">Search</button>
+		<div class="showResults">
+			<div ng-repeat="result in searchResults">
+				{{result.recipeName}}
+			</div>
+		</div>
+	</section>
+</container>
+
