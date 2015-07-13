@@ -1,20 +1,24 @@
 {
-  "posts": [
+  "foodItems": [
     {
       "id": 1,
       "item": "eggs"
     },
     {
       "id": 2,
-      "item": "updating #2 I hope"
+      "item": "bacon"
     },
     {
       "id": 3,
-      "item": "number 3"
+      "item": "cucumber"
     },
     {
       "id": 4,
       "item": "This is a new item"
+    },
+    {
+      "id": 5,
+      "item": "salad"
     }
   ],
   "menu": [

@@ -15,6 +15,10 @@ app.config(function($stateProvider, $urlRouterProvider){
 		url:'/menu',
 		templateUrl:'menu.html'
 	})
+	.state('recipe',{
+		url:'/recipe',
+		templateUrl:'recipe.html'
+	})
 	.state('kitchen',{
 		url:'/kitchen',
 		templateUrl:'kitchen.html'
@@ -31,37 +35,48 @@ app.config(function($stateProvider, $urlRouterProvider){
 
 app.service('inventory', ['$http', function ($http) {
 	this.getInventory = function(){
-		return $http.get('http://localhost:3000/posts')
+		return $http.get('http://localhost:3000/foodItems')
 	}
 
 	this.deleteInventory = function(id){
-		$http.delete('http://localhost:3000/posts/'+id);
+		$http.delete('http://localhost:3000/foodItems/'+id);
 	}
 
 	this.updateInventory = function(upItem, id){
-		$http.put('http://localhost:3000/posts/'+id, upItem);
+		$http.put('http://localhost:3000/foodItems/'+id, upItem);
 	}
 
 	this.createInventory = function(newItem){
-		$http.post('http://localhost:3000/posts', newItem);
+		$http.post('http://localhost:3000/foodItems', newItem);
 	}
 }])
 
 app.controller('myCtrl', ['$scope', 'inventory', function ($scope, inventory) {
 	inventory.getInventory().success(function(data){
-		$scope.inventory = data;
+		$scope.kitchen = data;
 	});
-
+	$scope.hideUpdate = true;
 	$scope.updatedItem = {};
 
 	$scope.newItem = {};
+
+	$scope.uHide = function(id, item){
+		if($scope.hideUpdate == true){
+			$scope.hideUpdate = false;
+			$scope.updatedItem.id = id;
+			$scope.updatedItem.item = item;
+		}else {
+			$scope.hideUpdate = true;
+			$scope.updatedItem = {};
+		}
+	};
 
 	$scope.delete = function(id){
 		inventory.deleteInventory(id);
 	};
 
-	$scope.update = function(){
-		inventory.updateInventory($scope.updatedItem, $scope.updatedItem.id);
+	$scope.update = function(id){
+		inventory.updateInventory($scope.updatedItem, id);
 		$scope.updatedItem = {};
 	}
 
