@@ -15,6 +15,10 @@ app.config(function($stateProvider, $urlRouterProvider){
 		url:'/menu',
 		templateUrl:'menu.html'
 	})
+	.state('recipe',{
+		url:'/recipe',
+		templateUrl:'recipe.html'
+	})
 	.state('kitchen',{
 		url:'/kitchen',
 		templateUrl:'kitchen.html'
@@ -23,51 +27,88 @@ app.config(function($stateProvider, $urlRouterProvider){
 		url:'/grocery',
 		templateUrl:'grocery.html'
 	})
-	.state('recipe',{
-		url:'/recipe',
-		templateUrl:'recipe.html'
-	})
 })
 
 app.service('inventory', ['$http', function ($http) {
 	this.getInventory = function(){
-		return $http.get('http://localhost:3000/posts')
+		return $http.get('http://localhost:3000/foodItems')
 	}
 
 	this.deleteInventory = function(id){
-		$http.delete('http://localhost:3000/posts/'+id);
+		$http.delete('http://localhost:3000/foodItems/'+id);
 	}
 
 	this.updateInventory = function(upItem, id){
-		$http.put('http://localhost:3000/posts/'+id, upItem);
+		$http.put('http://localhost:3000/foodItems/'+id, upItem);
 	}
 
 	this.createInventory = function(newItem){
-		$http.post('http://localhost:3000/posts', newItem);
+		$http.post('http://localhost:3000/foodItems', newItem);
 	}
+
+
 }])
 
-app.controller('myCtrl', ['$scope', 'inventory', function ($scope, inventory) {
-	inventory.getInventory().success(function(data){
-		$scope.inventory = data;
-	});
+app.service('recipe', ['$http', function ($http) {
+	this.getRecipeSearch = function(terms){
+		return $http.get('recipeSearch.json', {method:'GET', url:'recipeSearch.json', params:{_app_id:"",_app_key:"",q:terms}});
+		//'https://api.yummly.com/v1'
+	}
 
+	
+	this.getRecipeGet = function(){
+		return $http.get('recipeGet.json')
+		//'https://api.yummly.com/v1'
+	}
+
+}])
+
+
+app.controller('myCtrl', ['$scope', 'inventory', 'recipe', function ($scope, inventory, recipe) {
+	inventory.getInventory().success(function(data){
+		$scope.kitchen = data;
+	});
+	$scope.unitOptions = ["item(s)", "ounce(s)", "cup(s)", "TableSpoon(s)", "teaspoon(s)"];
 	$scope.updatedItem = {};
+	$scope.newItem = {};
+	$scope.hideUpdate = true;
 
 	$scope.newItem = {};
+	$scope.getRecipeSearch = function(terms) {
+		recipe.getRecipeSearch(terms).success(function(data) {
+			$scope.searchResults = data.matches;
+		});
+	}
+	$scope.getRecipeGet = recipe.getRecipeGet;
+
+	
+	//creating-adding, updating, and deleting items in the Inventory (kitchen list)
+	$scope.create = function(){
+		inventory.createInventory($scope.newItem);
+		$scope.newItem = {};
+	};
+
+	$scope.update = function(id){
+		inventory.updateInventory($scope.updatedItem, id);
+		$scope.updatedItem = {};
+		$scope.hideUpdate = true;
+	};
 
 	$scope.delete = function(id){
 		inventory.deleteInventory(id);
 	};
 
-	$scope.update = function(){
-		inventory.updateInventory($scope.updatedItem, $scope.updatedItem.id);
-		$scope.updatedItem = {};
-	}
+	$scope.uHide = function(item){
+		if($scope.hideUpdate == true){
+			$scope.hideUpdate = false;
+			$scope.updatedItem = item;
+		}else if($scope.hideUpdate == false && $scope.updatedItem != item){
+			$scope.updatedItem = item;
+		}else {
+			$scope.hideUpdate = true;
+			$scope.updatedItem = {};
+		}
+	};
 
-	$scope.create = function(){
-		inventory.createInventory($scope.newItem);
-		$scope.newItem = {};
 
-	}
 }])

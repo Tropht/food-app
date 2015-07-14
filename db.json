@@ -2,23 +2,38 @@
   "foodItems": [
     {
       "id": 1,
-      "item": "eggs"
+      "item": "eggs",
+      "quanityNum": 12,
+      "quanityType": "item(s)",
+      "price": "$1.99"
     },
     {
       "id": 2,
-      "item": "bacon"
+      "item": "bacon",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 4.99
     },
     {
       "id": 3,
-      "item": "cucumber"
+      "item": "cucumber",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.35
     },
     {
       "id": 4,
-      "item": "This is a new item"
+      "item": "pasta",
+      "quanityNum": 8,
+      "quanityType": "ounce(s)",
+      "price": 1.99
     },
     {
       "id": 5,
-      "item": "salad"
+      "item": "salad",
+      "quanityNum": 8,
+      "quanityType": "ounce(s)",
+      "price": 1.99
     }
   ],
   "menu": [
