@@ -8,7 +8,7 @@
 		<div class="input-group">
 			<input class="form-control" type="text" ng-model="searchinput" placeholder="Search">
 		</div>
-		<button class="btn btn-success" ng-click="getRecipeSearch(searchinput)">Search</button>
+		<button class="btn btn-success btn-sm" ng-click="getRecipeSearch(searchinput)">Search</button>
 		<div class="showResults">
 			<div ng-repeat="result in searchResults">
 				{{result.recipeName}}
