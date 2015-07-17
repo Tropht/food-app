@@ -5,53 +5,99 @@
       "item": "eggs",
       "quanityNum": 12,
       "quanityType": "item(s)",
-      "price": "$1.99"
+      "baseQuanity": "item",
+      "price": 1.99
     },
     {
       "id": 2,
-      "item": "bacon",
-      "quanityNum": 1,
-      "quanityType": "ounce(s)",
-      "price": 4.99
+      "item": "green beans",
+      "quanityNum": 4,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
     },
     {
       "id": 3,
-      "item": "cucumber",
-      "quanityNum": 1,
+      "item": "peaches",
+      "quanityNum": 4,
       "quanityType": "item(s)",
-      "price": 0.35
+      "baseQuanity": "item"
     },
     {
       "id": 4,
-      "item": "pasta",
-      "quanityNum": 8,
-      "quanityType": "ounce(s)",
-      "price": 1.99
+      "item": "pineapple chunks",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
     },
     {
       "id": 5,
-      "item": "salad",
-      "quanityNum": 8,
-      "quanityType": "ounce(s)",
-      "price": 1.99
+      "item": "corn",
+      "quanityNum": 3,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "item": "artichoke hearts",
+      "quanityNum": 3,
+      "id": 6,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "id": 7,
+      "item": "coconut milk",
+      "quanityNum": 2,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "id": 8,
+      "item": "meat pasta sauce",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "id": 9,
+      "item": "crushed tomatoes",
+      "quanityNum": 12,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "id": 10,
+      "item": "diced tomatoes (rosemary)",
+      "quanityNum": 3,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
     }
   ],
   "menu": [
     {
       "id": 1,
-      "item": "eggs"
+      "date": "march 15, 2015",
+      "mealType": "breakfast",
+      "foodItems": {
+        "id": 5,
+        "item": "salad",
+        "quanityNum": 8,
+        "quanityType": "ounce(s)",
+        "price": 1.99
+      },
+      "recipes": {}
     },
     {
       "id": 2,
-      "item": "updating #2 I hope"
-    },
-    {
-      "id": 3,
-      "item": "number 3"
-    },
-    {
-      "id": 4,
-      "item": "This is a new item"
+      "date": "march 15, 2015",
+      "mealType": "breakfast",
+      "foodItems": {
+        "id": 5,
+        "item": "salad",
+        "quanityNum": 8,
+        "quanityType": "ounce(s)",
+        "price": 1.99
+      },
+      "recipes": {}
     }
   ],
   "recipe": [

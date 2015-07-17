@@ -1,3 +1,7 @@
+/*body * {
+	border: 1px solid black;
+}*/
+
 .page-header{
 	text-align: center
 }
@@ -14,4 +18,8 @@ footer{
 
 #updateKitchen, #addItemsToKitchen{
 
+}
+
+.form-input{
+	display: inline-block;
 }

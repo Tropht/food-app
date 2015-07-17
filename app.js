@@ -84,11 +84,13 @@ app.controller('myCtrl', ['$scope', 'inventory', 'recipe', function ($scope, inv
 	
 	//creating-adding, updating, and deleting items in the Inventory (kitchen list)
 	$scope.create = function(){
+		$scope.newItem.baseQuanity = $scope.getBaseQuantity($scope.newItem);
 		inventory.createInventory($scope.newItem);
 		$scope.newItem = {};
 	};
 
 	$scope.update = function(id){
+		$scope.updatedItem.baseQuanity = $scope.getBaseQuantity($scope.updatedItem);
 		inventory.updateInventory($scope.updatedItem, id);
 		$scope.updatedItem = {};
 		$scope.hideUpdate = true;
@@ -110,5 +112,25 @@ app.controller('myCtrl', ['$scope', 'inventory', 'recipe', function ($scope, inv
 		}
 	};
 
+	$scope.getBaseQuantity = function(item){
+		switch(item.quanityType){
+			case "ounce(s)":
+				return item.quanityNum;
+				break;
+			case "pound(s)":
+				return (item.quanityNum * 16);
+				break;
+			case "cup(s)":
+				return (item.quanityNum * 8);
+				break;
+			case "TableSpoon(s)":
+				return (item.quanityNum * .5 );
+				break;
+			case "teaspoon(s)":
+				return (item.quanityNum * .5 /3 );
+			default:
+				return "item";
+		}
+	};
 
 }])
