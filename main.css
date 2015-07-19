@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-/*body * {
-	border: 1px solid black;
-}*/
 
-=======
 /*Main Page */
 html, body {margin:0;
 	padding:0;
@@ -11,7 +6,6 @@ html, body {margin:0;
 body{
 	background-color: #F6F9FD;
 }
->>>>>>> master
 .page-header{
 	text-align: center
 }
@@ -41,13 +35,9 @@ footer ul li{
 	overflow: scroll;
 }
 /*kitchen page*/
-#listKitchen, #updateKitchen, #addItemsToKitchen{
+#listKitchen, #updateItems, #addItems{
 	display: inline-block;
 	vertical-align: top;
-}
-
-#updateKitchen, #addItemsToKitchen{
-
 }
 
 .form-input{

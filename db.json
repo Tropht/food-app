@@ -70,6 +70,21 @@
       "quanityNum": 3,
       "quanityType": "item(s)",
       "baseQuanity": "item"
+    },
+    {
+      "id": 11,
+      "item": "updated (rosemary)",
+      "quanityNum": 2,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "id": 13,
+      "item": "new item",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 1.99,
+      "baseQuanity": "item"
     }
   ],
   "menu": [
@@ -98,6 +113,23 @@
         "price": 1.99
       },
       "recipes": {}
+    }
+  ],
+  "groceryList": [
+    {
+      "id": 1,
+      "item": "pickles",
+      "quanityNum": 5,
+      "quanityType": "item(s)",
+      "price": 1.99,
+      "baseQuanity": "item"
+    },
+    {
+      "id": 2,
+      "item": "something",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
     }
   ],
   "recipe": [
