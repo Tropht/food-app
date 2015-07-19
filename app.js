@@ -29,21 +29,27 @@ app.config(function($stateProvider, $urlRouterProvider){
 	})
 })
 
-app.service('inventory', ['$http', function ($http) {
-	this.getInventory = function(){
+app.service('dbItem', ['$http', function ($http) {
+	this.getKitchen = function(){
 		return $http.get('http://localhost:3000/foodItems')
 	}
 
-	this.deleteInventory = function(id){
-		$http.delete('http://localhost:3000/foodItems/'+id);
+	this.getGrocery = function(){
+		return $http.get('http://localhost:3000/groceryList')
 	}
 
-	this.updateInventory = function(upItem, id){
-		$http.put('http://localhost:3000/foodItems/'+id, upItem);
+	this.deletedbItem = function(list, id){
+		console.log('http://localhost:3000/'+list+'/'+id);
+		$http.delete('http://localhost:3000/'+list+'/'+id);
 	}
 
-	this.createInventory = function(newItem){
-		$http.post('http://localhost:3000/foodItems', newItem);
+	this.updatedbItem = function(list, upItem, id){
+		console.log('http://localhost:3000/'+list+'/'+id);
+		$http.put('http://localhost:3000/'+list+'/'+id, upItem);
+	}
+
+	this.createdbItem = function(list, newItem){
+		$http.post('http://localhost:3000/'+list, newItem);
 	}
 
 
@@ -64,9 +70,12 @@ app.service('recipe', ['$http', function ($http) {
 }])
 
 
-app.controller('myCtrl', ['$scope', 'inventory', 'recipe', function ($scope, inventory, recipe) {
-	inventory.getInventory().success(function(data){
+app.controller('myCtrl', ['$scope', 'dbItem', 'recipe', function ($scope, dbItem, recipe) {
+	dbItem.getKitchen().success(function(data){
 		$scope.kitchen = data;
+	});
+	dbItem.getGrocery().success(function(data){
+		$scope.groceries = data;
 	});
 	$scope.unitOptions = ["item(s)", "ounce(s)", "cup(s)", "TableSpoon(s)", "teaspoon(s)"];
 	$scope.updatedItem = {};
@@ -82,22 +91,25 @@ app.controller('myCtrl', ['$scope', 'inventory', 'recipe', function ($scope, inv
 	$scope.getRecipeGet = recipe.getRecipeGet;
 
 	
-	//creating-adding, updating, and deleting items in the Inventory (kitchen list)
-	$scope.create = function(){
+	//creating-adding, updating, and deleting items in the dbItem
+	$scope.create = function(list){
+		console.log("called create function for " + list);
 		$scope.newItem.baseQuanity = $scope.getBaseQuantity($scope.newItem);
-		inventory.createInventory($scope.newItem);
+		dbItem.createdbItem(list, $scope.newItem);
 		$scope.newItem = {};
 	};
 
-	$scope.update = function(id){
+	$scope.update = function(list, id){
+		console.log("called update function for " + list);
 		$scope.updatedItem.baseQuanity = $scope.getBaseQuantity($scope.updatedItem);
-		inventory.updateInventory($scope.updatedItem, id);
+		dbItem.updatedbItem(list, $scope.updatedItem, id);
 		$scope.updatedItem = {};
 		$scope.hideUpdate = true;
 	};
 
-	$scope.delete = function(id){
-		inventory.deleteInventory(id);
+	$scope.delete = function(list, id){
+		console.log("called delete function for " + list);
+		dbItem.deletedbItem(list, id);
 	};
 
 	$scope.uHide = function(item){
@@ -134,3 +146,4 @@ app.controller('myCtrl', ['$scope', 'inventory', 'recipe', function ($scope, inv
 	};
 
 }])
+
