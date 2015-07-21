@@ -29,6 +29,10 @@ footer ul li{
 	bAackground-color: #6E9FDE;
 }
 
+.special{
+	font-style: italic;
+	font-size: 80%;
+}
 /* Recipes Page */
 .showResults{
 	height: 400px;
