@@ -3,13 +3,23 @@
         <h1>Grocery List</h1>
     </div>
     <section class="col-lg-9 col-sm-9" id="listGroceries">
-        <div class="row" ng-repeat="items in groceries">
-            <div class="col-md-4 col-sm-4">#{{items.id}} {{ items.item }}</div>
-            <div class="col-md-2 col-sm-2">{{ items.quanityNum }} {{ items.quanityType }}</div>
-            <div class="col-md-1 col-sm-2">${{ items.price }}</div>
-            <div class="col-md-1 col-sm-2"><a href="" class="edit" ng-click="uHide(items)">Edit</a>
-            <span class="delete glyphicon glyphicon-trash" ng-click="delete('groceryList', items.id)"></span></div>
-        </div>
+    	<table class="table">
+			<tr>
+			    <th> <a ng-click="setFilter('type')">Type </a></th>
+			    <th> <a ng-click="setFilter('item')">Item</a></th>
+			    <th> <a ng-click="setFilter('quanity')">Quanity</a></th>
+			    <th> <a ng-click="setFilter('price')">Price</a></th>
+			    <th> Edit</th>
+			</tr>
+			<tr ng-repeat="items in groceries | orderBy: filterBy">
+			    <td class="special">{{ items.go }}</td>
+			    <td>#{{ items.id }} {{ items.item }}</td>
+			    <td>{{ items.quanityNum }} {{ items.quanityType }}</td>
+			    <td> ${{ item.price }}</td>
+			    <td><a href="" class="edit" ng-click="uHide(items)">Edit</a>
+            	<span class="delete glyphicon glyphicon-trash" ng-click="delete('groceryList', items.id)"></span></td>
+			</tr>
+		</table>
     </section>
 
     <section class="col-lg-3" id="updateItems" ng-hide="hideUpdate">
@@ -39,6 +49,13 @@
         <div class="input-group">
             <label for="id">id:</label>
             <input class="form-input" type="number" name="id" ng-model="newItem.id">
+        </div>
+        <div class="input-group">
+            <label for="go">List Type:</label>
+            <select name="go" id="select" ng-model="newItem.go">
+                <option value="Grocery" selected>Grocery</option>
+                <option value="Other">Other</option>
+            </select>
         </div>
         <div class="input-group">
             <label for="item">item:</label>

@@ -69,14 +69,16 @@
       "item": "diced tomatoes (rosemary)",
       "quanityNum": 3,
       "quanityType": "item(s)",
-      "baseQuanity": "item"
+      "baseQuanity": "item",
+      "price": 0.86
     },
     {
       "id": 11,
       "item": "updated (rosemary)",
       "quanityNum": 2,
       "quanityType": "item(s)",
-      "baseQuanity": "item"
+      "baseQuanity": "item",
+      "price": 8.77
     },
     {
       "id": 13,
@@ -130,6 +132,23 @@
       "quanityNum": 1,
       "quanityType": "item(s)",
       "baseQuanity": "item"
+    },
+    {
+      "go": "Grocery",
+      "id": 3,
+      "item": "stuff",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "id": 4,
+      "go": "Grocery",
+      "item": "new item",
+      "quanityNum": 5,
+      "quanityType": "cup(s)",
+      "price": 2.99,
+      "baseQuanity": 40
     }
   ],
   "recipe": [

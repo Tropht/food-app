@@ -52,7 +52,6 @@ app.service('dbItem', ['$http', function ($http) {
 		$http.post('http://localhost:3000/'+list, newItem);
 	}
 
-
 }])
 
 app.service('recipe', ['$http', function ($http) {
@@ -142,6 +141,49 @@ app.controller('myCtrl', ['$scope', 'dbItem', 'recipe', function ($scope, dbItem
 				return (item.quanityNum * .5 /3 );
 			default:
 				return "item";
+		}
+	};
+
+	$scope.filterBy = '';
+
+	$scope.setFilter = function(item){
+		switch(item){
+			case "type":
+				if($scope.filterBy === "type"){
+					$scope.filterBy =  "-type";
+				}else if($scope.filterBy === "-type"){
+					$scope.filterBy = '';
+				}else{
+    			$scope.filterBy = item;
+    			}
+    			break;
+			case "item":
+				if($scope.filterBy === "item"){
+					$scope.filterBy =  "-item";
+				}else if($scope.filterBy === "-item"){
+					$scope.filterBy = '';
+				}else{
+    			$scope.filterBy = item;
+    			}
+    			break;
+			case "quanity":
+    			if($scope.filterBy === "quanity"){
+					$scope.filterBy =  "-quanity";
+				}else if($scope.filterBy === "-quanity"){
+					$scope.filterBy = '';
+				}else{
+    			$scope.filterBy = item;
+    			}
+    			break;
+			case "price":
+    			if($scope.filterBy === "price"){
+					$scope.filterBy =  "-price";
+				}else if($scope.filterBy === "-price"){
+					$scope.filterBy = '';
+				}else{
+    			$scope.filterBy = item;
+    			}
+    			break;
 		}
 	};
 
