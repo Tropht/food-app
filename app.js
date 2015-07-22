@@ -81,7 +81,7 @@ app.controller('myCtrl', ['$scope', 'inventory', 'foodItems', function ($scope, 
 	});
 	$scope.newItem = {};
 =======
-app.controller('myCtrl', ['$scope', 'dbItem', 'recipe', function ($scope, dbItem, recipe) {
+app.controller('myCtrl', ['$scope', 'dbItem', 'foodItems', function ($scope, dbItem, recipe) {
 	dbItem.getMenu().success(function(data){
 		$scope.menu = data;
 	});
