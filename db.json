@@ -41,7 +41,8 @@
       "quanityNum": 3,
       "id": 6,
       "quanityType": "item(s)",
-      "baseQuanity": "item"
+      "baseQuanity": "item",
+      "price": 5.99
     },
     {
       "id": 7,
@@ -69,6 +70,23 @@
       "item": "diced tomatoes (rosemary)",
       "quanityNum": 3,
       "quanityType": "item(s)",
+      "baseQuanity": "item",
+      "price": 0.86
+    },
+    {
+      "id": 11,
+      "item": "updated (rosemary)",
+      "quanityNum": 2,
+      "quanityType": "item(s)",
+      "baseQuanity": "item",
+      "price": 8.77
+    },
+    {
+      "id": 13,
+      "item": "new item",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 1.99,
       "baseQuanity": "item"
     }
   ],
@@ -76,28 +94,66 @@
     {
       "id": 1,
       "date": "march 15, 2015",
-      "mealType": "breakfast",
-      "foodItems": {
-        "id": 5,
-        "item": "salad",
-        "quanityNum": 8,
-        "quanityType": "ounce(s)",
-        "price": 1.99
-      },
-      "recipes": {}
+      "breakfast": [
+        {
+          "id": 20,
+          "item": "pancakes",
+          "quanityNum": 8,
+          "quanityType": "ounce(s)",
+          "price": 1.99
+        },
+        {
+          "id": 49,
+          "item": "orange juice",
+          "quanityNum": 16,
+          "quanityType": "ounce(s)",
+          "price": 1.99
+        }
+      ],
+      "lunch": [],
+      "dinner": []
+    }
+  ],
+  "groceryList": [
+    {
+      "id": 1,
+      "item": "pickles",
+      "quanityNum": 5,
+      "quanityType": "item(s)",
+      "price": 1.99,
+      "baseQuanity": "item"
     },
     {
       "id": 2,
-      "date": "march 15, 2015",
-      "mealType": "breakfast",
-      "foodItems": {
-        "id": 5,
-        "item": "salad",
-        "quanityNum": 8,
-        "quanityType": "ounce(s)",
-        "price": 1.99
-      },
-      "recipes": {}
+      "item": "something",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "go": "Grocery",
+      "id": 3,
+      "item": "stuff",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "id": 4,
+      "go": "Grocery",
+      "item": "new item",
+      "quanityNum": 5,
+      "quanityType": "cup(s)",
+      "price": 2.99,
+      "baseQuanity": 40
+    },
+    {
+      "id": 5,
+      "item": "jelly",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 2.99,
+      "baseQuanity": "item"
     }
   ],
   "recipe": [
