@@ -1,18 +1,26 @@
 <div class="row">
-    <div class="page-header col-md-12">
+    <div class="page-header">
         <h1>What's in my Kitchen?</h1>
     </div>
-    <section class="col-lg-9 col-sm-9" id="listKitchen">
-        <div class="row" ng-repeat="items in kitchen">
-            <div class="col-md-4 col-sm-4">#{{items.id}} {{ items.item }}</div>
-            <div class="col-md-1 col-sm-2">{{ items.quanityNum }} {{ items.quanityType }}</div>
-            <div class="col-md-1 col-sm-2">${{ items.price }}</div>
-            <div class="col-md-1 col-sm-2"><a href="" class="edit" ng-click="uHide(items)">Edit</a>
-            <span class="delete glyphicon glyphicon-trash" ng-click="delete(items.id)"></span></div>
-        </div>
+    <section id="listKitchen">
+        <table class="table">
+            <tr>
+                <th> <a ng-click="setFilter('item')">Item</a></th>
+                <th> <a ng-click="setFilter('quanity')">Quanity</a></th>
+                <th> <a ng-click="setFilter('price')">Price</a></th>
+                <th> Edit</th>
+            </tr>
+            <tr ng-repeat="items in kitchen | orderBy: filterBy">
+                <td>#{{ items.id }} {{ items.item }}</td>
+                <td>{{ items.quanityNum }} {{ items.quanityType }}</td>
+                <td> ${{ items.price }}</td>
+                <td><a href="" class="edit" ng-click="uHide(items)">Edit</a>
+                <span class="delete glyphicon glyphicon-trash" ng-click="delete('foodItems', items.id)"></span></td>
+            </tr>
+        </table>
     </section>
 
-    <section class="col-lg-3" id="updateKitchen" ng-hide="hideUpdate">
+    <section class="col-lg-3" id="updateItems" ng-hide="hideUpdate">
         <h3>Update</h3>
         <div class="input-group">
             <label for="item">item:</label>
@@ -32,9 +40,9 @@
             <label for="price">price: $</label>
             <input class="form-input" type="text" name="price" ng-model="updatedItem.price">
         </div>
-        <button class="btn btn-success" ng-click="update(updatedItem.id)">Update</button>
+        <button class="btn btn-success" ng-click="update('foodItems', updatedItem.id)">Update</button>
     </section>
-    <section class="col-lg-3" id="addItemsToKitchen" ng-hide="!hideUpdate">
+    <section class="col-lg-3" id="addItems" ng-hide="!hideUpdate">
         <h3>Add new item</h3>
         <div class="input-group">
             <label for="id">id:</label>
@@ -59,8 +67,7 @@
             <input class="form-input" type="text" name="price" ng-model="newItem.price">
         </div>
 
-        <button class="btn btn-success" ng-click="create()">Add</button>
+        <button class="btn btn-success" ng-click="create('foodItems')">Add</button>
     </section>
 
 </div>
-

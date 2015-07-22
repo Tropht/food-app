@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-/*body * {
-	border: 1px solid black;
-}*/
 
-=======
 /*Main Page */
 html, body {margin:0;
 	padding:0;
@@ -11,7 +6,6 @@ html, body {margin:0;
 body{
 	background-color: #F6F9FD;
 }
->>>>>>> master
 .page-header{
 	text-align: center
 }
@@ -35,19 +29,19 @@ footer ul li{
 	bAackground-color: #6E9FDE;
 }
 
+.special{
+	font-style: italic;
+	font-size: 80%;
+}
 /* Recipes Page */
 .showResults{
 	height: 400px;
 	overflow: scroll;
 }
 /*kitchen page*/
-#listKitchen, #updateKitchen, #addItemsToKitchen{
+#listKitchen, #updateItems, #addItems{
 	display: inline-block;
 	vertical-align: top;
-}
-
-#updateKitchen, #addItemsToKitchen{
-
 }
 
 .form-input{
