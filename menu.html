@@ -1,3 +1,87 @@
 <div class="page-header">
-	<h1>What's on the Menu?</h1>
+	<h1>What's on the menu?</h1>
 </div>
+<section id="listmenu">
+        <table class="table">
+        	<tr>
+        		<td colspan="4" >Breakfast</td>
+        	</tr>
+            <tr ng-repeat="items in menu[0].breakfast">
+                <td>#{{ items.id }} {{ items.item }}</td>
+                <td>{{ items.quanityNum }} {{ items.quanityType }}</td>
+                <td> ${{ items.price }}</td>
+                <td><a href="" class="edit" ng-click="uHide(items)">Edit</a>
+                <span class="delete glyphicon glyphicon-trash" ng-click="delete('menu', items.id)"></span></td>
+            </tr>
+            <tr>
+        		<td colspan="4" >Lunch</td>
+        	</tr>
+            <tr ng-repeat="items in menu[0].lunch">
+                <td>#{{ items.id }} {{ items.item }}</td>
+                <td>{{ items.quanityNum }} {{ items.quanityType }}</td>
+                <td> ${{ items.price }}</td>
+                <td><a href="" class="edit" ng-click="uHide(items)">Edit</a>
+                <span class="delete glyphicon glyphicon-trash" ng-click="delete('menu', items.id)"></span></td>
+            </tr>
+            <tr>
+        		<td colspan="4" >Dinner</td>
+        	</tr>
+            <tr ng-repeat="items in menu[0].dinner">
+                <td>#{{ items.id }} {{ items.item }}</td>
+                <td>{{ items.quanityNum }} {{ items.quanityType }}</td>
+                <td> ${{ items.price }}</td>
+                <td><a href="" class="edit" ng-click="uHide(items)">Edit</a>
+                <span class="delete glyphicon glyphicon-trash" ng-click="delete('menu', items.id)"></span></td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="col-lg-3" id="updateItems" ng-hide="hideUpdate">
+        <h3>Update</h3>
+        <div class="input-group">
+            <label for="item">item:</label>
+            <input class="form-input" type="text" name="item" ng-model="updatedItem.item">
+        </div>
+        <div class="input-group">
+            <label for="quanityNum">Quanity:</label>
+            <input class="form-input" type="text" name="quanityNum" ng-model="updatedItem.quanityNum">
+        </div>
+        <div class="input-group">
+            <label for="quanityType">unit:</label>
+            <select name="quanityType" id="select" ng-model="updatedItem.quanityType">
+                <option ng-repeat="units in unitOptions">{{ units }}</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="price">price: $</label>
+            <input class="form-input" type="text" name="price" ng-model="updatedItem.price">
+        </div>
+        <button class="btn btn-success" ng-click="update('menu', updatedItem.id)">Update</button>
+    </section>
+    <section class="col-lg-3" id="addItems" ng-hide="!hideUpdate">
+        <h3>Add new item</h3>
+        <div class="input-group">
+            <label for="id">id:</label>
+            <input class="form-input" type="number" name="id" ng-model="newItem.id">
+        </div>
+        <div class="input-group">
+            <label for="item">item:</label>
+            <input class="form-input" type="text" name="item" ng-model="newItem.item">
+        </div>
+        <div class="input-group">
+            <label for="quanityNum">Quanity:</label>
+            <input class="form-input" type="text" name="quanityNum" ng-model="newItem.quanityNum">
+        </div>
+        <div class="input-group">
+            <label for="quanityType">unit:</label>
+            <select name="quanityType" id="select" ng-model="newItem.quanityType">
+                <option ng-repeat="units in unitOptions">{{ units }}</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="price">price: $</label>
+            <input class="form-input" type="text" name="price" ng-model="newItem.price">
+        </div>
+
+        <button class="btn btn-success" ng-click="create('menu')">Add</button>
+    </section>

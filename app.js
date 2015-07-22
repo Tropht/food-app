@@ -30,6 +30,10 @@ app.config(function($stateProvider, $urlRouterProvider){
 })
 
 app.service('dbItem', ['$http', function ($http) {
+	this.getMenu = function(){
+		return $http.get('http://localhost:3000/menu')
+	}
+
 	this.getKitchen = function(){
 		return $http.get('http://localhost:3000/foodItems')
 	}
@@ -70,6 +74,9 @@ app.service('recipe', ['$http', function ($http) {
 
 
 app.controller('myCtrl', ['$scope', 'dbItem', 'recipe', function ($scope, dbItem, recipe) {
+	dbItem.getMenu().success(function(data){
+		$scope.menu = data;
+	});
 	dbItem.getKitchen().success(function(data){
 		$scope.kitchen = data;
 	});
@@ -81,7 +88,7 @@ app.controller('myCtrl', ['$scope', 'dbItem', 'recipe', function ($scope, dbItem
 	$scope.newItem = {};
 	$scope.hideUpdate = true;
 
-	$scope.newItem = {};
+
 	$scope.getRecipeSearch = function(terms) {
 		recipe.getRecipeSearch(terms).success(function(data) {
 			$scope.searchResults = data.matches;

@@ -1,8 +1,8 @@
 <div class="row">
-    <div class="page-header col-md-12">
+    <div class="page-header">
         <h1>Grocery List</h1>
     </div>
-    <section class="col-lg-9 col-sm-9" id="listGroceries">
+    <section id="listGroceries">
     	<table class="table">
 			<tr>
 			    <th> <a ng-click="setFilter('type')">Type </a></th>
@@ -15,7 +15,7 @@
 			    <td class="special">{{ items.go }}</td>
 			    <td>#{{ items.id }} {{ items.item }}</td>
 			    <td>{{ items.quanityNum }} {{ items.quanityType }}</td>
-			    <td> ${{ item.price }}</td>
+			    <td> ${{ items.price }}</td>
 			    <td><a href="" class="edit" ng-click="uHide(items)">Edit</a>
             	<span class="delete glyphicon glyphicon-trash" ng-click="delete('groceryList', items.id)"></span></td>
 			</tr>
