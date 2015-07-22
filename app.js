@@ -15,9 +15,9 @@ app.config(function($stateProvider, $urlRouterProvider){
 		url:'/menu',
 		templateUrl:'menu.html'
 	})
-	.state('recipe',{
-		url:'/recipe',
-		templateUrl:'recipe.html'
+	.state('foodItems',{
+		url:'/foodItems',
+		templateUrl:'foodItems.html'
 	})
 	.state('kitchen',{
 		url:'/kitchen',
@@ -49,37 +49,44 @@ app.service('inventory', ['$http', function ($http) {
 
 }])
 
-app.service('recipe', ['$http', function ($http) {
-	this.getRecipeSearch = function(terms){
-		return $http.get('recipeSearch.json', {method:'GET', url:'recipeSearch.json', params:{_app_id:"",_app_key:"",q:terms}});
+app.service('foodItems', ['$http', function ($http) {
+	this.getfoodItemsSearch = function(terms){
+		return $http.get('foodItems.json', {method:'GET', url:'foodItems.json', params:{}});
 		//'https://api.yummly.com/v1'
+
 	}
 
 	
-	this.getRecipeGet = function(){
-		return $http.get('recipeGet.json')
+	this.getfoodItemsGet = function(){
+		return $http.get('foodItemsGet.json')
 		//'https://api.yummly.com/v1'
 	}
 
 }])
 
 
-app.controller('myCtrl', ['$scope', 'inventory', 'recipe', function ($scope, inventory, recipe) {
+app.controller('myCtrl', ['$scope', 'inventory', 'foodItems', function ($scope, inventory, foodItems) {
 	inventory.getInventory().success(function(data){
 		$scope.kitchen = data;
 	});
+	$scope.newItem = {};
 	$scope.unitOptions = ["item(s)", "ounce(s)", "cup(s)", "TableSpoon(s)", "teaspoon(s)"];
 	$scope.updatedItem = {};
 	$scope.newItem = {};
 	$scope.hideUpdate = true;
 
-	$scope.newItem = {};
-	$scope.getRecipeSearch = function(terms) {
-		recipe.getRecipeSearch(terms).success(function(data) {
-			$scope.searchResults = data.matches;
+	$scope.getfoodItemsSearch = function(terms) {
+		foodItems.getfoodItemsSearch(terms).success(function(data) {
+			var foundData = [];
+			for (var i = 0; i < data.length; i++){
+				if(data[i].item.indexOf(terms) !== -1) {
+					foundData.push(data[i])
+				}
+			}
+			$scope.searchResults = foundData;
 		});
 	}
-	$scope.getRecipeGet = recipe.getRecipeGet;
+	$scope.getfoodItemsGet = foodItems.getItem;
 
 	
 	//creating-adding, updating, and deleting items in the Inventory (kitchen list)
