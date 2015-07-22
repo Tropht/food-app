@@ -41,7 +41,8 @@
       "quanityNum": 3,
       "id": 6,
       "quanityType": "item(s)",
-      "baseQuanity": "item"
+      "baseQuanity": "item",
+      "price": 5.99
     },
     {
       "id": 7,
@@ -93,28 +94,24 @@
     {
       "id": 1,
       "date": "march 15, 2015",
-      "mealType": "breakfast",
-      "foodItems": {
-        "id": 5,
-        "item": "salad",
-        "quanityNum": 8,
-        "quanityType": "ounce(s)",
-        "price": 1.99
-      },
-      "recipes": {}
-    },
-    {
-      "id": 2,
-      "date": "march 15, 2015",
-      "mealType": "breakfast",
-      "foodItems": {
-        "id": 5,
-        "item": "salad",
-        "quanityNum": 8,
-        "quanityType": "ounce(s)",
-        "price": 1.99
-      },
-      "recipes": {}
+      "breakfast": [
+        {
+          "id": 20,
+          "item": "pancakes",
+          "quanityNum": 8,
+          "quanityType": "ounce(s)",
+          "price": 1.99
+        },
+        {
+          "id": 49,
+          "item": "orange juice",
+          "quanityNum": 16,
+          "quanityType": "ounce(s)",
+          "price": 1.99
+        }
+      ],
+      "lunch": [],
+      "dinner": []
     }
   ],
   "groceryList": [
@@ -149,6 +146,14 @@
       "quanityType": "cup(s)",
       "price": 2.99,
       "baseQuanity": 40
+    },
+    {
+      "id": 5,
+      "item": "jelly",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 2.99,
+      "baseQuanity": "item"
     }
   ],
   "recipe": [
