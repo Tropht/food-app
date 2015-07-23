@@ -56,8 +56,7 @@ app.service('dbItem', ['$http', function ($http) {
 		$http.post('http://localhost:3000/'+list, newItem);
 	}
 
-	//new search items
-	this.getSearchItems = function(){
+	this.getFoodItems = function(){
 		return $http.get('http://localhost:3000/foodDB')
 	}
 
@@ -81,8 +80,8 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 	$scope.hideUpdate = true;
 
 
-	$scope.getsearchItems = function(terms) {
-		dbItem.getSearchItems().success(function(data) {
+	$scope.search = function(terms) {
+		dbItem.getFoodItems().success(function(data) {
 			$scope.dbSearchItems = data;
 		
 			$scope.searchResults = [];
