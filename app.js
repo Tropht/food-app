@@ -15,9 +15,9 @@ app.config(function($stateProvider, $urlRouterProvider){
 		url:'/menu',
 		templateUrl:'menu.html'
 	})
-	.state('foodItems',{
-		url:'/foodItems',
-		templateUrl:'foodItems.html'
+	.state('dbItems',{
+		url:'/dbItems',
+		templateUrl:'dbItems.html'
 	})
 	.state('kitchen',{
 		url:'/kitchen',
@@ -56,31 +56,20 @@ app.service('dbItem', ['$http', function ($http) {
 		$http.post('http://localhost:3000/'+list, newItem);
 	}
 
-}])
-
-app.service('foodItems', ['$http', function ($http) {
-	this.getfoodItemsSearch = function(terms){
-		return $http.get('foodItems.json', {method:'GET', url:'foodItems.json', params:{}});
+	this.getdbItemsSearch = function(terms){
+		return $http.get('dbItems.json', {method:'GET', url:'dbItems.json', params:{}});
 		//'https://api.yummly.com/v1'
 
 	}
 
 	
-	this.getfoodItemsGet = function(){
-		return $http.get('foodItemsGet.json')
+	this.getdbItemsGet = function(){
+		return $http.get('dbItemsGet.json')
 		//'https://api.yummly.com/v1'
 	}
-
 }])
 
-
-<<<<<<< HEAD
-app.controller('myCtrl', ['$scope', 'inventory', 'foodItems', function ($scope, inventory, foodItems) {
-	inventory.getInventory().success(function(data){
-		$scope.kitchen = data;
-	});
-	$scope.newItem = {};
-=======
+	
 app.controller('myCtrl', ['$scope', 'dbItem', 'foodItems', function ($scope, dbItem, recipe) {
 	dbItem.getMenu().success(function(data){
 		$scope.menu = data;
@@ -91,15 +80,15 @@ app.controller('myCtrl', ['$scope', 'dbItem', 'foodItems', function ($scope, dbI
 	dbItem.getGrocery().success(function(data){
 		$scope.groceries = data;
 	});
->>>>>>> origin/master
+
 	$scope.unitOptions = ["item(s)", "ounce(s)", "cup(s)", "TableSpoon(s)", "teaspoon(s)"];
 	$scope.updatedItem = {};
 	$scope.newItem = {};
 	$scope.hideUpdate = true;
 
-<<<<<<< HEAD
-	$scope.getfoodItemsSearch = function(terms) {
-		foodItems.getfoodItemsSearch(terms).success(function(data) {
+
+	$scope.getdbItemsSearch = function(terms) {
+		dbItems.getdbItemsSearch(terms).success(function(data) {
 			var foundData = [];
 			for (var i = 0; i < data.length; i++){
 				if(data[i].item.indexOf(terms) !== -1) {
@@ -107,7 +96,7 @@ app.controller('myCtrl', ['$scope', 'dbItem', 'foodItems', function ($scope, dbI
 				}
 			}
 			$scope.searchResults = foundData;
-=======
+
 
 	$scope.getRecipeSearch = function(terms) {
 		recipe.getRecipeSearch(terms).success(function(data) {

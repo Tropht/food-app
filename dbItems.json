@@ -1,0 +1,47 @@
+[{
+"id": 67,
+"item": "white wine",
+"quantityNum": 1,
+"quantityType": "once(s)",
+"price": 11.98
+},
+
+{
+"id": 68,
+"item": "tortilla chips",
+"quantityNum": 1,
+"quantityType": "item(s)",
+"price": 2.69
+},
+
+{
+"id": 69,
+"item": "tomato",
+"quantityNum": 1,
+"quantityType": "item(s)",
+"price": 0.49
+},
+
+{
+"id": 70,
+"item": "peanut butter",
+"quantityNum": 1,
+"quantityType": "once(s)",
+"price": 2.99
+},
+
+{
+"id": 71,
+"item": "sugar",
+"quantityNum": 1,
+"quantityType": "once(s)",
+"price": 4.98
+},
+
+{
+"id": 72,
+"item": "grape jelly",
+"quantityNum": 1,
+"quantityType": "once(s)",
+"price": 2.98
+}]
