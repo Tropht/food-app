@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.router']);
+var app = angular.module('app', ['ui.router','ui.rCalendar']);
 
 app.config(function($stateProvider, $urlRouterProvider){
 
