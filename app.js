@@ -81,18 +81,19 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 	$scope.hideUpdate = true;
 
 
-	$scope.getsearchItems = function() {
+	$scope.getsearchItems = function(terms) {
 		dbItem.getSearchItems().success(function(data) {
 			$scope.dbSearchItems = data;
-		});
-		$scope.searchResults = [];
-		for (var i = 0; i < $scope.dbSearchItems.length; i++)
-		{
-			if($scope.dbSearchItems[i].item.indexOf(terms) !== -1) 
+		
+			$scope.searchResults = [];
+			for (var i = 0; i < $scope.dbSearchItems.length; i++)
 			{
-				$scope.searchResults.push($scope.dbSearchItems[i]);
+				if($scope.dbSearchItems[i].item.indexOf(terms) !== -1) 
+				{
+					$scope.searchResults.push($scope.dbSearchItems[i]);
+				}
 			}
-		}
+		});
 	};
 
 	
