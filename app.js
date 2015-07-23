@@ -56,21 +56,15 @@ app.service('dbItem', ['$http', function ($http) {
 		$http.post('http://localhost:3000/'+list, newItem);
 	}
 
-	this.getsearchItemsSearch = function(terms){
-		return $http.get('searchItems.json', {method:'GET', url:'searchItems.json', params:{}});
-		//'https://api.yummly.com/v1'
-
+	//new search items
+	this.getSearchItems = function(){
+		return $http.get('http://localhost:3000/foodDB')
 	}
 
-	
-	this.getsearchItemsGet = function(){
-		return $http.get('searchItemsGet.json')
-		//'https://api.yummly.com/v1'
-	}
 }])
 
 	
-app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem,) {
+app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 	dbItem.getMenu().success(function(data){
 		$scope.menu = data;
 	})
@@ -87,25 +81,19 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem,) {
 	$scope.hideUpdate = true;
 
 
-	$scope.getsearchItemsSearch = function(terms) {
-		dbItems.getsearchItemsSearch(terms).success(function(data) {
-			var foundData = [];
-			for (var i = 0; i < data.length; i++){
-				if(data[i].item.indexOf(terms) !== -1) {
-					foundData.push(data[i])
-				}
+	$scope.getsearchItems = function() {
+		dbItem.getSearchItems().success(function(data) {
+			$scope.dbSearchItems = data;
+		});
+		$scope.searchResults = [];
+		for (var i = 0; i < $scope.dbSearchItems.length; i++)
+		{
+			if($scope.dbSearchItems[i].item.indexOf(terms) !== -1) 
+			{
+				$scope.searchResults.push($scope.dbSearchItems[i]);
 			}
-			$scope.searchResults = foundData;
-
-		});
-	}
-	$scope.getRecipeSearch = function(terms) {
-		recipe.getRecipeSearch(terms).success(function(data) {
-			$scope.searchResults = data.matches;
-
-		});
-	}
-	$scope.getsearchItemsGet = searchItems.searchItem;
+		}
+	};
 
 	
 	//creating-adding, updating, and deleting items in the dbItem

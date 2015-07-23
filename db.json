@@ -93,7 +93,6 @@
   "menu": [
     {
       "id": 1,
-      "date": "march 15, 2015",
       "breakfast": [
         {
           "id": 20,
@@ -112,6 +111,43 @@
       ],
       "lunch": [],
       "dinner": []
+    },
+    {
+      "id": 2,
+      "breakfast": [
+        {
+          "id": 7,
+          "item": "waffles",
+          "quanityNum": 1,
+          "quanityType": "ounce(s)",
+          "price": 1.99
+        },
+        {
+          "id": 17,
+          "item": "milk",
+          "quanityNum": 16,
+          "quanityType": "ounce(s)",
+          "price": 1.99
+        }
+      ],
+      "lunch": [
+        {
+          "id": 18,
+          "item": "salad",
+          "quanityNum": 1,
+          "quanityType": "ounce(s)",
+          "price": 1.99
+        }
+      ],
+      "dinner": [
+        {
+          "id": 22,
+          "item": "steak",
+          "quanityNum": 6,
+          "quanityType": "ounce(s)",
+          "price": 7.99
+        }
+      ]
     }
   ],
   "groceryList": [
@@ -156,22 +192,48 @@
       "baseQuanity": "item"
     }
   ],
-  "recipe": [
+  "foodDB": [
     {
-      "id": 1,
-      "item": "eggs"
+      "id": 67,
+      "item": "white wine",
+      "quantityNum": 1,
+      "quantityType": "once(s)",
+      "price": 11.98
     },
     {
-      "id": 2,
-      "item": "updating #2 I hope"
+      "id": 68,
+      "item": "tortilla chips",
+      "quantityNum": 1,
+      "quantityType": "item(s)",
+      "price": 2.69
     },
     {
-      "id": 3,
-      "item": "number 3"
+      "id": 69,
+      "item": "tomato",
+      "quantityNum": 1,
+      "quantityType": "item(s)",
+      "price": 0.49
     },
     {
-      "id": 4,
-      "item": "This is a new item"
+      "id": 70,
+      "item": "peanut butter",
+      "quantityNum": 1,
+      "quantityType": "once(s)",
+      "price": 2.99
+    },
+    {
+      "id": 71,
+      "item": "sugar",
+      "quantityNum": 1,
+      "quantityType": "once(s)",
+      "price": 4.98
+    },
+    {
+      "id": 72,
+      "item": "grape jelly",
+      "quantityNum": 1,
+      "quantityType": "once(s)",
+      "price": 2.98
     }
   ]
 }
