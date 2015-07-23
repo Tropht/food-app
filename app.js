@@ -15,9 +15,9 @@ app.config(function($stateProvider, $urlRouterProvider){
 		url:'/menu',
 		templateUrl:'menu.html'
 	})
-	.state('dbItems',{
-		url:'/dbItems',
-		templateUrl:'dbItems.html'
+	.state('searchItems',{
+		url:'/searchItems',
+		templateUrl:'searchItems.html'
 	})
 	.state('kitchen',{
 		url:'/kitchen',
@@ -56,24 +56,24 @@ app.service('dbItem', ['$http', function ($http) {
 		$http.post('http://localhost:3000/'+list, newItem);
 	}
 
-	this.getdbItemsSearch = function(terms){
-		return $http.get('dbItems.json', {method:'GET', url:'dbItems.json', params:{}});
+	this.getsearchItemsSearch = function(terms){
+		return $http.get('searchItems.json', {method:'GET', url:'searchItems.json', params:{}});
 		//'https://api.yummly.com/v1'
 
 	}
 
 	
-	this.getdbItemsGet = function(){
-		return $http.get('dbItemsGet.json')
+	this.getsearchItemsGet = function(){
+		return $http.get('searchItemsGet.json')
 		//'https://api.yummly.com/v1'
 	}
 }])
 
 	
-app.controller('myCtrl', ['$scope', 'dbItem', 'foodItems', function ($scope, dbItem, recipe) {
+app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem,) {
 	dbItem.getMenu().success(function(data){
 		$scope.menu = data;
-	});
+	})
 	dbItem.getKitchen().success(function(data){
 		$scope.kitchen = data;
 	});
@@ -87,8 +87,8 @@ app.controller('myCtrl', ['$scope', 'dbItem', 'foodItems', function ($scope, dbI
 	$scope.hideUpdate = true;
 
 
-	$scope.getdbItemsSearch = function(terms) {
-		dbItems.getdbItemsSearch(terms).success(function(data) {
+	$scope.getsearchItemsSearch = function(terms) {
+		dbItems.getsearchItemsSearch(terms).success(function(data) {
 			var foundData = [];
 			for (var i = 0; i < data.length; i++){
 				if(data[i].item.indexOf(terms) !== -1) {
@@ -97,14 +97,15 @@ app.controller('myCtrl', ['$scope', 'dbItem', 'foodItems', function ($scope, dbI
 			}
 			$scope.searchResults = foundData;
 
-
+		});
+	}
 	$scope.getRecipeSearch = function(terms) {
 		recipe.getRecipeSearch(terms).success(function(data) {
 			$scope.searchResults = data.matches;
->>>>>>> origin/master
+
 		});
 	}
-	$scope.getfoodItemsGet = foodItems.getItem;
+	$scope.getsearchItemsGet = searchItems.searchItem;
 
 	
 	//creating-adding, updating, and deleting items in the dbItem

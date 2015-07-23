@@ -1,0 +1,19 @@
+<div class="page-header">
+	<h1>foodItems</h1>
+</div>
+
+<container>
+	<h4>Search for food items and add to your menu!</h4>
+	<section id="searchsearchItems">
+		<div class="input-group">
+			<input class="form-control" type="text" ng-model="searchinput" placeholder="Search">
+		</div>
+		<button class="btn btn-success" ng-click="getsearchItemsSearch(searchinput)">Search</button>
+		<div class="showResults">
+			<div ng-repeat="result in searchResults">
+				{{result.item}}
+			</div>
+		</div>
+	</section>
+</container>
+
