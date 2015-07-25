@@ -11,6 +11,23 @@
 			    <th> <a ng-click="setFilter('price')">Price</a></th>
 			    <th> Edit</th>
 			</tr>
+            <tr ng-hide="hideUpdate">
+                <td class="input-edit">
+                <select name="go" id="select" ng-model="updatedItem.go">
+                    <option value="Grocery" selected>Grocery</option>
+                    <option value="Other">Other</option>
+                </select>
+                </td>
+                <td class="input-edit">
+                    <input class="form-input" type="text" name="item" ng-model="updatedItem.item"></td>
+                <td class="input-edit">
+                    <input class="form-input" type="text" name="quanityNum" ng-model="updatedItem.quanityNum">
+                    <select name="quanityType" id="select" ng-model="updatedItem.quanityType">
+                    <option ng-repeat="units in unitOptions">{{ units }}</option></td>
+                <td class="input-edit">
+                    <input class="form-input" type="text" name="price" ng-model="updatedItem.price"></td>
+                <td class="input-edit"><button class="btn btn-success" ng-click="update('groceryList', updatedItem.id)">Update</button></td>
+            </tr>
 			<tr ng-repeat="items in groceries | orderBy: filterBy">
 			    <td class="special">{{ items.go }}</td>
 			    <td>#{{ items.id }} {{ items.item }}</td>

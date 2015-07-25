@@ -44,6 +44,6 @@ footer ul li{
 	vertical-align: top;
 }
 
-.form-input{
-	display: inline-block;
+.input-edit{
+	background-color: #cccccc;
 }

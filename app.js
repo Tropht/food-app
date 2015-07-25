@@ -35,7 +35,7 @@ app.service('dbItem', ['$http', function ($http) {
 	}
 
 	this.getKitchen = function(){
-		return $http.get('http://localhost:3000/foodItems')
+		return $http.get('http://localhost:3000/kitchenItems')
 	}
 
 	this.getGrocery = function(){
