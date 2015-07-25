@@ -49,7 +49,8 @@
       "item": "coconut milk",
       "quanityNum": 2,
       "quanityType": "item(s)",
-      "baseQuanity": "item"
+      "baseQuanity": "item",
+      "price": 0.98
     },
     {
       "id": 8,

@@ -30,8 +30,8 @@ app.config(function($stateProvider, $urlRouterProvider){
 })
 
 app.service('dbItem', ['$http', function ($http) {
-	this.getMenu = function(){
-		return $http.get('http://localhost:3000/menu')
+	this.getMenu = function(id){
+		return $http.get('http://localhost:3000/menu/'+id)
 	}
 
 	this.getKitchen = function(){
@@ -64,9 +64,6 @@ app.service('dbItem', ['$http', function ($http) {
 
 	
 app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
-	dbItem.getMenu().success(function(data){
-		$scope.menu = data;
-	})
 	dbItem.getKitchen().success(function(data){
 		$scope.kitchen = data;
 	});
@@ -79,7 +76,19 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 	$scope.newItem = {};
 	$scope.hideUpdate = true;
 
-
+	$scope.today = 1;
+	//get original menu
+	dbItem.getMenu($scope.today).success(function(data){
+			$scope.menu = data;
+		});
+	//update menu view based on selected date
+	$scope.getDailyMenu = function(selectedDate){
+		dbItem.getMenu(selectedDate).success(function(data){
+			$scope.menu = data;
+		});
+	};
+	
+	//search items
 	$scope.search = function(terms) {
 		dbItem.getFoodItems().success(function(data) {
 			$scope.dbSearchItems = data;
@@ -93,10 +102,9 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 				}
 			}
 		});
-	};
-
+	};	
 	
-	//creating-adding, updating, and deleting items in the dbItem
+	//creating, updating, and deleting items in the dbItem
 	$scope.create = function(list){
 		console.log("called create function for " + list);
 		$scope.newItem.baseQuanity = $scope.getBaseQuantity($scope.newItem);
