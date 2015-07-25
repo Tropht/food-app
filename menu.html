@@ -7,16 +7,15 @@
         		<td colspan="4" >Breakfast</td>
         	</tr>
             <tr ng-hide="hideUpdate">
-                <td class="input-group"><label for="item">item:</label>
+                <td class="input-edit">
                     <input class="form-input" type="text" name="item" ng-model="updatedItem.item"></td>
-                <td class="input-group"><label for="quanityNum">Quanity:</label>
+                <td class="input-edit"><label for="quanityNum">Quanity:</label>
                     <input class="form-input" type="text" name="quanityNum" ng-model="updatedItem.quanityNum">
-                    <label for="quanityType">unit:</label>
                     <select name="quanityType" id="select" ng-model="updatedItem.quanityType">
                     <option ng-repeat="units in unitOptions">{{ units }}</option></td>
-                <td class="input-group"> <label for="price">price: $</label>
+                <td class="input-edit"> <label for="price">price: $</label>
                     <input class="form-input" type="text" name="price" ng-model="updatedItem.price"></td>
-                <td class="input-group"><button class="btn btn-success" ng-click="update('menu', updatedItem.id)">Update</button></td>
+                <td class="input-edit"><button class="btn btn-success" ng-click="update('menu', updatedItem.id)">Update</button></td>
             </tr>
             <tr ng-repeat="items in menu.breakfast">
                 <td>#{{ items.id }} {{ items.item }}</td>

@@ -1,5 +1,5 @@
 {
-  "foodItems": [
+  "kitchenItems": [
     {
       "id": 1,
       "item": "eggs",
@@ -91,6 +91,49 @@
       "baseQuanity": "item"
     }
   ],
+  "groceryList": [
+    {
+      "id": 1,
+      "item": "pickles",
+      "quanityNum": 5,
+      "quanityType": "item(s)",
+      "price": 1.99,
+      "baseQuanity": "item",
+      "go": "Grocery"
+    },
+    {
+      "id": 2,
+      "item": "something",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "go": "Grocery",
+      "id": 3,
+      "item": "stuff",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "id": 4,
+      "go": "Grocery",
+      "item": "new item",
+      "quanityNum": 5,
+      "quanityType": "cup(s)",
+      "price": 2.99,
+      "baseQuanity": 40
+    },
+    {
+      "id": 5,
+      "item": "jelly",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 2.99,
+      "baseQuanity": "item"
+    }
+  ],
   "menu": [
     {
       "id": 1,
@@ -149,48 +192,6 @@
           "price": 7.99
         }
       ]
-    }
-  ],
-  "groceryList": [
-    {
-      "id": 1,
-      "item": "pickles",
-      "quanityNum": 5,
-      "quanityType": "item(s)",
-      "price": 1.99,
-      "baseQuanity": "item"
-    },
-    {
-      "id": 2,
-      "item": "something",
-      "quanityNum": 1,
-      "quanityType": "item(s)",
-      "baseQuanity": "item"
-    },
-    {
-      "go": "Grocery",
-      "id": 3,
-      "item": "stuff",
-      "quanityNum": 1,
-      "quanityType": "item(s)",
-      "baseQuanity": "item"
-    },
-    {
-      "id": 4,
-      "go": "Grocery",
-      "item": "new item",
-      "quanityNum": 5,
-      "quanityType": "cup(s)",
-      "price": 2.99,
-      "baseQuanity": 40
-    },
-    {
-      "id": 5,
-      "item": "jelly",
-      "quanityNum": 1,
-      "quanityType": "item(s)",
-      "price": 2.99,
-      "baseQuanity": "item"
     }
   ],
   "foodDB": [
