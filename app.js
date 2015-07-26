@@ -27,9 +27,10 @@ app.config(function($stateProvider, $urlRouterProvider){
 		url:'/grocery',
 		templateUrl:'grocery.html'
 	})
+
 })
 
-app.service('inventory', ['$http', function ($http) {
+/*app.service('inventory', ['$http', function ($http) {
 	this.getInventory = function(){
 		return $http.get('http://localhost:3000/foodItems')
 	}
@@ -47,7 +48,7 @@ app.service('inventory', ['$http', function ($http) {
 	}
 
 
-}])
+}])*/
 
 app.service('recipe', ['$http', function ($http) {
 	this.getRecipeSearch = function(terms){
@@ -112,3 +113,129 @@ app.controller('myCtrl', ['$scope', 'inventory', 'recipe', function ($scope, inv
 
 
 }])
+
+angular.module('app').controller('myCtrl', ['$scope', function ($scope) {
+	//Variables
+	var selectDay = document.getElementsByClassName("monthview-selected");
+	var selectMonthAndYear = document.getElementsByClassName("calendar-header");
+	var month;
+	var year;
+
+	//Checking For Year and Month
+	$scope.checkMonthAndYear = function(){
+		month = selectMonthAndYear[0].innerText.split(" ");
+		year = month[1];
+		//Assign Value to Month
+		switch	(month[0].toLowerCase()){
+    	case "january":
+ 		   	month = 0;
+ 		   	break;
+ 		case "february":
+ 		   	month = 1;
+ 		   	break;
+ 		case "march":
+ 		   	month = 2;
+ 		   	break;
+ 		case "april":
+ 		   	month = 3;
+ 		   	break;
+ 		case "may":
+ 		   	month = 4;
+ 		   	break;
+ 		case "june":
+ 		   	month = 5;
+ 		   	break;
+ 		case "july":
+ 		   	month = 6;
+ 		   	break;
+ 		case "august":
+ 		   	month = 7;
+ 		   	break;
+ 		case "september":
+ 		   	month = 8;
+ 		   	break;
+ 		case "october":
+ 		   	month = 9;
+ 		   	break;
+ 		case "november":
+ 		   	month = 10;
+ 		   	break;
+ 		case "december":
+ 		   	month = 11;
+ 		   	break;
+    	}
+	}
+
+	//Loading Functions
+    $scope.loadEvents = function () {
+        $scope.eventSource = createEvents();
+    };
+
+    function createEvents() {
+    	events = [];
+        return events;
+    };
+    //Breakfast Lunch and Dinner Functions
+    $scope.breakfast = function(){
+    	if(document.getElementById("foodItems").value == 0){
+    		alert("There's nothing selected!")
+    	}
+    	else{
+	    	var day = selectDay[0].innerText;
+	    	$scope.loadEvents();
+	    	$scope.checkMonthAndYear();
+	    	events.push({
+	    		title: 'Breakfast - ' + document.getElementById("foodItems").value,
+	           	startTime: new Date(year, month, day, 7, 0),
+	           	endTime: new Date(year, month, day, 8, 0),
+	           	allDay: false
+	    	});
+	    	document.getElementById("foodItems").value = "";
+    	}
+    };
+
+    $scope.lunch = function(){
+    	if(document.getElementById("foodItems").value == 0){
+    		alert("There's nothing selected!")
+    	}
+    	else{
+	    	var day = selectDay[0].innerText;
+	    	$scope.loadEvents();
+	    	$scope.checkMonthAndYear();
+	    	events.push({
+	    		title: 'Lunch - ' + document.getElementById("foodItems").value,
+	           	startTime: new Date(year, month, day, 12, 0),
+	           	endTime: new Date(year, month, day, 13, 0),
+	           	allDay: false
+	    	});
+	    	document.getElementById("foodItems").value = "";
+	    }
+    };
+
+    $scope.dinner = function(){
+    	if(document.getElementById("foodItems").value == 0){
+    		alert("There's nothing selected!")
+    	}
+    	else{
+	    	var day = selectDay[0].innerText;
+	    	$scope.loadEvents();
+	    	$scope.checkMonthAndYear();
+	    	events.push({
+	    		title: 'Dinner - ' + document.getElementById("foodItems").value,
+	           	startTime: new Date(year, month, day, 18, 0),
+	           	endTime: new Date(year, month, day, 19, 0),
+	           	allDay: false
+	    	});
+	    	document.getElementById("foodItems").value = "";
+	    }
+    };
+}]);
+
+//jQuery
+$(document).ready(function(){
+
+	$('.footerNav').click(function(){
+		$('.footerNav').removeClass('active');
+		$(this).addClass('active');
+	});
+});

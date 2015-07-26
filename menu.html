@@ -1,7 +1,15 @@
 <div class="page-header">
 	<h3>What's on the Menu?</h3>
 </div>
-<div class="calContainer" style="height: 400px;">
+<button ng-click="breakfast()">Breakfast</button>
+<button ng-click="lunch()">Lunch</button>
+<button ng-click="dinner()">Dinner</button>
+<input type="text" placeholder="Type in food here" id="foodItems">
+<div class="calContainer" style="height: 400px;" ng-init="loadEvents()">
 	<calendar calendar-mode="mode" event-source="eventSource">
+		Event selected:{{event.startTime|date:
+                'MMM/dd,yyyy,HH:mm'}} - {{event.endTime|date:'MMM/dd,yyyy,HH:mm'}}, {{event.title}}
 </div>
-
+<div id="menuButtons">
+	
+</div>
