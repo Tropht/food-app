@@ -29,6 +29,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 	})
 })
 
+//calls to db.json 
 app.service('dbItem', ['$http', function ($http) {
 	this.getMenu = function(id){
 		return $http.get('http://localhost:3000/menu/'+id)
@@ -72,20 +73,29 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 	});
 
 	$scope.unitOptions = ["item(s)", "ounce(s)", "cup(s)", "TableSpoon(s)", "teaspoon(s)"];
-	$scope.updatedItem = {};
 	$scope.newItem = {};
+	$scope.newMenuItem = {};
+	$scope.updatedItem = {};
+	$scope.updatedMenuItem = {};
+	$scope.menuSelection = "";
 	$scope.hideUpdate = true;
 
 	$scope.today = 1;
+	$scope.selectedDay = $scope.today;
 	//get original menu
 	dbItem.getMenu($scope.today).success(function(data){
 			$scope.menu = data;
+		}).error(function(data){
+			$scope.menu = {};
 		});
 	//update menu view based on selected date
 	$scope.getDailyMenu = function(selectedDate){
 		dbItem.getMenu(selectedDate).success(function(data){
 			$scope.menu = data;
+		}).error(function(data){
+			$scope.menu = {};
 		});
+		$scope.selectedDay = selectedDate;
 	};
 	
 	//search items
@@ -103,18 +113,99 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 			}
 		});
 	};	
+
+	//creating, and updating items in the Menu
+	$scope.createMenu = function(menu, menuSelection){
+		console.log("called createMenu function for creating new item in "+ menuSelection);
+		if($scope.newItem.quanityType != "item(s)"){
+			$scope.newItem.quanityNum = $scope.getBaseQuantity($scope.newItem);
+			$scope.newItem.quanityType = "ounce(s)";
+		}
+		if(menu.length < 1){
+			console.log("This menu is empty");
+			$scope.newMenuItem.id = $scope.selectedDay;
+		} else{
+			console.log("getting old items from the menu");
+			$scope.newMenuItem = menu;
+		}
+		switch(menuSelection){
+			case "breakfast":
+				console.log("calling breakfast");
+				$scope.newMenuItem.breakfast.push($scope.newItem);
+				break;
+			case "lunch":
+				console.log("calling lunch");
+				$scope.newMenuItem.lunch.push($scope.newItem);
+				break;
+			case "dinner":
+				console.log("calling dinner");
+				$scope.newMenuItem.dinner.push($scope.newItem);
+				break;
+			default:
+				console.log("Error, no option selected");
+
+		}
+		console.log("ready to add new itmes to DB");
+		dbItem.createdbItem("menu", $scope.newMenuItem);
+		$scope.newItem = {};
+		$scope.newMenuItem = {};
+	};
+
+	$scope.updateMenu = function(menu, id){
+		console.log("called menu ID # " + menu.id + " update function for " + $scope.menuSelection);
+		$scope.updatedMenuItem = menu;
+		if($scope.updatedItem.quanityType != "item(s)"){
+			$scope.updatedItem.quanityNum = $scope.getBaseQuantity($scope.updatedItem);
+			$scope.newItem.quanityType = "ounce(s)";
+		}
+		switch($scope.menuSelection){
+			case "breakfast":
+				for(var i = 0; i < $scope.updatedMenuItem.breakfast.length; i++){
+					if($scope.updatedMenuItem.breakfast[i].id == id){
+						$scope.updatedMenuItem.breakfast[i] = $scope.updatedItem;
+						break;
+					}
+				}
+				break;
+			case "lunch":
+				for(var i = 0; i < $scope.updatedMenuItem.lunch.length; i++){
+					if($scope.updatedMenuItem.lunch[i].id == id){
+						$scope.updatedMenuItem.lunch[i] = $scope.updatedItem;
+						break;
+					}
+				}
+				break;
+			case "dinner":
+				for(var i = 0; i < $scope.updatedMenuItem.dinner.length; i++){
+					if($scope.updatedMenuItem.dinner[i].id == id){
+						$scope.updatedMenuItem.dinner[i] = $scope.updatedItem;
+						break;
+					}
+				}
+		}
+		dbItem.updatedbItem("menu", $scope.updatedMenuItem, $scope.selectedDay);
+		$scope.updatedItem = {};
+		$scope.updatedMenuItem = {};
+		$scope.hideUpdate = true;
+	};
 	
-	//creating, updating, and deleting items in the dbItem
+	//creating, updating, and deleting items in Kitchen & Grocery
 	$scope.create = function(list){
 		console.log("called create function for " + list);
-		$scope.newItem.baseQuanity = $scope.getBaseQuantity($scope.newItem);
+		if($scope.newItem.quanityType != "item(s)"){
+			$scope.newItem.quanityNum = $scope.getBaseQuantity($scope.newItem);
+			$scope.newItem.quanityType = "ounce(s)";
+		}
 		dbItem.createdbItem(list, $scope.newItem);
 		$scope.newItem = {};
 	};
 
 	$scope.update = function(list, id){
 		console.log("called update function for " + list);
-		$scope.updatedItem.baseQuanity = $scope.getBaseQuantity($scope.updatedItem);
+		if($scope.updatedItem.quanityType != "item(s)"){
+			$scope.newItem.quanityNum = $scope.getBaseQuantity($scope.updatedItem);
+			$scope.newItem.quanityType = "ounce(s)";
+		}
 		dbItem.updatedbItem(list, $scope.updatedItem, id);
 		$scope.updatedItem = {};
 		$scope.hideUpdate = true;
@@ -125,6 +216,7 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 		dbItem.deletedbItem(list, id);
 	};
 
+	// Hiding the update fields until selected, then hiding the add option
 	$scope.uHide = function(item){
 		if($scope.hideUpdate == true){
 			$scope.hideUpdate = false;
@@ -139,9 +231,6 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 
 	$scope.getBaseQuantity = function(item){
 		switch(item.quanityType){
-			case "ounce(s)":
-				return item.quanityNum;
-				break;
 			case "pound(s)":
 				return (item.quanityNum * 16);
 				break;
@@ -153,8 +242,8 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 				break;
 			case "teaspoon(s)":
 				return (item.quanityNum * .5 /3 );
-			default:
-				return "item";
+			default: //if ounce(s) or not listed
+				return item.quanityNum;
 		}
 	};
 
