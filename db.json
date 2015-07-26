@@ -6,7 +6,9 @@
       "quanityNum": 12,
       "quanityType": "item(s)",
       "baseQuanity": "item",
-      "price": 1.99
+      "price": 1.99,
+      "menuQuanityNum": 0,
+      "menuQuanityType": "item(s)"
     },
     {
       "id": 2,
@@ -95,18 +97,20 @@
     {
       "id": 1,
       "item": "pickles",
-      "quanityNum": 5,
+      "quanityNum": 3,
       "quanityType": "item(s)",
       "price": 1.99,
       "baseQuanity": "item",
-      "go": "Grocery"
+      "go": "Grocery",
+      "fromMenu": true
     },
     {
       "id": 2,
       "item": "something",
       "quanityNum": 1,
       "quanityType": "item(s)",
-      "baseQuanity": "item"
+      "baseQuanity": "item",
+      "fromMenu": true
     },
     {
       "go": "Grocery",
@@ -139,22 +143,50 @@
       "id": 1,
       "breakfast": [
         {
-          "id": 20,
+          "id": 17,
           "item": "pancakes",
-          "quanityNum": 8,
-          "quanityType": "ounce(s)",
+          "quanityNum": "5",
+          "quanityType": "item(s)",
           "price": 1.99
         },
         {
-          "id": 49,
-          "item": "orange juice",
-          "quanityNum": 16,
+          "id": 99,
+          "item": "beer",
+          "quanityNum": "99",
+          "quanityType": "item(s)"
+        }
+      ],
+      "lunch": [
+        {
+          "id": 18,
+          "item": "test 2",
+          "quanityNum": "8",
           "quanityType": "ounce(s)",
           "price": 1.99
         }
       ],
-      "lunch": [],
-      "dinner": []
+      "dinner": [
+        {
+          "id": 22,
+          "item": "steak",
+          "quanityNum": 6,
+          "quanityType": "ounce(s)",
+          "price": 7.99
+        },
+        {
+          "id": 44,
+          "item": "23",
+          "quanityNum": 11.5,
+          "quanityType": "TableSpoon(s)",
+          "price": "23"
+        },
+        {
+          "id": 33,
+          "item": "crepes",
+          "quanityNum": "2",
+          "quanityType": "item(s)"
+        }
+      ]
     },
     {
       "id": 2,

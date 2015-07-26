@@ -29,7 +29,7 @@
                 <td class="input-edit"><button class="btn btn-success" ng-click="update('groceryList', updatedItem.id)">Update</button></td>
             </tr>
 			<tr ng-repeat="items in groceries | orderBy: filterBy">
-			    <td class="special">{{ items.go }}</td>
+			    <td class="special">{{ items.go }}<span ng-hide="!items.fromMenu"> ** </span></td>
 			    <td>#{{ items.id }} {{ items.item }}</td>
 			    <td>{{ items.quanityNum }} {{ items.quanityType }}</td>
 			    <td> ${{ items.price }}</td>
