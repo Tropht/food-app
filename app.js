@@ -86,14 +86,20 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 	dbItem.getMenu($scope.today).success(function(data){
 			$scope.menu = data;
 		}).error(function(data){
-			$scope.menu = {};
+			$scope.menu.id = $scope.today;
+			$scope.menu.breakfast = [];
+			$scope.menu.lunch = [];
+			$scope.menu.dinner = [];
 		});
 	//update menu view based on selected date
 	$scope.getDailyMenu = function(selectedDate){
 		dbItem.getMenu(selectedDate).success(function(data){
 			$scope.menu = data;
 		}).error(function(data){
-			$scope.menu = {};
+			$scope.menu.id = selectedDate;
+			$scope.menu.breakfast = [];
+			$scope.menu.lunch = [];
+			$scope.menu.dinner = [];
 		});
 		$scope.selectedDay = selectedDate;
 	};
@@ -121,13 +127,7 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 			$scope.newItem.quanityNum = $scope.getBaseQuantity($scope.newItem);
 			$scope.newItem.quanityType = "ounce(s)";
 		}
-		if(menu.length < 1){
-			console.log("This menu is empty");
-			$scope.newMenuItem.id = $scope.selectedDay;
-		} else{
-			console.log("getting old items from the menu");
-			$scope.newMenuItem = menu;
-		}
+		$scope.newMenuItem = menu;
 		switch(menuSelection){
 			case "breakfast":
 				console.log("calling breakfast");
@@ -143,7 +143,6 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 				break;
 			default:
 				console.log("Error, no option selected");
-
 		}
 		console.log("ready to add new itmes to DB");
 		dbItem.createdbItem("menu", $scope.newMenuItem);
@@ -242,7 +241,7 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 				break;
 			case "teaspoon(s)":
 				return (item.quanityNum * .5 /3 );
-			default: //if ounce(s) or not listed
+			default: //if ounce(s) or type not listed
 				return item.quanityNum;
 		}
 	};
