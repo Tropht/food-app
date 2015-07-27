@@ -1,6 +1,96 @@
 @media only screen and (min-width: 1241px) {
+html, body{
+	height: 100%;
+}
 body{
-	background-color: #F6F9FD;
+	background-color: #f7fcf7;
+}
+h4{
+	margin: 0px;
+}
+.panel-heading{
+	background-color: #cbffcc;
+}
+
+/* Content */
+	/* Overall Header */
+header{
+	width: 100%;
+	height: 100px;
+	background-image: url('../img/headerLargeGreen.jpg');
+	text-align: right;
+}
+header h2{
+	padding: 25px 5px 0 0;
+	margin: 0px;
+	color: white;
+}
+	/* Container */
+.container{
+	background-color: #FFFFFF;
+	margin: auto;
+	width: 1241px;
+	height: 85%;
+	border-right: 1px solid #EEEEEE;
+	border-left: 1px solid #EEEEEE;
+}
+	/* Each Pages Header */
+
+.page-header{
+	margin: 0px;
+	margin-top: -55px;
+	border: none;
+}
+.page-header h3{
+	color: white;
+}
+
+/* Footer */
+footer{
+	position: absolute;
+	margin: auto;
+	bottom: 0px;
+}
+	/*Footer Navigation */
+.active{
+	text-align: center;
+	width: 100px;
+}
+
+/* Menu Page */
+.monthview-eventdetail-timecolumn{
+	display: none;
+}
+.calContainer{
+	width: 90%;
+	margin: auto;
+	overflow-x: hidden;
+	padding: 5px;
+	overflow: auto;
+}
+
+/* Grocery List Page */
+.paper{
+	float: left;
+	width: 40%;
+	margin-left: 25px;
+}
+.paperHead{
+	height: 10px;
+	background-image: url('../img/notepadTop.png');
+}
+.paper section{
+	background-color: #FFF899;
+	height: 450px;
+	overflow: scroll;
+}
+.paperBottom{
+	height: 10px;
+	background-image: url('../img/notepadBottom.png');
+}
+.line{
+	height: 25px;
+	border-bottom: 1px solid blue;
 }
 
 }

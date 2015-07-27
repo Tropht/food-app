@@ -5,6 +5,12 @@ html, body{
 body{
 	background-color: #F6F9FD;
 }
+.panel-heading{
+	background-color: #cbffcc;
+}
+
+/* Content */
+	/* Overall Header */
 header{
 	width: 100%;
 	height: 100px;
@@ -16,23 +22,46 @@ header h2{
 	margin: 0px;
 	color: white;
 }
-/* Content */
-
+	/* Container */
 .container{
 	background-color: #FFFFFF;
 	margin: auto;
 	width: 100%;
-	height: 100%;
+	height: 80%;
 }
-/* Header */
+	/* Each Pages Header */
+
 .page-header{
-	float: left;
+	margin: 0px;
+	margin-top: -55px;
+	border: none;
 }
+.page-header h3{
+	color: white;
+}
+
 /* Footer */
 footer{
 	position: absolute;
 	margin: auto;
 	bottom: 0px;
+}
+	/*Footer Navigation */
+.active{
+	text-align: center;
+	width: 100px;
+}
+
+/* Menu Page */
+.monthview-eventdetail-timecolumn{
+	display: none;
+}
+.calContainer{
+	width: 90%;
+	margin: auto;
+	overflow-x: hidden;
+	padding: 5px;
+	overflow: auto;
 }
 
 }

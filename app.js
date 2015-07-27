@@ -114,10 +114,12 @@ app.controller('myCtrl', ['$scope', 'inventory', 'recipe', function ($scope, inv
 
 }])
 
+//Calendar Javascript
 angular.module('app').controller('myCtrl', ['$scope', function ($scope) {
 	//Variables
 	var selectDay = document.getElementsByClassName("monthview-selected");
 	var selectMonthAndYear = document.getElementsByClassName("calendar-header");
+	var events = [];
 	var month;
 	var year;
 
@@ -229,6 +231,9 @@ angular.module('app').controller('myCtrl', ['$scope', function ($scope) {
 	    	document.getElementById("foodItems").value = "";
 	    }
     };
+    $scope.test = function(){
+    	console.log(events);
+    }
 }]);
 
 //jQuery
