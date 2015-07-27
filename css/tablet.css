@@ -55,7 +55,7 @@ header h2{
 /* Footer */
 footer{
 	position: absolute;
-	margin: -16px;
+	margin-left: -16px;
 	width: 100%;
 	background-color: #FFFFFF;
 	border-right: 1px solid #EEEEEE;
@@ -78,11 +78,22 @@ footer{
 	background-color: #4292b7;
 }
 .calContainer{
-	width: 90%;
+	float: left;
+	width: 50%;
 	margin: auto;
 	overflow-x: hidden;
 	padding: 5px;
 	overflow: auto;
+}
+.ng-isolate-scope{
+	width: 96%;
+}
+.menuButtons{
+	width: 45%;
+	float: right;
+}
+.phoneButtons{
+	display: none;
 }
 
 /* Grocery List Page */

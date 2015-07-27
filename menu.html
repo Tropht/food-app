@@ -1,16 +1,22 @@
 <div class="page-header">
 	<h3>What's on the Menu?</h3>
 </div>
-<button ng-click="breakfast()">Breakfast</button>
-<button ng-click="lunch()">Lunch</button>
-<button ng-click="dinner()">Dinner</button>
-<button ng-click="test()">Test</button>
-<input type="text" placeholder="Type in food here" id="foodItems">
+<div class="panel panel-default menuButtons">
+	<div class="panel-heading">
+		<h4>Add food to your menu</h4>
+	</div>
+	<div class="panel-body">
+		<input type="text" placeholder="Type in food here" id="foodItems">
+		<button ng-click="breakfast()">Breakfast</button>
+		<button ng-click="lunch()">Lunch</button>
+		<button ng-click="dinner()">Dinner</button>
+		<button ng-click="test()">Test</button>
+	</div>
+</div>
+
 <div class="calContainer" style="height: 400px;" ng-init="loadEvents()">
 	<calendar calendar-mode="mode" event-source="eventSource">
 		Event selected:{{event.startTime|date:
                 'MMM/dd,yyyy,HH:mm'}} - {{event.endTime|date:'MMM/dd,yyyy,HH:mm'}}, {{event.title}}
 </div>
-<div id="menuButtons">
-	
-</div>
+

@@ -237,9 +237,6 @@ angular.module('app').controller('myCtrl', ['$scope', function ($scope) {
     };
 
     //Grocery List
-    $scope.seeList = function(){
-    	console.log($scope.list);
-    };
 	$scope.addToGroceryList = function(){
 		$scope.list.push({
 			body: document.getElementById("groceryItem").value
