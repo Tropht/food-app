@@ -6,12 +6,20 @@ body{
 	background-color: #f7fcf7;
 }
 h4{
+	color: grey;
 	margin: 0px;
 }
-.panel-heading{
-	background-color: #cbffcc;
+.panel{
+	text-align: right;
+	width: 45%;
+	float: left;
+	margin: 20px;
 }
-
+.panel-heading{
+	background-image: url('../img/sectionHeaderGreen.jpg');
+	background-repeat: no-repeat;
+	background-color: #e8fce8 !important;
+}
 /* Content */
 	/* Overall Header */
 header{
@@ -48,7 +56,10 @@ header h2{
 /* Footer */
 footer{
 	position: absolute;
-	margin: auto;
+	margin: -16px;
+	width: 1241px;
+	background-color: #FFFFFF;
+	border-right: 1px solid #EEEEEE;
 	bottom: 0px;
 }
 	/*Footer Navigation */
@@ -60,6 +71,12 @@ footer{
 /* Menu Page */
 .monthview-eventdetail-timecolumn{
 	display: none;
+}
+.monthview-selected{
+	background-color: #9ed39e;
+}
+.monthview-primary-with-event{
+	background-color: #4292b7;
 }
 .calContainer{
 	width: 90%;
@@ -80,6 +97,7 @@ footer{
 	background-image: url('../img/notepadTop.png');
 }
 .paper section{
+	background-image: url('../img/groceryPaper.png');
 	background-color: #FFF899;
 	height: 450px;
 	overflow: scroll;
@@ -89,8 +107,10 @@ footer{
 	background-image: url('../img/notepadBottom.png');
 }
 .line{
-	height: 25px;
-	border-bottom: 1px solid blue;
+	height: 26px;
+	padding-left: 10px;
+	padding-top: 3px;
+	background-image: url('../img/groceryPaper.png');
 }
 
 }

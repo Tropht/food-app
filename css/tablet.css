@@ -5,8 +5,20 @@ html, body{
 body{
 	background-color: #F6F9FD;
 }
+h4{
+	color: grey;
+	margin: 0px;
+}
+.panel{
+	text-align: right;
+	width: 45%;
+	float: left;
+	margin: 20px;
+}
 .panel-heading{
-	background-color: #cbffcc;
+	background-image: url('../img/sectionHeaderGreen.jpg');
+	background-repeat: no-repeat;
+	background-color: #e8fce8!important;
 }
 
 /* Content */
@@ -27,7 +39,7 @@ header h2{
 	background-color: #FFFFFF;
 	margin: auto;
 	width: 100%;
-	height: 80%;
+	height: 85%;
 }
 	/* Each Pages Header */
 
@@ -43,7 +55,10 @@ header h2{
 /* Footer */
 footer{
 	position: absolute;
-	margin: auto;
+	margin: -16px;
+	width: 100%;
+	background-color: #FFFFFF;
+	border-right: 1px solid #EEEEEE;
 	bottom: 0px;
 }
 	/*Footer Navigation */
@@ -56,12 +71,45 @@ footer{
 .monthview-eventdetail-timecolumn{
 	display: none;
 }
+.monthview-selected{
+	background-color: #9ed39e;
+}
+.monthview-primary-with-event{
+	background-color: #4292b7;
+}
 .calContainer{
 	width: 90%;
 	margin: auto;
 	overflow-x: hidden;
 	padding: 5px;
 	overflow: auto;
+}
+
+/* Grocery List Page */
+.paper{
+	float: left;
+	width: 40%;
+	margin-left: 25px;
+}
+.paperHead{
+	height: 10px;
+	background-image: url('../img/notepadTop.png');
+}
+.paper section{
+	background-image: url('../img/groceryPaper.png');
+	background-color: #FFF899;
+	height: 450px;
+	overflow: scroll;
+}
+.paperBottom{
+	height: 10px;
+	background-image: url('../img/notepadBottom.png');
+}
+.line{
+	height: 26px;
+	padding-left: 10px;
+	padding-top: 3px;
+	background-image: url('../img/groceryPaper.png');
 }
 
 }

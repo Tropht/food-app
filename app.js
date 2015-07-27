@@ -114,7 +114,7 @@ app.controller('myCtrl', ['$scope', 'inventory', 'recipe', function ($scope, inv
 
 }])
 
-//Calendar Javascript
+//Calendar Javascript and Grocery List
 angular.module('app').controller('myCtrl', ['$scope', function ($scope) {
 	//Variables
 	var selectDay = document.getElementsByClassName("monthview-selected");
@@ -177,6 +177,7 @@ angular.module('app').controller('myCtrl', ['$scope', function ($scope) {
     	events = [];
         return events;
     };
+
     //Breakfast Lunch and Dinner Functions
     $scope.breakfast = function(){
     	if(document.getElementById("foodItems").value == 0){
@@ -233,7 +234,23 @@ angular.module('app').controller('myCtrl', ['$scope', function ($scope) {
     };
     $scope.test = function(){
     	console.log(events);
-    }
+    };
+
+    //Grocery List
+    $scope.seeList = function(){
+    	console.log($scope.list);
+    };
+	$scope.addToGroceryList = function(){
+		$scope.list.push({
+			body: document.getElementById("groceryItem").value
+		});
+		document.getElementById("groceryItem").value = "";
+	}
+	$scope.list = [
+		{
+			body: 'Things to get...'
+		}
+	];
 }]);
 
 //jQuery

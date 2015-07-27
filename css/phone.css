@@ -18,8 +18,19 @@ header h2{
 	margin: 0px;
 	color: white;
 }
+h4{
+	margin: 0px;
+	color: grey;
+}
+.panel{
+	text-align: right;
+	width: 90%;
+	margin: 20px auto;
+}
 .panel-heading{
-	background-color: #cbffcc;
+	background-image: url('../img/sectionHeaderGreen.jpg');
+	background-repeat: no-repeat;
+	background-color: #e8fce8!important;
 }
 	/* Content */
 .container{
@@ -81,6 +92,12 @@ footer ul li a{
 .monthview-eventdetail-timecolumn{
 	display: none;
 }
+.monthview-selected{
+	background-color: #9ed39e;
+}
+.monthview-primary-with-event{
+	background-color: #4292b7;
+}
 
 
 /* Recipes Page */
@@ -104,5 +121,30 @@ footer ul li a{
 
 }
 
+/* Grocery List Page */
+.paper{
+	width: 80%;
+	margin: auto;
+}
+.paperHead{
+	height: 10px;
+	background-image: url('../img/notepadTop.png');
+}
+.paper section{
+	background-image: url('../img/groceryPaper.png');
+	background-color: #FFF899;
+	height: 400px;
+	overflow: scroll;
+}
+.paperBottom{
+	height: 10px;
+	background-image: url('../img/notepadBottom.png');
+}
+.line{
+	height: 26px;
+	padding-left: 10px;
+	padding-top: 3px;
+	background-image: url('../img/groceryPaper.png');
+}
 
 }

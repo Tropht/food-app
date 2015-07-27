@@ -4,62 +4,17 @@
 <div class="paper">
 	<div class="paperHead"></div>
 	<section class="paperContent">
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
+		<div class="line" ng-repeat="items in list"><h4>{{ items.body }}</h4></div>
 	</section>
 	<div class="paperBottom"></div>
-	
 </div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4>Add to the list!</h4>
+	</div>
+	<div class="panel-body">
+		<input type="text" ng-model="content" id="groceryItem" placeholder="Type item here">
+		<button ng-click="addToGroceryList()">ADD</button>
+	</div>
+</div>
+<button ng-click="seeList()">test</button>
