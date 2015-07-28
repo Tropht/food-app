@@ -1,4 +1,4 @@
-@media only screen and (max-width: 480px) {
+
 /*Main Page */
 html, body {margin:0;
 	padding:0;
@@ -14,7 +14,7 @@ body{
 	background-color: #FFFFFF;
 	margin: auto;
 	height: 100%;
-	width: 320px;
+	width: 970px;
 	box-shadow: 0px 0px 10px #888888;
 }
 
@@ -29,20 +29,21 @@ footer ul li{
 	bAackground-color: #6E9FDE;
 }
 
+.special{
+	font-style: italic;
+	font-size: 80%;
+}
 /* Recipes Page */
 .showResults{
-	height: 90%;
-	overflow: auto;
+	height: 400px;
+	overflow: scroll;
 }
 /*kitchen page*/
-#listKitchen, #updateKitchen, #addItemsToKitchen{
+#listKitchen, #updateItems, #addItems{
 	display: inline-block;
 	vertical-align: top;
 }
 
-#updateKitchen, #addItemsToKitchen{
-
-}
-
-
+.input-edit{
+	background-color: #cccccc;
 }
