@@ -174,7 +174,7 @@ angular.module('app').controller('myCtrl', ['$scope', function ($scope) {
     };
 
     function createEvents() {
-    	events;
+    	events = [];
         return events;
     };
 
