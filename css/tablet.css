@@ -5,6 +5,10 @@ html, body{
 body{
 	background-color: #F6F9FD;
 }
+table, th, td, tr{
+	padding: 0px;
+	margin: 0px;
+}
 h4{
 	color: grey;
 	margin: 0px;
@@ -88,12 +92,23 @@ footer{
 .ng-isolate-scope{
 	width: 96%;
 }
-.menuButtons{
-	width: 45%;
-	float: right;
+#listmenu{
+	float: left;
+	height: 150px;
+	overflow: scroll;
+	width: 40%;
 }
-.phoneButtons{
-	display: none;
+#addItems{
+	float: left;
+	width: 40%;
+}
+
+/* Ktichen */
+#listkitchenItems{
+	width: 45%;
+	height: 450px;
+	overflow: scroll;
+	float: left;
 }
 
 /* Grocery List Page */
@@ -106,7 +121,10 @@ footer{
 	height: 10px;
 	background-image: url('../img/notepadTop.png');
 }
-.paper section{
+.table{
+	margin: 0px;
+}
+.paperContent{
 	background-image: url('../img/groceryPaper.png');
 	background-color: #FFF899;
 	height: 450px;
@@ -120,7 +138,7 @@ footer{
 	height: 26px;
 	padding-left: 10px;
 	padding-top: 3px;
-	background-image: url('../img/groceryPaper.png');
+	bAackground-image: url('../img/groceryPaper.png');
 }
 
 }

@@ -47,14 +47,6 @@
       "price": 5.99
     },
     {
-      "id": 7,
-      "item": "coconut milk",
-      "quanityNum": 2,
-      "quanityType": "item(s)",
-      "baseQuanity": "item",
-      "price": 0.98
-    },
-    {
       "id": 8,
       "item": "meat pasta sauce",
       "quanityNum": 1,

@@ -89,11 +89,22 @@ footer{
 .ng-isolate-scope{
 	width: 96%;
 }
-.menuButtons{
-	float: right;
+#listmenu{
+	float: left;
+	height: 150px;
+	overflow: scroll;
+	width: 40%;
 }
-.phoneButtons{
-	display: none;
+#addItems{
+
+}
+
+/* Kitchen */
+#listkitchenItems{
+	width: 45%;
+	height: 450px;
+	overflow: scroll;
+	float: left;
 }
 
 /* Grocery List Page */
