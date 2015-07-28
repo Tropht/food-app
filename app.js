@@ -307,40 +307,40 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 		//Assign Value to Month
 		switch	(month[0].toLowerCase()){
     	case "january":
- 		   	month = 0;
+ 		   	month = "01";
  		   	break;
  		case "february":
- 		   	month = 1;
+ 		   	month = "02";
  		   	break;
  		case "march":
- 		   	month = 2;
+ 		   	month = "03";
  		   	break;
  		case "april":
- 		   	month = 3;
+ 		   	month = "04";
  		   	break;
  		case "may":
- 		   	month = 4;
+ 		   	month = "05";
  		   	break;
  		case "june":
- 		   	month = 5;
+ 		   	month = "06";
  		   	break;
  		case "july":
- 		   	month = 6;
+ 		   	month = "07";
  		   	break;
  		case "august":
- 		   	month = 7;
+ 		   	month = "08";
  		   	break;
  		case "september":
- 		   	month = 8;
+ 		   	month = "09";
  		   	break;
  		case "october":
- 		   	month = 9;
+ 		   	month = "10";
  		   	break;
  		case "november":
- 		   	month = 10;
+ 		   	month = "11";
  		   	break;
  		case "december":
- 		   	month = 11;
+ 		   	month = "12";
  		   	break;
     	}
 	}
@@ -426,10 +426,6 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 		}
 	];
 
-}])
-
-
-
 //jQuery
 $(document).ready(function(){
 
@@ -437,6 +433,15 @@ $(document).ready(function(){
 		$('.footerNav').removeClass('active');
 		$(this).addClass('active');
 	});
+	$(document).on('click', 'td', function(){
+		var theDate;
+		$scope.checkMonthAndYear();
+		theDate = parseInt(year + month + selectDay[0].innerText);
+		console.log(theDate);
+	})
 });
 
 
+
+}])
+/////////////////////

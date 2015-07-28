@@ -147,6 +147,24 @@ footer{
 	overflow: scroll;
 	float: left;
 }
+.kitchenTable .panel-heading{
+	height: 40px;
+}
+.kitchenHeaderList{
+	mAargin: 0 15px;
+	width: 25%;
+	float: left;
+}
+.kitchenList{
+	padding: 10px 15px;
+}
+.kitchenItem{
+	margin: 5px 0px;
+	padding: 5px 0 0 5px;
+	width: 25%;
+	height: 40px;
+	float: left;
+}
 
 /* Grocery List Page */
 .table{
