@@ -13,6 +13,12 @@ h4{
 	color: grey;
 	margin: 0px;
 }
+h5{
+	color: grey;
+	margin: 0px;
+	font-size: 14px;
+	font-family: arial;
+}
 .panel{
 	text-align: right;
 	width: 45%;
@@ -84,25 +90,56 @@ footer{
 }
 .calContainer{
 	float: left;
-	width: 50%;
+	width: 80%;
 	margin: auto;
 	overflow-x: hidden;
 	padding: 5px;
 	overflow: auto;
 }
+.scrollable{
+	display: none;
+}
 .ng-isolate-scope{
 	width: 96%;
 }
+.monthview-datetable{
+	height: 300px;
+}
 #listmenu{
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #EEEEEE;
 	float: left;
-	height: 150px;
+	height: 480px;
 	overflow: scroll;
-	width: 40%;
+	width: 60%;
 }
-#addItems{
-
+#theMenu{
+	margin: auto;
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #EEEEEE;
 }
-
+.table{
+	width: 80%;
+	margin: auto;
+}
+.tableHeader{
+	padding: 10px;
+	background-image: url('../img/sectionHeaderGreen.jpg');
+	background-repeat: no-repeat;
+	background-color: #e8fce8;
+	text-align: right;
+}
+.repeatedItems{
+	background-color: #efefef;
+	padding-top: 5px;
+	margin: auto;
+	height: 25px;
+	width: 100%;
+}
+.repeatedItems div{
+	margin: 0 20px;
+	float: left;
+}
 /* Kitchen */
 #listkitchenItems{
 	width: 45%;

@@ -2,63 +2,79 @@
 	<h3>What's on the menu?</h3>
 </div>
 
-<div class="calContainer" style="height: 400px;" ng-init="loadEvents()">
+<section id="listmenu">
+    <div class="calContainer" style="height: 400px;" ng-init="loadEvents()">
     <calendar calendar-mode="mode" event-source="eventSource">
         Event selected:{{event.startTime|date:
                 'MMM/dd,yyyy,HH:mm'}} - {{event.endTime|date:'MMM/dd,yyyy,HH:mm'}}, {{event.title}}
-</div>
-
-<section id="listmenu">
-        <table class="table">
-            <tr>
-                <td colspan="4">
-                    <label for="date">select date</label>
-                    <input class="text" name="date" ng-model="selectedDay">
-                    <button class="btn btn-success" ng-click="getDailyMenu(selectedDay)">Update</button>
-                </td>
-            </tr>
-            <tr ng-hide="hideUpdate">
-                <td class="input-edit">
-                    <input class="form-input" type="text" name="item" ng-model="updatedItem.item"></td>
-                <td class="input-edit"><label for="quanityNum">Quanity:</label>
-                    <input class="form-input" type="text" name="quanityNum" ng-model="updatedItem.quanityNum">
-                    <select name="quanityType" id="select" ng-model="updatedItem.quanityType">
-                    <option ng-repeat="units in unitOptions">{{ units }}</option></td>
-                <td class="input-edit"> <label for="price">price: $</label>
-                    <input class="form-input" type="text" name="price" ng-model="updatedItem.price"></td>
-                <td class="input-edit"><button class="btn btn-success" ng-click="updateMenu(menu, updatedItem.id)">Update</button></td>
-            </tr>
-            <tr>
-                <td colspan="4" >Breakfast</td>
-            </tr>
-            <tr ng-repeat="items in menu.breakfast">
-                <td>#{{ items.id }} {{ items.item }}</td>
-                <td>{{ items.quanityNum }} {{ items.quanityType }}</td>
-                <td> ${{ items.price }}</td>
-                <td><a href="" class="edit" ng-click="uHide(items); menuSelection='breakfast'">Edit</a>
-                <span class="delete glyphicon glyphicon-trash" ng-click="delete('menu', items.id)"></span></td>
-            </tr>
-            <tr>
-        		<td colspan="4" >Lunch</td>
-        	</tr>
-            <tr ng-repeat="items in menu.lunch">
-                <td>#{{ items.id }} {{ items.item }}</td>
-                <td>{{ items.quanityNum }} {{ items.quanityType }}</td>
-                <td> ${{ items.price }}</td>
-                <td><a href="" class="edit" ng-click="uHide(items); menuSelection='lunch'">Edit</a>
-                <span class="delete glyphicon glyphicon-trash" ng-click="delete('menu', items.id)"></span></td>
-            </tr>
-            <tr>
-        		<td colspan="4" >Dinner</td>
-        	</tr>
-            <tr ng-repeat="items in menu.dinner">
-                <td>#{{ items.id }} {{ items.item }}</td>
-                <td>{{ items.quanityNum }} {{ items.quanityType }}</td>
-                <td> ${{ items.price }}</td>
-                <td><a href="" class="edit" ng-click="uHide(items); menuSelection='dinner'">Edit</a>
-                <span class="delete glyphicon glyphicon-trash" ng-click="delete('menu', items.id)"></span></td>
-            </tr>
-        </table>
+    </div>
+        <div class="table">
+            <section id="updater">
+                <div>
+                    <div>
+                        <label for="date">select date</label>
+                        <input class="text" name="date" ng-model="selectedDay">
+                        <button class="btn btn-success" ng-click="getDailyMenu(selectedDay)">Update</button>
+                    </div>
+                </div>
+                <div ng-hide="hideUpdate">
+                    <div class="input-edit">
+                        <input class="form-input" type="text" name="item" ng-model="updatedItem.item">
+                    </div>
+                    <div class="input-edit">
+                        <label for="quanityNum">Quanity:</label>
+                        <input class="form-input" type="text" name="quanityNum" ng-model="updatedItem.quanityNum">
+                        <select name="quanityType" id="select" ng-model="updatedItem.quanityType">
+                        <option ng-repeat="units in unitOptions">{{ units }}</option>
+                    </div>
+                    <div class="input-edit">
+                        <label for="price">price: $</label>
+                        <input class="form-input" type="text" name="price" ng-model="updatedItem.price">
+                    </div>
+                    <div class="input-edit">
+                        <button class="btn btn-success" ng-click="updateMenu(menu, updatedItem.id)">Update</button>
+                    </div>
+                </div>
+            </section>
+            <section id="theMenu">
+                <div class="tableHeader">
+                    <h4>Breakfast</h4>
+                </div>
+                <div ng-repeat="items in menu.breakfast" class="repeatedItems">
+                    <div><h5>#{{ items.id }} {{ items.item }}</h5></div>
+                    <div><h5>{{ items.quanityNum }} {{ items.quanityType }}</h5></div>
+                    <div><h5>${{ items.price }}</h5></div>
+                    <div>
+                        <a href="" class="edit" ng-click="uHide(items); menuSelection='breakfast'">Edit</a>
+                        <span class="delete glyphicon glyphicon-trash" ng-click="delete('menu', items.id)"></span>
+                    </div>
+                </div>
+            	<div class="tableHeader">
+                    <h4>Lunch</h4>
+                </div>
+                <div ng-repeat="items in menu.lunch" class="repeatedItems">
+                    <div><h5>#{{ items.id }} {{ items.item }}</h5></div>
+                    <div><h5>{{ items.quanityNum }} {{ items.quanityType }}</h5></div>
+                    <div><h5>${{ items.price }}</h5></div>
+                    <div>
+                        <a href="" class="edit" ng-click="uHide(items); menuSelection='lunch'">Edit</a>
+                        <span class="delete glyphicon glyphicon-trash" ng-click="delete('menu', items.id)"></span>
+                    </div>
+                </div>
+            	<div class="tableHeader">
+                    <h4>Dinner</h4>
+                </div>
+                <div ng-repeat="items in menu.dinner" class="repeatedItems">
+                    <div><h5>#{{ items.id }} {{ items.item }}</h5></div>
+                    <div><h5>{{ items.quanityNum }} {{ items.quanityType }}</h5></div>
+                    <div><h5> ${{ items.price }}</h5></div>
+                    <div>
+                        <a href="" class="edit" ng-click="uHide(items); menuSelection='dinner'">Edit</a>
+                        <span class="delete glyphicon glyphicon-trash" ng-click="delete('menu', items.id)"></span>
+                    </div>
+                </div>
+            </section>
+        </div>
     </section>
 
 
