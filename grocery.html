@@ -4,40 +4,47 @@
     </div>
     <section id="listGroceries" class="paper">
     	<div class="paperHead"></div>
-        <table class="table paperContent">
-			<tr class="line">
-			    <th> <a ng-click="setFilter('type')">Type </a></th>
-			    <th> <a ng-click="setFilter('item')">Item</a></th>
-			    <th> <a ng-click="setFilter('quanity')">Quanity</a></th>
-			    <th> <a ng-click="setFilter('price')">Price</a></th>
-			    <th> Edit</th>
-			</tr>
-            <tr ng-hide="hideUpdate">
-                <td class="input-edit">
+        <div class="paperContent">
+			<div class="line">
+			    <a class="groceryHeaderList" ng-click="setFilter('type')"><h4>Type</h4></a>
+                <a class="groceryHeaderList" ng-click="setFilter('item')"><h4>Item</h4></a>
+                <a class="groceryHeaderList" ng-click="setFilter('quanity')"><h4>Quantity</h4></a>
+                <a class="groceryHeaderList" ng-click="setFilter('price')"><h4>Price</h4></a>
+			    <a class="groceryHeaderList"><h4>Edit</h4></a>
+			</div>
+            <div ng-hide="hideUpdate">
+                <div class="input-edit">
                 <select name="go" id="select" ng-model="updatedItem.go">
                     <option value="Grocery" selected>Grocery</option>
                     <option value="Other">Other</option>
                 </select>
-                </td>
-                <td class="input-edit">
-                    <input class="form-input" type="text" name="item" ng-model="updatedItem.item"></td>
-                <td class="input-edit">
+                </div>
+                <div class="input-edit">
+                    <input class="form-input" type="text" name="item" ng-model="updatedItem.item">
+                </div>
+                <div class="input-edit">
                     <input class="form-input" type="text" name="quanityNum" ng-model="updatedItem.quanityNum">
                     <select name="quanityType" id="select" ng-model="updatedItem.quanityType">
-                    <option ng-repeat="units in unitOptions">{{ units }}</option></td>
-                <td class="input-edit">
-                    <input class="form-input" type="text" name="price" ng-model="updatedItem.price"></td>
-                <td class="input-edit"><button class="btn btn-success" ng-click="update('groceryList', updatedItem.id)">Update</button></td>
-            </tr>
-			<tr class="line" ng-repeat="items in groceries | orderBy: filterBy">
-			    <td class="special">{{ items.go }}<span ng-hide="!items.fromMenu"> ** </span></td>
-			    <td>#{{ items.id }} {{ items.item }}</td>
-			    <td>{{ items.quanityNum }} {{ items.quanityType }}</td>
-			    <td> ${{ items.price }}</td>
-			    <td><a href="" class="edit" ng-click="uHide(items)">Edit</a>
-            	<span class="delete glyphicon glyphicon-trash" ng-click="delete('groceryList', items.id)"></span></td>
-			</tr>
-		</table>
+                    <option ng-repeat="units in unitOptions">{{ units }}</option>
+                </div>
+                <div class="input-edit">
+                    <input class="form-input" type="text" name="price" ng-model="updatedItem.price">
+                </div>
+                <div class="input-edit">
+                    <button class="btn btn-success" ng-click="update('groceryList', updatedItem.id)">Update</button>
+                </div>
+            </div>
+			<div class="line" ng-repeat="items in groceries | orderBy: filterBy">
+			    <div class="special groceryListItem">{{ items.go }}<span ng-hide="!items.fromMenu"> ** </span></div>
+			    <div class="groceryListItem">#{{ items.id }} {{ items.item }}</div>
+			    <div class="groceryListItem">{{ items.quanityNum }} {{ items.quanityType }}</div>
+			    <div class="groceryListItem"> ${{ items.price }}</div>
+			    <div class="groceryListItem">
+                    <a href="" class="edit" ng-click="uHide(items)">Edit</a>
+            	   <span class="delete glyphicon glyphicon-trash" ng-click="delete('groceryList', items.id)"></span>
+                </div>
+			</div>
+		</div>
         <div class="paperBottom"></div>
     </section>
 

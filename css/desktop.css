@@ -90,7 +90,7 @@ footer{
 }
 .calContainer{
 	float: left;
-	width: 80%;
+	width: 40%;
 	margin: auto;
 	overflow-x: hidden;
 	padding: 5px;
@@ -108,7 +108,7 @@ footer{
 #listmenu{
 	border-left: 1px solid #EEEEEE;
 	border-right: 1px solid #EEEEEE;
-	float: left;
+	float: right;
 	height: 480px;
 	overflow: scroll;
 	width: 60%;
@@ -140,7 +140,11 @@ footer{
 	margin: 0 20px;
 	float: left;
 }
+#updater{
+	margin: auto;
+}
 /* Kitchen */
+
 #listkitchenItems{
 	width: 45%;
 	height: 450px;
@@ -167,9 +171,6 @@ footer{
 }
 
 /* Grocery List Page */
-.table{
-	margin: 0px;
-}
 .paper{
 	float: left;
 	width: 40%;
@@ -179,7 +180,7 @@ footer{
 	height: 10px;
 	background-image: url('../img/notepadTop.png');
 }
-.paper section{
+.paperContent{
 	background-image: url('../img/groceryPaper.png');
 	background-color: #FFF899;
 	height: 450px;
@@ -194,6 +195,14 @@ footer{
 	padding-left: 10px;
 	padding-top: 3px;
 	background-image: url('../img/groceryPaper.png');
+}
+.groceryHeaderList{
+	float: left;
+	width: 20%;
+}
+.groceryListItem{
+	float: left;
+	width: 20%;
 }
 
 }
