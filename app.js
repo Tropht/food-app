@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.router']);
+var app = angular.module('app', ['ui.router', 'ui.rCalendar']);
 
 app.config(function($stateProvider, $urlRouterProvider){
 
@@ -80,20 +80,29 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 	$scope.menuSelection = "";
 	$scope.hideUpdate = true;
 
-	$scope.today = 1;
-	$scope.selectedDay = $scope.today;
+	var today = parseInt(moment().format("YYYYMMDD"));
+	//$scope.today = day.getDay();
+	var numberYo = parseInt(today);
+	console.log(numberYo);
+	$scope.selectedDay = today;
 	//get original menu
-	dbItem.getMenu($scope.today).success(function(data){
+	dbItem.getMenu(today).success(function(data){
 			$scope.menu = data;
 		}).error(function(data){
-			$scope.menu = {};
+			$scope.menu.id = today;
+			$scope.menu.breakfast = [];
+			$scope.menu.lunch = [];
+			$scope.menu.dinner = [];
 		});
 	//update menu view based on selected date
 	$scope.getDailyMenu = function(selectedDate){
 		dbItem.getMenu(selectedDate).success(function(data){
 			$scope.menu = data;
 		}).error(function(data){
-			$scope.menu = {};
+			$scope.menu.id = selectedDate;
+			$scope.menu.breakfast = [];
+			$scope.menu.lunch = [];
+			$scope.menu.dinner = [];
 		});
 		$scope.selectedDay = selectedDate;
 	};
@@ -121,13 +130,7 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 			$scope.newItem.quanityNum = $scope.getBaseQuantity($scope.newItem);
 			$scope.newItem.quanityType = "ounce(s)";
 		}
-		if(menu.length < 1){
-			console.log("This menu is empty");
-			$scope.newMenuItem.id = $scope.selectedDay;
-		} else{
-			console.log("getting old items from the menu");
-			$scope.newMenuItem = menu;
-		}
+		$scope.newMenuItem = menu;
 		switch(menuSelection){
 			case "breakfast":
 				console.log("calling breakfast");
@@ -143,7 +146,6 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 				break;
 			default:
 				console.log("Error, no option selected");
-
 		}
 		console.log("ready to add new itmes to DB");
 		dbItem.createdbItem("menu", $scope.newMenuItem);
@@ -242,7 +244,7 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 				break;
 			case "teaspoon(s)":
 				return (item.quanityNum * .5 /3 );
-			default: //if ounce(s) or not listed
+			default: //if ounce(s) or type not listed
 				return item.quanityNum;
 		}
 	};
@@ -290,5 +292,151 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 		}
 	};
 
+//Calendar Control
+	//Variables
+	var selectDay = document.getElementsByClassName("monthview-selected");
+	var selectMonthAndYear = document.getElementsByClassName("calendar-header");
+	var events = [];
+	var month;
+	var year;
+
+	//Checking For Year and Month
+	$scope.checkMonthAndYear = function(){
+		month = selectMonthAndYear[0].innerText.split(" ");
+		year = month[1];
+		//Assign Value to Month
+		switch	(month[0].toLowerCase()){
+    	case "january":
+ 		   	month = 0;
+ 		   	break;
+ 		case "february":
+ 		   	month = 1;
+ 		   	break;
+ 		case "march":
+ 		   	month = 2;
+ 		   	break;
+ 		case "april":
+ 		   	month = 3;
+ 		   	break;
+ 		case "may":
+ 		   	month = 4;
+ 		   	break;
+ 		case "june":
+ 		   	month = 5;
+ 		   	break;
+ 		case "july":
+ 		   	month = 6;
+ 		   	break;
+ 		case "august":
+ 		   	month = 7;
+ 		   	break;
+ 		case "september":
+ 		   	month = 8;
+ 		   	break;
+ 		case "october":
+ 		   	month = 9;
+ 		   	break;
+ 		case "november":
+ 		   	month = 10;
+ 		   	break;
+ 		case "december":
+ 		   	month = 11;
+ 		   	break;
+    	}
+	}
+
+	//Loading Functions
+    $scope.loadEvents = function () {
+        $scope.eventSource = createEvents();
+    };
+
+    function createEvents() {
+    	events = [];
+        return events;
+    };
+
+    //Breakfast Lunch and Dinner Functions
+    $scope.breakfast = function(){
+    	if(document.getElementById("foodItems").value == 0){
+    		alert("There's nothing selected!")
+    	}
+    	else{
+	    	var day = selectDay[0].innerText;
+	    	$scope.loadEvents();
+	    	$scope.checkMonthAndYear();
+	    	events.push({
+	    		title: 'Breakfast - ' + document.getElementById("foodItems").value,
+	           	startTime: new Date(year, month, day, 7, 0),
+	           	endTime: new Date(year, month, day, 8, 0),
+	           	allDay: false
+	    	});
+	    	document.getElementById("foodItems").value = "";
+    	}
+    };
+
+    $scope.lunch = function(){
+    	if(document.getElementById("foodItems").value == 0){
+    		alert("There's nothing selected!")
+    	}
+    	else{
+	    	var day = selectDay[0].innerText;
+	    	$scope.loadEvents();
+	    	$scope.checkMonthAndYear();
+	    	events.push({
+	    		title: 'Lunch - ' + document.getElementById("foodItems").value,
+	           	startTime: new Date(year, month, day, 12, 0),
+	           	endTime: new Date(year, month, day, 13, 0),
+	           	allDay: false
+	    	});
+	    	document.getElementById("foodItems").value = "";
+	    }
+    };
+
+    $scope.dinner = function(){
+    	if(document.getElementById("foodItems").value == 0){
+    		alert("There's nothing selected!")
+    	}
+    	else{
+	    	var day = selectDay[0].innerText;
+	    	$scope.loadEvents();
+	    	$scope.checkMonthAndYear();
+	    	events.push({
+	    		title: 'Dinner - ' + document.getElementById("foodItems").value,
+	           	startTime: new Date(year, month, day, 18, 0),
+	           	endTime: new Date(year, month, day, 19, 0),
+	           	allDay: false
+	    	});
+	    	document.getElementById("foodItems").value = "";
+	    }
+    };
+    $scope.test = function(){
+    	console.log(events);
+    };
+
+    //Grocery List
+	$scope.addToGroceryList = function(){
+		$scope.list.push({
+			body: document.getElementById("groceryItem").value
+		});
+		document.getElementById("groceryItem").value = "";
+	}
+	$scope.list = [
+		{
+			body: 'Things to get...'
+		}
+	];
+
 }])
+
+
+
+//jQuery
+$(document).ready(function(){
+
+	$('.footerNav').click(function(){
+		$('.footerNav').removeClass('active');
+		$(this).addClass('active');
+	});
+});
+
 
