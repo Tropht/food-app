@@ -6,7 +6,8 @@
         <table class="table">
             <tr>
                 <th> <a ng-click="setFilter('item')">Item</a></th>
-                <th> <a ng-click="setFilter('quanity')">Quanity</a></th>
+                <th> <a ng-click="setFilter('quanity')">Available Quanity</a></th>
+                <th> Items on menu </th>
                 <th> <a ng-click="setFilter('price')">Price</a></th>
                 <th> Edit</th>
             </tr>
@@ -24,6 +25,7 @@
             <tr ng-repeat="items in kitchen | orderBy: filterBy">
                 <td>#{{ items.id }} {{ items.item }}</td>
                 <td>{{ items.quanityNum }} {{ items.quanityType }}</td>
+                <td>{{ items.menuQuanityNum }} {{ items.quanityType }}</td>
                 <td> ${{ items.price }}</td>
                 <td><a href="" class="edit" ng-click="uHide(items)">Edit</a>
                 <span class="delete glyphicon glyphicon-trash" ng-click="delete('kitchenItems', items.id)"></span></td>
@@ -78,7 +80,7 @@
             <input class="form-input" type="text" name="price" ng-model="newItem.price">
         </div>
 
-        <button class="btn btn-success" ng-click="create('kitchenItems')">Add</button>
+        <button class="btn btn-success" ng-click="newItem.menuQuanityNum = 0; create('kitchenItems') ">Add</button>
     </section>
 
 </div>

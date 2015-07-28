@@ -36,7 +36,7 @@
                 <td>{{ items.quanityNum }} {{ items.quanityType }}</td>
                 <td> ${{ items.price }}</td>
                 <td><a href="" class="edit" ng-click="uHide(items); menuSelection='breakfast'">Edit</a>
-                <span class="delete glyphicon glyphicon-trash" ng-click="delete('menu', items.id)"></span></td>
+                <span class="delete glyphicon glyphicon-trash" ng-click="deleteMenuItem(menu, 'breakfast', items.id)"></span></td>
             </tr>
             <tr>
         		<td colspan="4" >Lunch</td>
@@ -46,7 +46,7 @@
                 <td>{{ items.quanityNum }} {{ items.quanityType }}</td>
                 <td> ${{ items.price }}</td>
                 <td><a href="" class="edit" ng-click="uHide(items); menuSelection='lunch'">Edit</a>
-                <span class="delete glyphicon glyphicon-trash" ng-click="delete('menu', items.id)"></span></td>
+                <span class="delete glyphicon glyphicon-trash" ng-click="deleteMenuItem(menu, 'lunch', items.id)"></span></td>
             </tr>
             <tr>
         		<td colspan="4" >Dinner</td>
@@ -56,7 +56,7 @@
                 <td>{{ items.quanityNum }} {{ items.quanityType }}</td>
                 <td> ${{ items.price }}</td>
                 <td><a href="" class="edit" ng-click="uHide(items); menuSelection='dinner'">Edit</a>
-                <span class="delete glyphicon glyphicon-trash" ng-click="delete('menu', items.id)"></span></td>
+                <span class="delete glyphicon glyphicon-trash" ng-click="deleteMenuItem(menu, 'dinner', items.id)"></span></td>
             </tr>
         </table>
     </section>
