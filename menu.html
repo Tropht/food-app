@@ -21,11 +21,11 @@
                 <td class="input-edit">
                     <input class="form-input" type="text" name="item" ng-model="updatedItem.item"></td>
                 <td class="input-edit"><label for="quanityNum">Quanity:</label>
-                    <input class="form-input" type="text" name="quanityNum" ng-model="updatedItem.quanityNum">
+                    <input class="form-input" type="number" name="quanityNum" ng-model="updatedItem.quanityNum">
                     <select name="quanityType" id="select" ng-model="updatedItem.quanityType">
                     <option ng-repeat="units in unitOptions">{{ units }}</option></td>
                 <td class="input-edit"> <label for="price">price: $</label>
-                    <input class="form-input" type="text" name="price" ng-model="updatedItem.price"></td>
+                    <input class="form-input" type="number" name="price" ng-model="updatedItem.price"></td>
                 <td class="input-edit"><button class="btn btn-success" ng-click="updateMenu(menu, updatedItem.id)">Update</button></td>
             </tr>
             <tr>
@@ -81,7 +81,7 @@
         </div>
         <div class="input-group">
             <label for="quanityNum">Quanity:</label>
-            <input class="form-input" type="text" name="quanityNum" ng-model="newItem.quanityNum">
+            <input class="form-input" type="number" name="quanityNum" ng-model="newItem.quanityNum">
         </div>
         <div class="input-group">
             <label for="quanityType">unit:</label>
@@ -91,7 +91,7 @@
         </div>
         <div class="input-group">
             <label for="price">price: $</label>
-            <input class="form-input" type="text" name="price" ng-model="newItem.price">
+            <input class="form-input" type="number" name="price" ng-model="newItem.price">
         </div>
 
         <button class="btn btn-success" ng-click="createMenu(menu, menuSelection)">Add</button>

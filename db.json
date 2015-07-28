@@ -23,10 +23,11 @@
     {
       "id": 4,
       "item": "wine",
-      "quanityNum": 16,
+      "quanityNum": 0,
       "price": 2,
       "menuNum": 0,
-      "quanityType": "ounce(s)"
+      "quanityType": "ounce(s)",
+      "menuQuanityNum": 0
     },
     {
       "id": 5,
@@ -41,9 +42,17 @@
       "id": 1,
       "go": "Grocery",
       "item": "pickles",
-      "quanityNum": null,
+      "quanityNum": 2,
       "quanityType": "item(s)",
       "price": 1.99,
+      "fromMenu": true
+    },
+    {
+      "id": 4,
+      "item": "wine",
+      "quanityNum": null,
+      "quanityType": "ounce(s)",
+      "go": "Grocery",
       "fromMenu": true
     }
   ],
@@ -77,7 +86,9 @@
         }
       ],
       "lunch": [],
-      "dinner": []
+      "dinner": [
+        {}
+      ]
     }
   ]
 }
