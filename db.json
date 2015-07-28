@@ -95,7 +95,7 @@
   ],
   "menu": [
     {
-      "id": 1,
+      "id": 20150727,
       "breakfast": [
         {
           "id": 17,
@@ -144,7 +144,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 20150728,
       "breakfast": [
         {
           "id": 7,
@@ -232,7 +232,7 @@
     }
   ],
   "foodDB": [
-  {
+    {
       "id": 1,
       "item": "bread",
       "quantityNum": 1,
@@ -328,7 +328,7 @@
       "item": "orange juice",
       "quantityNum": 1,
       "quantityType": "once(s)",
-      "price": 2.50
+      "price": 2.5
     },
     {
       "id": 15,
@@ -342,7 +342,7 @@
       "item": "strawberries",
       "quantityNum": 1,
       "quantityType": "once(s)",
-      "price": 2.50
+      "price": 2.5
     },
     {
       "id": 17,
@@ -363,7 +363,7 @@
       "item": "Barilla Gluten Free Penne Pasta",
       "quantityNum": 1,
       "quantityType": "once(s)",
-      "price": 2.00
+      "price": 2
     },
     {
       "id": 20,
@@ -377,7 +377,7 @@
       "item": "Folgers Classic Roast Medium Ground Coffee",
       "quantityNum": 1,
       "quantityType": "once(s)",
-      "price": 8.70
+      "price": 8.7
     },
     {
       "id": 22,
@@ -412,7 +412,7 @@
       "item": "Cheetos Crunchy Cheddar Jalapeno Cheese Flavored Snacks",
       "quantityNum": 1,
       "quantityType": "once(s)",
-      "price": 2.50
+      "price": 2.5
     },
     {
       "id": 27,
@@ -440,7 +440,7 @@
       "item": "Great Value: Long Grain Enriched Rice",
       "quantityNum": 1,
       "quantityType": "once(s)",
-      "price": 2.50
+      "price": 2.5
     },
     {
       "id": 31,
@@ -449,7 +449,7 @@
       "quantityType": "once(s)",
       "price": 19.28
     },
-      {
+    {
       "id": 32,
       "item": "Kraft Family Size Velveeta Shells & Cheese",
       "quantityNum": 1,
@@ -475,7 +475,7 @@
       "item": "Old El Paso Hard & Soft Taco Kit",
       "quantityNum": 1,
       "quantityType": "once(s)",
-      "price": 2.50
+      "price": 2.5
     },
     {
       "id": 36,
@@ -496,21 +496,21 @@
       "item": "Campbell's Chunky Classic Chicken Noodle Soup",
       "quantityNum": 1,
       "quantityType": "once(s)",
-      "price": 2.00
+      "price": 2
     },
     {
       "id": 39,
       "item": "Campbell's Chunky Mushroom Swiss Burger Soup",
       "quantityNum": 1,
       "quantityType": "once(s)",
-      "price": 2.00
+      "price": 2
     },
     {
       "id": 40,
       "item": "Campbell's Chunky Healthy Request Old Fashioned Vegetable Beef Soup",
       "quantityNum": 1,
       "quantityType": "once(s)",
-      "price": 2.00
+      "price": 2
     },
     {
       "id": 41,
@@ -715,7 +715,7 @@
       "quantityType": "once(s)",
       "price": 2.99
     },
-  {
+    {
       "id": 70,
       "item": "asparagus",
       "quantityNum": 1,
@@ -881,7 +881,7 @@
       "item": "lemon",
       "quantityNum": 1,
       "quantityType": "item",
-      "price": 0.49 
+      "price": 0.49
     },
     {
       "id": 94,
@@ -925,12 +925,12 @@
       "quantityType": "item",
       "price": 1.99
     },
-  {
+    {
       "id": 100,
       "item": "carrots",
       "quantityNum": 1,
       "quantityType": "once(s)",
       "price": 1.99
-    },
+    }
   ]
 }

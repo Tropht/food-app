@@ -1,0 +1,126 @@
+@media only screen and (min-width: 1241px) {
+html, body{
+	height: 100%;
+}
+body{
+	background-color: #f7fcf7;
+}
+h4{
+	color: grey;
+	margin: 0px;
+}
+.panel{
+	text-align: right;
+	width: 45%;
+	float: left;
+	margin: 20px;
+}
+.panel-heading{
+	background-image: url('../img/sectionHeaderGreen.jpg');
+	background-repeat: no-repeat;
+	background-color: #e8fce8 !important;
+}
+/* Content */
+	/* Overall Header */
+header{
+	width: 100%;
+	height: 100px;
+	background-image: url('../img/headerLargeGreen.jpg');
+	text-align: right;
+}
+header h2{
+	padding: 25px 5px 0 0;
+	margin: 0px;
+	color: white;
+}
+	/* Container */
+.container{
+	background-color: #FFFFFF;
+	margin: auto;
+	width: 1241px;
+	height: 85%;
+	border-right: 1px solid #EEEEEE;
+	border-left: 1px solid #EEEEEE;
+}
+	/* Each Pages Header */
+
+.page-header{
+	margin: 0px;
+	margin-top: -55px;
+	border: none;
+}
+.page-header h3{
+	color: white;
+}
+
+/* Footer */
+footer{
+	position: absolute;
+	margin-left: -16px;
+	width: 1241px;
+	background-color: #FFFFFF;
+	border-right: 1px solid #EEEEEE;
+	bottom: 0px;
+}
+	/*Footer Navigation */
+.active{
+	text-align: center;
+	width: 100px;
+}
+
+/* Menu Page */
+.monthview-eventdetail-timecolumn{
+	display: none;
+}
+.monthview-selected{
+	background-color: #9ed39e;
+}
+.monthview-primary-with-event{
+	background-color: #4292b7;
+}
+.calContainer{
+	float: left;
+	width: 50%;
+	margin: auto;
+	overflow-x: hidden;
+	padding: 5px;
+	overflow: auto;
+}
+.ng-isolate-scope{
+	width: 96%;
+}
+.menuButtons{
+	float: right;
+}
+.phoneButtons{
+	display: none;
+}
+
+/* Grocery List Page */
+.paper{
+	float: left;
+	width: 40%;
+	margin-left: 25px;
+}
+.paperHead{
+	height: 10px;
+	background-image: url('../img/notepadTop.png');
+}
+.paper section{
+	background-image: url('../img/groceryPaper.png');
+	background-color: #FFF899;
+	height: 450px;
+	overflow: scroll;
+}
+.paperBottom{
+	height: 10px;
+	background-image: url('../img/notepadBottom.png');
+}
+.line{
+	height: 26px;
+	padding-left: 10px;
+	padding-top: 3px;
+	background-image: url('../img/groceryPaper.png');
+}
+
+}

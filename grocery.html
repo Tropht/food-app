@@ -2,8 +2,9 @@
     <div class="page-header">
         <h1>Grocery List</h1>
     </div>
-    <section id="listGroceries">
-    	<table class="table">
+    <section id="listGroceries" class="paper">
+    	<div class="paperHead"></div>
+        <table class="table" class="paperContent">
 			<tr>
 			    <th> <a ng-click="setFilter('type')">Type </a></th>
 			    <th> <a ng-click="setFilter('item')">Item</a></th>
@@ -28,7 +29,7 @@
                     <input class="form-input" type="text" name="price" ng-model="updatedItem.price"></td>
                 <td class="input-edit"><button class="btn btn-success" ng-click="update('groceryList', updatedItem.id)">Update</button></td>
             </tr>
-			<tr ng-repeat="items in groceries | orderBy: filterBy">
+			<tr class="line" ng-repeat="items in groceries | orderBy: filterBy">
 			    <td class="special">{{ items.go }}<span ng-hide="!items.fromMenu"> ** </span></td>
 			    <td>#{{ items.id }} {{ items.item }}</td>
 			    <td>{{ items.quanityNum }} {{ items.quanityType }}</td>
@@ -37,6 +38,7 @@
             	<span class="delete glyphicon glyphicon-trash" ng-click="delete('groceryList', items.id)"></span></td>
 			</tr>
 		</table>
+        <div class="paperBottom"></div>
     </section>
 
     <section class="col-lg-3" id="updateItems" ng-hide="hideUpdate">

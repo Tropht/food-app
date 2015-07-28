@@ -1,0 +1,151 @@
+@media only screen and (max-width: 480px) {
+/*Main Page */
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;}
+body{
+	background-color: #F6F9FD;
+}
+header{
+	width: 100%;
+	height: 100px;
+	background-image: url('../img/headerLargeGreen.jpg');
+	text-align: right;
+}
+header h2{
+	padding: 25px 5px 0 0;
+	margin: 0px;
+	color: white;
+}
+h4{
+	margin: 0px;
+	color: grey;
+}
+.panel{
+	text-align: right;
+	width: 90%;
+	margin: 20px auto;
+}
+.panel-heading{
+	background-image: url('../img/sectionHeaderGreen.jpg');
+	background-repeat: no-repeat;
+	background-color: #e8fce8!important;
+}
+	/* Content */
+.container{
+	background-color: #FFFFFF;
+	margin: auto;
+	height: 85%;
+	width: 100%;
+}
+	/* Header */
+.page-header{
+	margin: 0px;
+	margin-top: -55px;
+	border: none;
+}
+.page-header h3{
+	color: white;
+}
+	/* Footer */
+
+footer{
+	left: 0px;
+	position: absolute;
+	height: 60px;
+	width: 100%;
+	bottom:0px;
+	background-color: #FFFFFF;
+}
+	/* Footer Navigation */
+.active{
+	text-align: center;
+	width: 100px;
+}
+footer ul{
+	bottom: 0px;
+	margin-top: 12px;
+}
+footer ul li{
+	width: 50px;
+}
+footer ul li:hover{
+	text-align: center;
+}
+footer ul li a{
+	padding-left: 0px;
+	overflow: hidden;
+}
+/* Home Page */
+
+/* Menu Page */
+.calContainer{
+	height: 500px;
+	overflow-x: hidden;
+	padding: 5px;
+	overflow: auto;
+}
+.ng-isolate-scope{
+	width: 96%;
+}
+.monthview-eventdetail-timecolumn{
+	display: none;
+}
+.monthview-selected{
+	background-color: #9ed39e;
+}
+.monthview-primary-with-event{
+	background-color: #4292b7;
+}
+
+
+/* Recipes Page */
+.input-group{
+	height: 32px;
+	float: left;
+}
+
+.showResults{
+	height: 300px;
+	width: 100%;
+	overflow: auto;
+}
+/*kitchen page*/
+#listKitchen, #updateKitchen, #addItemsToKitchen{
+	display: inline-block;
+	vertical-align: top;
+}
+
+#updateKitchen, #addItemsToKitchen{
+
+}
+
+/* Grocery List Page */
+.paper{
+	width: 80%;
+	margin: auto;
+}
+.paperHead{
+	height: 10px;
+	background-image: url('../img/notepadTop.png');
+}
+.paper section{
+	background-image: url('../img/groceryPaper.png');
+	background-color: #FFF899;
+	height: 400px;
+	overflow: scroll;
+}
+.paperBottom{
+	height: 10px;
+	background-image: url('../img/notepadBottom.png');
+}
+.line{
+	height: 26px;
+	padding-left: 10px;
+	padding-top: 3px;
+	background-image: url('../img/groceryPaper.png');
+}
+
+
+}

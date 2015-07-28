@@ -1,12 +1,19 @@
 <div class="page-header">
 	<h1>What's on the menu?</h1>
 </div>
+
+<div class="calContainer" style="height: 400px;" ng-init="loadEvents()">
+    <calendar calendar-mode="mode" event-source="eventSource">
+        Event selected:{{event.startTime|date:
+                'MMM/dd,yyyy,HH:mm'}} - {{event.endTime|date:'MMM/dd,yyyy,HH:mm'}}, {{event.title}}
+</div>
+
 <section id="listmenu">
         <table class="table">
             <tr>
                 <td colspan="4">
                     <label for="date">select date</label>
-                    <input class="form-input" type="number" name="date" ng-model="selectedDay">
+                    <input class="text" name="date" ng-model="selectedDay">
                     <button class="btn btn-success" ng-click="getDailyMenu(selectedDay)">Update</button>
                 </td>
             </tr>
