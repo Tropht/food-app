@@ -6,7 +6,7 @@ body{
 	background-color: #F6F9FD;
 }
 table, th, td, tr{
-	padding: 0px;
+	padding: 0px !important;
 	margin: 0px;
 }
 h4{
@@ -112,6 +112,9 @@ footer{
 }
 
 /* Grocery List Page */
+.table{
+	margin: 0px;
+}
 .paper{
 	float: left;
 	width: 40%;
@@ -121,13 +124,10 @@ footer{
 	height: 10px;
 	background-image: url('../img/notepadTop.png');
 }
-.table{
-	margin: 0px;
-}
 .paperContent{
 	background-image: url('../img/groceryPaper.png');
 	background-color: #FFF899;
-	height: 450px;
+	hAeight: 400px;
 	overflow: scroll;
 }
 .paperBottom{

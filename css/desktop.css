@@ -5,6 +5,10 @@ html, body{
 body{
 	background-color: #f7fcf7;
 }
+table, th, td, tr{
+	padding: 0px !important;
+	margin: 0px;
+}
 h4{
 	color: grey;
 	margin: 0px;
@@ -108,6 +112,9 @@ footer{
 }
 
 /* Grocery List Page */
+.table{
+	margin: 0px;
+}
 .paper{
 	float: left;
 	width: 40%;
