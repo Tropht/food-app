@@ -1,7 +1,7 @@
-<div class="row">
-    <div class="page-header">
-        <h3>Grocery List</h3>
-    </div>
+<div class="page-header">
+    <h3>Grocery List</h3>
+</div>
+<div id="mobileScroll">
     <section id="listGroceries" class="paper">
     	<div class="paperHead"></div>
         <div class="paperContent">
@@ -48,7 +48,7 @@
         <div class="paperBottom"></div>
     </section>
 
-    <section class="col-lg-3" id="updateItems" ng-hide="hideUpdate">
+    <section id="updateItems" ng-hide="hideUpdate">
         <h3>Update</h3>
         <div class="input-group">
             <label for="item">item:</label>
@@ -70,7 +70,7 @@
         </div>
         <button class="btn btn-success" ng-click="update('groceryList', updatedItem.id)">Update</button>
     </section>
-    <section class="col-lg-3" id="addItems" ng-hide="!hideUpdate">
+    <section id="addItems" ng-hide="!hideUpdate">
         <h3>Add new item</h3>
         <div class="input-group">
             <label for="id">id:</label>
@@ -104,5 +104,4 @@
 
         <button class="btn btn-success" ng-click="create('groceryList')">Add</button>
     </section>
-
 </div>

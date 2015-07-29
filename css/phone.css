@@ -195,21 +195,18 @@ footer ul li a{
 
 
 /* Grocery List Page */
-.table{
-	margin: 0px;
-}
 .paper{
-	width: 80%;
-	margin: auto;
+	float: left;
+	width: 100%;
 }
 .paperHead{
 	height: 10px;
 	background-image: url('../img/notepadTop.png');
 }
-.paper section{
+.paperContent{
 	background-image: url('../img/groceryPaper.png');
 	background-color: #FFF899;
-	height: 400px;
+	height: 350px;
 	overflow: scroll;
 }
 .paperBottom{
@@ -221,6 +218,14 @@ footer ul li a{
 	padding-left: 10px;
 	padding-top: 3px;
 	background-image: url('../img/groceryPaper.png');
+}
+.groceryHeaderList{
+	float: left;
+	width: 20%;
+}
+.groceryListItem{
+	float: left;
+	width: 20%;
 }
 
 
