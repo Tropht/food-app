@@ -122,5 +122,13 @@ footer{
 	padding-top: 3px;
 	background-image: url('../img/groceryPaper.png');
 }
+}
+.showResults{
+    width: 300px;
+    height: 100px;
+    overflow-y: scroll;
+    border: 1px solid aquamarine;
+}
+
 
 }

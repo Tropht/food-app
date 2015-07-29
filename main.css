@@ -43,7 +43,15 @@ footer ul li{
 	display: inline-block;
 	vertical-align: top;
 }
+.showResults{
+    width: 300px;
+    height: 100px;
+    overflow-y: scroll;
+    border: 1px solid aquamarine;
+}
 
 .input-edit{
 	background-color: #cccccc;
 }
+
+
