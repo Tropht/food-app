@@ -10,26 +10,7 @@
 
 <section id="listmenu">
         <div class="table">
-            <section id="updater">
-                <div ng-hide="hideUpdate">
-                    <div class="input-edit">
-                        <input class="form-input" type="text" name="item" ng-model="updatedItem.item">
-                    </div>
-                    <div class="input-edit">
-                        <label for="quanityNum">Quanity:</label>
-                        <input class="form-input" type="number" name="quanityNum" ng-model="updatedItem.quanityNum">
-                        <select name="quanityType" id="select" ng-model="updatedItem.quanityType">
-                        <option ng-repeat="units in unitOptions">{{ units }}</option>
-                    </div>
-                    <div class="input-edit">
-                        <label for="price">price: $</label>
-                        <input class="form-input" type="number" name="price" ng-model="updatedItem.price">
-                    </div>
-                    <div class="input-edit">
-                        <button class="btn btn-success" ng-click="updateMenu(menu, updatedItem.id)">Update</button>
-                    </div>
-                </div>
-            </section>
+
             <section id="theMenu">
                 <div class="tableHeader">
                     <h4>Breakfast</h4>
@@ -69,7 +50,7 @@
                 </div>
             </section>
 
-            <section class="col-lg-3" id="addItems" ng-hide="!hideUpdate">
+            <section id="addItems" ng-hide="!hideUpdate">
                 <h3>Add new item</h3>
                 <div class="input-group">
                     <select name="menuSelection" id="select" ng-model="menuSelection">
@@ -103,6 +84,44 @@
 
                 <button class="btn btn-success" ng-click="createMenu(menu, menuSelection)">Add</button>
             </section>
+
+            <section id="updater">
+                <div ng-hide="hideUpdate">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Item</span>
+                        <input class="form-input" type="text" name="item" ng-model="updatedItem.item">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Quanity:</span>
+                        <input class="form-input" type="number" name="quanityNum" ng-model="updatedItem.quanityNum">
+                        <select name="quanityType" id="select" ng-model="updatedItem.quanityType">
+                            <option ng-repeat="units in unitOptions">{{ units }}</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Price: $</span>
+                        <input class="form-input" type="number" name="price" ng-model="updatedItem.price">
+                    </div>
+
+                    <!-- <div class="input-edit">
+                        <input class="form-input" type="text" name="item" ng-model="updatedItem.item">
+                    </div> -->
+                    <!-- <div class="input-edit">
+                        <label for="quanityNum">Quanity:</label>
+                        <input class="form-input" type="number" name="quanityNum" ng-model="updatedItem.quanityNum">
+                        <select name="quanityType" id="select" ng-model="updatedItem.quanityType">
+                        <option ng-repeat="units in unitOptions">{{ units }}</option>
+                    </div> -->
+                    <!-- <div class="input-edit">
+                        <label for="price">price: $</label>
+                        <input class="form-input" type="number" name="price" ng-model="updatedItem.price">
+                    </div> -->
+                    <div class="input-edit">
+                        <button class="btn btn-success" ng-click="updateMenu(menu, updatedItem.id)">Update</button>
+                    </div>
+                </div>
+            </section>
+
         </div>
         <br><br><br><br><br><br><br><br><br><br><br>
     </section>
