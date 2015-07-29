@@ -4,6 +4,7 @@ html, body{
 }
 body{
 	background-color: #F6F9FD;
+	overflow: hidden;
 }
 table, th, td, tr{
 	padding: 0px !important;
@@ -12,7 +13,6 @@ table, th, td, tr{
 h4{
 	color: grey;
 	margin: 0px;
-}
 }
 h5{
 	color: grey;
@@ -90,7 +90,7 @@ footer{
 }
 .calContainer{
 	float: left;
-	width: 80%;
+	width: 40%;
 	margin: auto;
 	overflow-x: hidden;
 	padding: 5px;
@@ -107,8 +107,7 @@ footer{
 }
 #listmenu{
 	border-left: 1px solid #EEEEEE;
-	border-right: 1px solid #EEEEEE;
-	float: left;
+	float: right;
 	height: 480px;
 	overflow: scroll;
 	width: 60%;
@@ -116,7 +115,6 @@ footer{
 #theMenu{
 	margin: auto;
 	border-left: 1px solid #EEEEEE;
-	border-right: 1px solid #EEEEEE;
 }
 .table{
 	width: 80%;
@@ -140,13 +138,16 @@ footer{
 	margin: 0 20px;
 	float: left;
 }
-
+#updater{
+	margin: auto;
+}
 /* Ktichen */
 #listkitchenItems{
 	width: 45%;
 	height: 450px;
 	overflow: scroll;
 	float: left;
+	margin-left: 15px;
 }
 .kitchenTable .panel-heading{
 	height: 40px;

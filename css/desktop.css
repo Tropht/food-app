@@ -3,6 +3,7 @@ html, body{
 	height: 100%;
 }
 body{
+	overflow: hidden;
 	background-color: #f7fcf7;
 }
 table, th, td, tr{
@@ -107,7 +108,6 @@ footer{
 }
 #listmenu{
 	border-left: 1px solid #EEEEEE;
-	border-right: 1px solid #EEEEEE;
 	float: right;
 	height: 480px;
 	overflow: scroll;
@@ -116,7 +116,6 @@ footer{
 #theMenu{
 	margin: auto;
 	border-left: 1px solid #EEEEEE;
-	border-right: 1px solid #EEEEEE;
 }
 .table{
 	width: 80%;
@@ -150,6 +149,7 @@ footer{
 	height: 450px;
 	overflow: scroll;
 	float: left;
+	margin-left: 15px;
 }
 .kitchenTable .panel-heading{
 	height: 40px;

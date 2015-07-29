@@ -1,7 +1,7 @@
 <div class="page-header">
 	<h3>What's on the menu?</h3>
 </div>
-
+<div id="mobileScroll">
 <div class="calContainer" style="height: 400px;" ng-init="loadEvents()">
     <calendar calendar-mode="mode" event-source="eventSource">
         Event selected:{{event.startTime|date:
@@ -112,3 +112,4 @@
             </section>
         </div>
     </section>
+</div>

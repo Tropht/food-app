@@ -5,6 +5,7 @@ html, body {
 	padding:0;
 	height:100%;}
 body{
+	overflow: hidden;
 	background-color: #F6F9FD;
 }
 table, th, td, tr{
@@ -35,6 +36,10 @@ h4{
 	background-image: url('../img/sectionHeaderGreen.jpg');
 	background-repeat: no-repeat;
 	background-color: #e8fce8!important;
+}
+#mobileScroll{
+	height: 568px;
+	overflow: auto;
 }
 	/* Content */
 .container{
@@ -84,15 +89,6 @@ footer ul li a{
 /* Home Page */
 
 /* Menu Page */
-.calContainer{
-	height: 500px;
-	overflow-x: hidden;
-	padding: 5px;
-	overflow: auto;
-}
-.ng-isolate-scope{
-	width: 96%;
-}
 .monthview-eventdetail-timecolumn{
 	display: none;
 }
@@ -102,8 +98,60 @@ footer ul li a{
 .monthview-primary-with-event{
 	background-color: #4292b7;
 }
+.calContainer{
+	float: left;
+	width: 100%;
+	margin: auto;
+	overflow-x: hidden;
+	padding: 5px;
+	overflow: auto;
+}
+.scrollable{
+	display: none;
+}
+.ng-isolate-scope{
+	width: 96%;
+}
+.monthview-datetable{
+	height: 300px;
+}
 
-
+#listmenu{
+	border-left: 1px solid #EEEEEE;
+	float: right;
+	height: 480px;
+	overflow: scroll;
+	width: 100%;
+}
+#theMenu{
+	margin: auto;
+	border-left: 1px solid #EEEEEE;
+}
+.table{
+	width: 80%;
+	margin: auto;
+}
+.tableHeader{
+	padding: 10px;
+	background-image: url('../img/sectionHeaderGreen.jpg');
+	background-repeat: no-repeat;
+	background-color: #e8fce8;
+	text-align: right;
+}
+.repeatedItems{
+	background-color: #efefef;
+	padding-top: 5px;
+	margin: auto;
+	height: 25px;
+	width: 100%;
+}
+.repeatedItems div{
+	margin: 0 20px;
+	float: left;
+}
+#updater{
+	margin: auto;
+}
 /* Recipes Page */
 .input-group{
 	height: 32px;
