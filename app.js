@@ -113,6 +113,8 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 			$scope.dbSearchItems = data;
 		
 			$scope.searchResults = [];
+			if (terms === "" || !terms)
+				return;
 			for (var i = 0; i < $scope.dbSearchItems.length; i++)
 			{
 				if($scope.dbSearchItems[i].item.toLowerCase().replace(/ /g, '').indexOf(terms.toLowerCase().replace(/ /g, '')) !== -1) 

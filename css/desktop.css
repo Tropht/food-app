@@ -204,5 +204,10 @@ footer{
 	float: left;
 	width: 20%;
 }
-
+.showResults {
+    width: 300px;
+    height: 100px;
+    overflow-y: scroll;
+    border: aquamarine 1px solid;
+}
 }

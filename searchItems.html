@@ -3,9 +3,9 @@
 </div>
 <section id="searchsearchItems">
 	<div class="input-group">
-		<input class="form-control" type="text" ng-model="searchinput" placeholder="Search">
+		<input class="form-control" type="text" ng-model="searchinput" placeholder="Search" ng-keyup="search(searchinput)">
 	</div>
-	<button class="btn btn-success" ng-click="search(searchinput)">Search</button>
+	
 	<div class="showResults">
 		<div ng-repeat="result in searchResults">
 			{{result.item}}
