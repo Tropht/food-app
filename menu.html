@@ -11,13 +11,6 @@
 <section id="listmenu">
         <div class="table">
             <section id="updater">
-                <div>
-                    <div>
-                        <label for="date">select date</label>
-                        <input class="text" name="date" ng-model="selectedDay">
-                        <button class="btn btn-success" ng-click="getDailyMenu(selectedDay)">Update</button>
-                    </div>
-                </div>
                 <div ng-hide="hideUpdate">
                     <div class="input-edit">
                         <input class="form-input" type="text" name="item" ng-model="updatedItem.item">
