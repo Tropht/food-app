@@ -27,6 +27,12 @@ h4{
 	margin: 0px;
 	color: grey;
 }
+h5{
+	color: grey;
+	margin: 0px;
+	font-size: 14px;
+	font-family: arial;
+}
 .panel{
 	text-align: right;
 	width: 90%;
@@ -127,10 +133,6 @@ footer ul li a{
 	margin: auto;
 	border-left: 1px solid #EEEEEE;
 }
-.table{
-	width: 80%;
-	margin: auto;
-}
 .tableHeader{
 	padding: 10px;
 	background-image: url('../img/sectionHeaderGreen.jpg');
@@ -140,13 +142,13 @@ footer ul li a{
 }
 .repeatedItems{
 	background-color: #efefef;
-	padding-top: 5px;
+	padding: 5px 0;
 	margin: auto;
 	height: 25px;
 	width: 100%;
 }
 .repeatedItems div{
-	margin: 0 20px;
+	width: 25%;
 	float: left;
 }
 #updater{

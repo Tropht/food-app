@@ -7,7 +7,7 @@
             <div class="panel-heading">
                 <a class="kitchenHeaderList" href=""><h4 ng-click="setFilter('item')">Item</h4></a>
                 <a class="kitchenHeaderList" href=""><h4 ng-click="setFilter('quanity')">Available Quantity</h4></a>
-                <h4>Items on Menu</h4>
+                <h4 class="kitchenHeaderList">Items on Menu</h4>
                 <a class="kitchenHeaderList" href=""><h4 ng-click="setFilter('price')">Price</h4></a>
                 <a class="kitchenHeaderList" href=""><h4>Edit</h4></a>
             </div>
@@ -30,7 +30,7 @@
             <div class="kitchenList" ng-repeat="items in kitchen | orderBy: filterBy">
                 <h5 class="kitchenItem">#{{ items.id }} {{ items.item }}</h5>
                 <h5 class="kitchenItem">{{ items.quanityNum }} {{ items.quanityType }}</h5>
-                 <h5>{{ items.menuQuanityNum }} {{ items.quanityType }}</h5>
+                <h5 class="kitchenItem">{{ items.menuQuanityNum }} {{ items.quanityType }}</h5>
                 <h5 class="kitchenItem">${{ items.price }}</h5>
                 <a class="kitchenItem" href="" class="edit" ng-click="uHide(items)">
                     Edit
