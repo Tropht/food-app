@@ -427,6 +427,7 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 	];
 
 //jQuery
+
 $(document).ready(function(){
 
 	$('.footerNav').click(function(){
@@ -434,10 +435,10 @@ $(document).ready(function(){
 		$(this).addClass('active');
 	});
 	$(document).on('click', 'td', function(){
-		var theDate;
 		$scope.checkMonthAndYear();
-		theDate = parseInt(year + month + selectDay[0].innerText);
-		console.log(theDate);
+		$scope.selectedDate = parseInt(year + month + selectDay[0].innerText);
+		$scope.getDailyMenu($scope.selectedDate);
+		console.log($scope.selectedDate);
 	})
 });
 
