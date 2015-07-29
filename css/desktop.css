@@ -149,6 +149,7 @@ footer{
 	height: 450px;
 	overflow: scroll;
 	float: left;
+	padding-right: 1px solid #EEEEEE;
 	margin-left: 15px;
 }
 .kitchenTable .panel-heading{
@@ -167,6 +168,11 @@ footer{
 	padding: 5px 0 0 0;
 	width: 20%;
 	height: 40px;
+	float: left;
+}
+#addItems{
+	width: 45%;
+	margin: auto;
 	float: left;
 }
 

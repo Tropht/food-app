@@ -2,19 +2,8 @@
     <div class="page-header">
         <h3>What's in my kitchen?</h3>
     </div>
-    <section id="searchsearchItems">
-        <div class="input-group">
-            <input class="form-control" type="text" ng-model="searchinput" placeholder="Search" ng-keyup="search(searchinput)">
-        </div>
-        
-        <div class="showResults">
-            <div ng-repeat="result in searchResults">
-                <div ng-click="populateNewItem(result)">
-                    {{result.item}}
-                </div>
-            </div>
-        </div>
-    </section>
+
+    
     <section id="listkitchenItems">
         <div class="kitchenTable">
             <div class="panel-heading">
@@ -53,7 +42,7 @@
         </div>
     </section>
 
-    <section class="col-lg-3" id="updateItems" ng-hide="hideUpdate">
+    <section id="updateItems" ng-hide="hideUpdate">
         <h3>Update</h3>
         <div class="input-group">
             <label for="item">item:</label>
@@ -75,7 +64,22 @@
         </div>
         <button class="btn btn-success" ng-click="update('kitchenItems', updatedItem.id)">Update</button>
     </section>
-    <section class="col-lg-3" id="addItems" ng-hide="!hideUpdate">
+    <section id="addItems" ng-hide="!hideUpdate">
+        
+        <section id="searchsearchItems">
+            <div class="input-group">
+                <input class="form-control" type="text" ng-model="searchinput" placeholder="Search" ng-keyup="search(searchinput)">
+            </div>
+            
+            <div class="showResults">
+                <div ng-repeat="result in searchResults">
+                    <div ng-click="populateNewItem(result)">
+                        {{result.item}}
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <h3>Add new item</h3>
         <div class="input-group">
             <label for="id">id:</label>
