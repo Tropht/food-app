@@ -81,14 +81,13 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 	$scope.hideUpdate = true;
 
 	var today = parseInt(moment().format("YYYYMMDD"));
-	//$scope.today = day.getDay();
-	var numberYo = parseInt(today);
-	console.log(numberYo);
 	$scope.selectedDay = today;
+
 	//get original menu
 	dbItem.getMenu(today).success(function(data){
 			$scope.menu = data;
 		}).error(function(data){
+			$scope.menu = {};
 			$scope.menu.id = today;
 			$scope.menu.breakfast = [];
 			$scope.menu.lunch = [];
@@ -99,6 +98,7 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 		dbItem.getMenu(selectedDate).success(function(data){
 			$scope.menu = data;
 		}).error(function(data){
+			$scope.menu = {};
 			$scope.menu.id = selectedDate;
 			$scope.menu.breakfast = [];
 			$scope.menu.lunch = [];
@@ -106,7 +106,7 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 		});
 		$scope.selectedDay = selectedDate;
 	};
-	
+
 	//search items
 	$scope.search = function(terms) {
 		dbItem.getFoodItems().success(function(data) {
@@ -123,7 +123,55 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 		});
 	};	
 
+	//Is the item in the kitchen
+	$scope.checkKitchen = function(item){
+		dbItem.getKitchen().success(function(data){
+			$scope.kitchen = data;
+		});
+		dbItem.getGrocery().success(function(data){
+			$scope.groceries = data;
+		});
+		var updateKitchen = {};
+		var updateGrocery = item;
+		var groceryQuanity = 0;
+		for(var i=0; i<$scope.groceries.length; i++){
+			if($scope.groceries[i].id == item.id){
+				updateGrocery = $scope.groceries[i];
+				console.log("item is in the Grocery list");
+			}
+		}
+		updateGrocery.go = "Grocery";
+		updateGrocery.fromMenu = true;
+		for(var i=0; i<$scope.kitchen.length; i++){
+			if($scope.kitchen[i].id == item.id){
+				updateKitchen = $scope.kitchen[i];
+				console.log("item is in the Kitchen list");
+				if(updateKitchen.quanityNum >= item.quanityNum){
+					updateKitchen.quanityNum -= item.quanityNum;
+					updateKitchen.menuQuanityNum += item.quanityNum;
+					console.log("Asking for less than what is in the Kitchen");
+				}else {
+					var diff = item.quanityNum - updateKitchen.quanityNum;
+					updateKitchen.menuQuanityNum = updateKitchen.quanityNum; //item.quanity - diff;
+					updateKitchen.quanityNum = 0;
+					updateGrocery.quanityNum = diff + groceryQuanity;
+					$scope.newItem = updateGrocery;
+					$scope.create("groceryList");
+					console.log("More than kitchen, adding to grocery list");
+				}
+				$scope.updatedItem = updateKitchen;
+				$scope.update("kitchenItems", $scope.updatedItem.id);
+			}else{
+				updateGrocery.quanityNum = item.quanityNum + groceryQuanity;
+				$scope.newItem = updateGrocery;
+				$scope.create("groceryList");
+			}
+		}
+	};
+
 	//creating, and updating items in the Menu
+	// menu items: id, breakfast, lunch, dinner
+	// food items: id, item, quanityNum, quanityType, price
 	$scope.createMenu = function(menu, menuSelection){
 		console.log("called createMenu function for creating new item in "+ menuSelection);
 		if($scope.newItem.quanityType != "item(s)"){
@@ -149,6 +197,7 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 		}
 		console.log("ready to add new itmes to DB");
 		dbItem.createdbItem("menu", $scope.newMenuItem);
+		$scope.checkKitchen($scope.newItem);
 		$scope.newItem = {};
 		$scope.newMenuItem = {};
 	};
@@ -186,12 +235,50 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 				}
 		}
 		dbItem.updatedbItem("menu", $scope.updatedMenuItem, $scope.selectedDay);
+		$scope.checkKitchen($scope.updatedItem);
 		$scope.updatedItem = {};
 		$scope.updatedMenuItem = {};
 		$scope.hideUpdate = true;
 	};
+
+	$scope.deleteMenuItem = function(menu, mealType, id){
+		console.log("called delete item menu ID # " + menu.id);
+		$scope.updatedMenuItem = menu;
+		switch(mealType){
+			case "breakfast":
+				for(var i = 0; i < $scope.updatedMenuItem.breakfast.length; i++){
+					if($scope.updatedMenuItem.breakfast[i].id == id){
+						//$scope.updatedMenuItem.breakfast[i] = need to delete;
+						break;
+					}
+				}
+				break;
+			case "lunch":
+				for(var i = 0; i < $scope.updatedMenuItem.lunch.length; i++){
+					if($scope.updatedMenuItem.lunch[i].id == id){
+						//$scope.updatedMenuItem.lunch[i] = need to delete;
+						break;
+					}
+				}
+				break;
+			case "dinner":
+				for(var i = 0; i < $scope.updatedMenuItem.dinner.length; i++){
+					if($scope.updatedMenuItem.dinner[i].id == id){
+						//$scope.updatedMenuItem.dinner[i] = need to delete;
+						break;
+					}
+				}
+		}
+		dbItem.updatedbItem("menu", $scope.updatedMenuItem, $scope.selectedDay);
+		$scope.updatedMenuItem = {};
+	};
 	
 	//creating, updating, and deleting items in Kitchen & Grocery
+	/*
+	Kitchen items: id, item, quanityNum, quanityType, menuQuanityNum, price
+
+	Grocery items: go, id, item, quanityNum, quanityType, price
+	*/	
 	$scope.create = function(list){
 		console.log("called create function for " + list);
 		if($scope.newItem.quanityType != "item(s)"){
