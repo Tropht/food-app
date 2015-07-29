@@ -142,6 +142,16 @@ footer{
 #updater{
 	margin: auto;
 }
+#addMenuItems{
+	width: 100%;
+	margin: auto;
+	float: left;
+}
+#addMenuItems .panel{
+	width: 100%;
+	text-align: left;
+	margin: 10px 0 0 0;
+}
 /* Kitchen */
 
 #listkitchenItems{
