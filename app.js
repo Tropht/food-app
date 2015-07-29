@@ -192,17 +192,17 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 			if($scope.kitchen[i].id == item.id){
 				updateKitchen = $scope.kitchen[i];
 				console.log("item is in the Kitchen list");
-				//if the quanity is less than or equal to what is in the kitchen
+				//if the quanity is less than or equal to what is available in the kitchen
 				if(updateKitchen.quanityNum >= item.quanityNum){
 					updateKitchen.quanityNum -= item.quanityNum - oldQuantityNum; //update available amount
 					updateKitchen.menuQuanityNum += item.quanityNum - oldQuantityNum; //update on menu amount
 					console.log("Asking for less than what is in the Kitchen");
 				}else { //if the quanity is greater than in kitchen
 					//there might be a bug here ***
-					var diff = item.quanityNum - oldQuantityNum - updateKitchen.quanityNum; //subtract orig quanity
-					updateKitchen.menuQuanityNum = updateKitchen.quanityNum; //item.quanity - diff;
+					var diff = item.quanityNum - updateKitchen.quanityNum - oldQuantityNum; //subtract orig quanity
+					updateGrocery.quanityNum = diff + groceryQuanity; // difference between what was avail & wanted items
+					updateKitchen.menuQuanityNum += updateKitchen.quanityNum - oldQuantityNum;
 					updateKitchen.quanityNum = 0;
-					updateGrocery.quanityNum = diff + groceryQuanity;
 					$scope.newItem = updateGrocery;
 					$scope.create("groceryList");
 					console.log("More than kitchen, adding to grocery list");

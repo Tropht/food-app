@@ -66,11 +66,56 @@
       "quanityType": "item(s)",
       "price": 1.99,
       "menuQuanityNum": 0
+    },
+    {
+      "id": 53,
+      "item": "eggs",
+      "quantityNum": 1,
+      "quantityType": "once(s)",
+      "price": 4.98,
+      "quanityNum": 0,
+      "quanityType": "item(s)",
+      "menuQuanityNum": 4
     }
   ],
   "menu": [
+    {
+      "id": 20150729,
+      "breakfast": [
+        {
+          "id": 53,
+          "item": "eggs",
+          "quanityNum": 4,
+          "quanityType": "item(s)",
+          "go": "Grocery",
+          "fromMenu": true
+        }
+      ],
+      "lunch": [],
+      "dinner": [
+        {
+          "id": 57,
+          "item": "red wine",
+          "quantityNum": 1,
+          "quantityType": "once(s)",
+          "price": 12.99,
+          "quanityNum": 6,
+          "quanityType": "ounce(s)",
+          "go": "Grocery",
+          "fromMenu": true
+        }
+      ]
+    }
   ],
   "groceryList": [
+    {
+      "id": 53,
+      "item": "eggs",
+      "quanityNum": 4,
+      "quanityType": "item(s)",
+      "go": "Grocery",
+      "fromMenu": true
+    }
   ],
   "foodDB": [
     {
