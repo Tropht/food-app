@@ -19,7 +19,8 @@
         <div class="kitchenTable">
             <div class="panel-heading">
                 <a class="kitchenHeaderList" href=""><h4 ng-click="setFilter('item')">Item</h4></a>
-                <a class="kitchenHeaderList" href=""><h4 ng-click="setFilter('quanity')">Quantity</h4></a>
+                <a class="kitchenHeaderList" href=""><h4 ng-click="setFilter('quanity')">Available Quantity</h4></a>
+                <h4 class="kitchenHeaderList">Items on Menu</h4>
                 <a class="kitchenHeaderList" href=""><h4 ng-click="setFilter('price')">Price</h4></a>
                 <a class="kitchenHeaderList" href=""><h4>Edit</h4></a>
             </div>
@@ -28,12 +29,12 @@
                     <input class="form-input" type="text" name="item" ng-model="updatedItem.item">
                 </div>
                 <div class="input-edit">
-                    <input class="form-input" type="text" name="quanityNum" ng-model="updatedItem.quanityNum">
+                    <input class="form-input" type="number" name="quanityNum" ng-model="updatedItem.quanityNum">
                     <select name="quanityType" id="select" ng-model="updatedItem.quanityType">
                     <option ng-repeat="units in unitOptions">{{ units }}</option>
                 </div>
                 <div class="input-edit">
-                    <input class="form-input" type="text" name="price" ng-model="updatedItem.price">
+                    <input class="form-input" type="number" name="price" ng-model="updatedItem.price">
                 </div>
                 <div class="input-edit">
                     <button class="btn btn-success" ng-click="update('kitchenItems', updatedItem.id)">Update</button>
@@ -42,6 +43,7 @@
             <div class="kitchenList" ng-repeat="items in kitchen | orderBy: filterBy">
                 <h5 class="kitchenItem">#{{ items.id }} {{ items.item }}</h5>
                 <h5 class="kitchenItem">{{ items.quanityNum }} {{ items.quanityType }}</h5>
+                <h5 class="kitchenItem">{{ items.menuQuanityNum }} {{ items.quanityType }}</h5>
                 <h5 class="kitchenItem">${{ items.price }}</h5>
                 <a class="kitchenItem" href="" class="edit" ng-click="uHide(items)">
                     Edit
@@ -98,7 +100,7 @@
             <input class="form-input" type="text" name="price" ng-model="newItem.price">
         </div>
 
-        <button class="btn btn-success" ng-click="create('kitchenItems')">Add</button>
+        <button class="btn btn-success" ng-click="newItem.menuQuanityNum = 0; create('kitchenItems')">Add</button>
     </section>
 
 </div>
