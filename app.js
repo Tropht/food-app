@@ -106,7 +106,9 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 		});
 		$scope.selectedDay = selectedDate;
 	};
-
+	$scope.populateNewItem=function(result){
+		$scope.newItem=result;
+	}
 	//search items
 	$scope.search = function(terms) {
 		dbItem.getFoodItems().success(function(data) {
