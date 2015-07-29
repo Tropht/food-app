@@ -24,13 +24,13 @@
                     </div>
                     <div class="input-edit">
                         <label for="quanityNum">Quanity:</label>
-                        <input class="form-input" type="text" name="quanityNum" ng-model="updatedItem.quanityNum">
+                        <input class="form-input" type="number" name="quanityNum" ng-model="updatedItem.quanityNum">
                         <select name="quanityType" id="select" ng-model="updatedItem.quanityType">
                         <option ng-repeat="units in unitOptions">{{ units }}</option>
                     </div>
                     <div class="input-edit">
                         <label for="price">price: $</label>
-                        <input class="form-input" type="text" name="price" ng-model="updatedItem.price">
+                        <input class="form-input" type="number" name="price" ng-model="updatedItem.price">
                     </div>
                     <div class="input-edit">
                         <button class="btn btn-success" ng-click="updateMenu(menu, updatedItem.id)">Update</button>
@@ -47,7 +47,7 @@
                     <div><h5>${{ items.price }}</h5></div>
                     <div>
                         <a href="" class="edit" ng-click="uHide(items); menuSelection='breakfast'">Edit</a>
-                        <span class="delete glyphicon glyphicon-trash" ng-click="delete('menu', items.id)"></span>
+                        <span class="delete glyphicon glyphicon-trash" ng-click="deleteMenuItem(menu, 'breakfast', items.id)"></span>
                     </div>
                 </div>
             	<div class="tableHeader">
@@ -59,7 +59,7 @@
                     <div><h5>${{ items.price }}</h5></div>
                     <div>
                         <a href="" class="edit" ng-click="uHide(items); menuSelection='lunch'">Edit</a>
-                        <span class="delete glyphicon glyphicon-trash" ng-click="delete('menu', items.id)"></span>
+                        <span class="delete glyphicon glyphicon-trash" ng-click="deleteMenuItem(menu, 'lunch', items.id)"></span>
                     </div>
                 </div>
             	<div class="tableHeader">
@@ -71,7 +71,7 @@
                     <div><h5> ${{ items.price }}</h5></div>
                     <div>
                         <a href="" class="edit" ng-click="uHide(items); menuSelection='dinner'">Edit</a>
-                        <span class="delete glyphicon glyphicon-trash" ng-click="delete('menu', items.id)"></span>
+                        <span class="delete glyphicon glyphicon-trash" ng-click="deleteMenuItem(menu, 'dinner', items.id)"></span>
                     </div>
                 </div>
             </section>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="input-group">
                     <label for="quanityNum">Quanity:</label>
-                    <input class="form-input" type="text" name="quanityNum" ng-model="newItem.quanityNum">
+                    <input class="form-input" type="number" name="quanityNum" ng-model="newItem.quanityNum">
                 </div>
                 <div class="input-group">
                     <label for="quanityType">unit:</label>
@@ -105,7 +105,7 @@
                 </div>
                 <div class="input-group">
                     <label for="price">price: $</label>
-                    <input class="form-input" type="text" name="price" ng-model="newItem.price">
+                    <input class="form-input" type="number" name="price" ng-model="newItem.price">
                 </div>
 
                 <button class="btn btn-success" ng-click="createMenu(menu, menuSelection)">Add</button>
