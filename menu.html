@@ -2,7 +2,7 @@
 	<h3>What's on the menu?</h3>
 </div>
 <div id="mobileScroll">
-<div class="calContainer" style="height: 400px;" ng-init="loadEvents()">
+<div class="calContainer" ng-init="loadEvents()">
     <calendar calendar-mode="mode" event-source="eventSource">
         Event selected:{{event.startTime|date:
                 'MMM/dd,yyyy,HH:mm'}} - {{event.endTime|date:'MMM/dd,yyyy,HH:mm'}}, {{event.title}}
@@ -104,5 +104,6 @@
                 <button class="btn btn-success" ng-click="createMenu(menu, menuSelection)">Add</button>
             </section>
         </div>
+        <br><br><br><br><br><br><br><br><br><br><br>
     </section>
 </div>
