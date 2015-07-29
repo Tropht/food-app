@@ -157,20 +157,42 @@ footer ul li a{
 	float: left;
 }
 
-.showResults{
-	height: 300px;
+
+/* Kitchen Page */
+
+#listkitchenItems{
 	width: 100%;
-	overflow: auto;
+	height: 350px;
+	overflow: scroll;
+	border-right: 1px solid #EEEEEE;
 }
-/*kitchen page*/
-#listKitchen, #updateKitchen, #addItemsToKitchen{
-	display: inline-block;
-	vertical-align: top;
+.kitchenTable .panel-heading{
+	height: 60px;
+}
+.kitchenHeaderList{
+	width: 20%;
+	float: left;
+}
+.kitchenList{
+	padding: 10px 15px;
+}
+.kitchenItem{
+	margin: 5px 0px;
+	padding: 5px 0 0 0;
+	width: 20%;
+	height: 40px;
+	float: left;
+}
+#addItems{
+	width: 100%;
+}
+.showResults {
+    width: 300px;
+    height: 100px;
+    overflow-y: scroll;
+    border: aquamarine 1px solid;
 }
 
-#updateKitchen, #addItemsToKitchen{
-
-}
 
 /* Grocery List Page */
 .table{

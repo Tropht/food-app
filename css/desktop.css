@@ -145,18 +145,17 @@ footer{
 /* Kitchen */
 
 #listkitchenItems{
-	width: 45%;
+	width: 40%;
 	height: 450px;
 	overflow: scroll;
 	float: left;
-	padding-right: 1px solid #EEEEEE;
+	border-right: 1px solid #EEEEEE;
 	margin-left: 15px;
 }
 .kitchenTable .panel-heading{
 	height: 60px;
 }
 .kitchenHeaderList{
-	mAargin: 0 15px;
 	width: 20%;
 	float: left;
 }
@@ -171,9 +170,15 @@ footer{
 	float: left;
 }
 #addItems{
-	width: 45%;
-	margin: auto;
+	width: 55%;
+	margin-left: 25px;
 	float: left;
+}
+.showResults {
+    width: 300px;
+    height: 100px;
+    overflow-y: scroll;
+    border: aquamarine 1px solid;
 }
 
 /* Grocery List Page */
@@ -210,10 +215,5 @@ footer{
 	float: left;
 	width: 20%;
 }
-.showResults {
-    width: 300px;
-    height: 100px;
-    overflow-y: scroll;
-    border: aquamarine 1px solid;
-}
+
 }

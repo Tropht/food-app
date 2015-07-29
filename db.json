@@ -1,33 +1,17 @@
 {
   "kitchenItems": [
     {
-      "id": 1,
-      "item": "eggs",
-      "quanityNum": 12,
-      "quanityType": "item(s)",
-      "baseQuanity": "item",
-      "price": 1.99,
-      "menuQuanityNum": 0,
-      "menuQuanityType": "item(s)"
-    },
-    {
       "id": 2,
       "item": "green beans",
-      "quanityNum": 4,
+      "quanityNum": 2,
       "quanityType": "item(s)",
-      "baseQuanity": "item"
+      "baseQuanity": "item",
+      "menuQuanityNum": null
     },
     {
       "id": 3,
       "item": "peaches",
       "quanityNum": 4,
-      "quanityType": "item(s)",
-      "baseQuanity": "item"
-    },
-    {
-      "id": 4,
-      "item": "pineapple chunks",
-      "quanityNum": 1,
       "quanityType": "item(s)",
       "baseQuanity": "item"
     },
@@ -171,6 +155,20 @@
           "price": 7.99
         }
       ]
+    },
+    {
+      "id": 20150729,
+      "breakfast": [
+        {
+          "id": 2,
+          "item": "4",
+          "quanityNum": 2,
+          "quanityType": "ounce(s)",
+          "price": 3
+        }
+      ],
+      "lunch": [],
+      "dinner": []
     }
   ],
   "groceryList": [
@@ -185,9 +183,11 @@
     {
       "id": 2,
       "item": "something",
-      "quanityNum": 1,
+      "quanityNum": 2,
       "quanityType": "item(s)",
-      "baseQuanity": "item"
+      "baseQuanity": "item",
+      "go": "Grocery",
+      "fromMenu": true
     },
     {
       "go": "Grocery",
