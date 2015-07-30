@@ -27,16 +27,18 @@ h5{
 	margin: 20px;
 }
 .panel-heading{
-	background-image: url('../img/sectionHeaderGreen.jpg');
+	background-image: url('../img/INSERTHERE');
 	background-repeat: no-repeat;
-	background-color: #e8fce8 !important;
+	background-color: #fcb794 !important;
 }
 /* Content */
 	/* Overall Header */
 header{
 	width: 100%;
 	height: 100px;
-	background-image: url('../img/headerLargeGreen.jpg');
+	background-image: url('../img/42header.png');
+	background-color: #F37431;
+	background-repeat: no-repeat;
 	text-align: right;
 }
 header h2{
@@ -61,6 +63,7 @@ header h2{
 	border: none;
 }
 .page-header h3{
+	text-align: right;
 	color: white;
 }
 
@@ -84,7 +87,7 @@ footer{
 	display: none;
 }
 .monthview-selected{
-	background-color: #9ed39e;
+	background-color: #FCB794;
 }
 .monthview-primary-with-event{
 	background-color: #4292b7;
@@ -123,9 +126,9 @@ footer{
 }
 .tableHeader{
 	padding: 10px;
-	background-image: url('../img/sectionHeaderGreen.jpg');
+	background-image: url('../img/INSERTHERE');
 	background-repeat: no-repeat;
-	background-color: #e8fce8;
+	background-color: #FCB794;
 	text-align: right;
 }
 .repeatedItems{
