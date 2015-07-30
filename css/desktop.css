@@ -204,6 +204,7 @@ footer{
 }
 .kitchenTable{
 	width: 95%;
+	overflow-y: scroll;
 }
 .kitchenTable .panel-heading{
 	height: 60px;
