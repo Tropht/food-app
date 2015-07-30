@@ -54,7 +54,7 @@
 
             <section id="addMenuItems" ng-hide="!hideUpdate">
                 <div class="panel panel-default">
-                  <div class="panel-heading"><h4>Add new item</h4></div>
+                  <div class="tableHeader"><h4>Add new item</h4></div>
                   <div class="panel-body">
                   
                   <section id="searchsearchItems">
@@ -71,72 +71,44 @@
                         </div>
                     </section>
 
-                    <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1">When?</span>
-                        <select name="menuSelection" id="select" ng-model="menuSelection">
-                            <option value="breakfast" selected>Breakfast</option>
-                            <option value="lunch">Lunch</option>
-                            <option value="dinner">Dinner</option>
-                        </select>
-                    </div>
-                    
-                    <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1">Item:</span>
-                        <input class="form-input" type="text" name="item" ng-model="newItem.item">
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1">Quantity:</span>
-                        <input class="form-input" type="number" name="quanityNum" ng-model="newItem.quanityNum">
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1">Unit:</span>
-                        <select name="quanityType" id="select" ng-model="newItem.quanityType">
-                            <option ng-repeat="units in unitOptions">{{ units }}</option>
-                        </select>
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1">Price: $</span>
-                        <input class="form-input" type="number" name="price" ng-model="newItem.price">
-                    </div>
-                    <button class="btn btn-success" ng-click="createMenu(menu, menuSelection)">Add</button>
+                    <section class="valueGroup">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">When?</span>
+                            <select name="menuSelection" id="select" ng-model="menuSelection">
+                                <option value="breakfast" selected>Breakfast</option>
+                                <option value="lunch">Lunch</option>
+                                <option value="dinner">Dinner</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Item:</span>
+                            <h4>{{ newItem.item }}</h4>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Quantity:</span>
+                            <input class="form-input" type="number" name="quanityNum" ng-model="newItem.quanityNum">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Unit:</span>
+                            <select name="quanityType" id="select" ng-model="newItem.quanityType">
+                                <option ng-repeat="units in unitOptions">{{ units }}</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Price: $</span>
+                            <input class="form-input" type="number" name="price" ng-model="newItem.price">
+                        </div>
+                    </section>
                   </div>
+                  <button ng-click="createMenu(menu, menuSelection)">Add</button>
                 </div>
-
-                <!-- <div class="input-group">
-                    <select name="menuSelection" id="select" ng-model="menuSelection">
-                        <option value="breakfast" selected>Breakfast</option>
-                        <option value="lunch">Lunch</option>
-                        <option value="dinner">Dinner</option>
-                    </select>
-                </div> -->
-                <!-- <div class="input-group">
-                    <label for="id">id:</label>
-                    <input class="form-input" type="number" name="id" ng-model="newItem.id">
-                </div> -->
-                <!-- <div class="input-group">
-                    <label for="item">item:</label>
-                    <input class="form-input" type="text" name="item" ng-model="newItem.item">
-                </div> -->
-                <!-- <div class="input-group">
-                    <label for="quanityNum">Quanity:</label>
-                    <input class="form-input" type="number" name="quanityNum" ng-model="newItem.quanityNum">
-                </div> -->
-                <!-- <div class="input-group">
-                    <label for="quanityType">unit:</label>
-                    <select name="quanityType" id="select" ng-model="newItem.quanityType">
-                        <option ng-repeat="units in unitOptions">{{ units }}</option>
-                    </select>
-                </div> -->
-                <!-- <div class="input-group">
-                    <label for="price">price: $</label>
-                    <input class="form-input" type="number" name="price" ng-model="newItem.price">
-                </div> -->
-
-                <!-- <button class="btn btn-success" ng-click="createMenu(menu, menuSelection)">Add</button> -->
             </section>
 
             <section id="updater">
                 <div ng-hide="hideUpdate">
+                <div class="tableHeader">
+                    <h4>Edit Item</h4>
+                </div>
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon1">Item</span>
                         <input class="form-input" type="text" name="item" ng-model="updatedItem.item">
@@ -153,21 +125,8 @@
                         <input class="form-input" type="number" name="price" ng-model="updatedItem.price">
                     </div>
 
-                    <!-- <div class="input-edit">
-                        <input class="form-input" type="text" name="item" ng-model="updatedItem.item">
-                    </div> -->
-                    <!-- <div class="input-edit">
-                        <label for="quanityNum">Quanity:</label>
-                        <input class="form-input" type="number" name="quanityNum" ng-model="updatedItem.quanityNum">
-                        <select name="quanityType" id="select" ng-model="updatedItem.quanityType">
-                        <option ng-repeat="units in unitOptions">{{ units }}</option>
-                    </div> -->
-                    <!-- <div class="input-edit">
-                        <label for="price">price: $</label>
-                        <input class="form-input" type="number" name="price" ng-model="updatedItem.price">
-                    </div> -->
                     <div class="input-edit">
-                        <button class="btn btn-success" ng-click="updateMenu(menu, updatedItem.id)">Update</button>
+                        <button ng-click="updateMenu(menu, updatedItem.id)">Update</button>
                     </div>
                 </div>
             </section>

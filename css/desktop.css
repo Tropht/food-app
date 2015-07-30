@@ -20,16 +20,40 @@ h5{
 	font-size: 14px;
 	font-family: arial;
 }
+button{
+	float: right;
+}
 .panel{
 	text-align: right;
 	width: 45%;
 	float: left;
 	margin: 20px;
+	border: none;
 }
 .panel-heading{
 	background-image: url('../img/INSERTHERE');
 	background-repeat: no-repeat;
 	background-color: #fcb794 !important;
+}
+.panel-body{
+	border: none;
+}
+.panel-default{
+	border-style: none;
+}
+.leftPanel{
+	width: 40%;
+	float: left;
+}
+.rightPanel{
+	width: 60%;
+	float: left;
+	border-left: 1px solid #EEEEEE;
+	height: 550px;
+}
+.rightPanelAlign{
+	width: 80%;
+	margin: auto;
 }
 /* Content */
 	/* Overall Header */
@@ -79,7 +103,7 @@ footer{
 	/*Footer Navigation */
 .active{
 	text-align: center;
-	width: 100px;
+	width: 120px;
 }
 
 /* Menu Page */
@@ -94,7 +118,7 @@ footer{
 }
 .calContainer{
 	float: left;
-	width: 40%;
+	width: 100%;
 	margin: auto;
 	overflow-x: hidden;
 	padding: 5px;
@@ -112,7 +136,7 @@ footer{
 #listmenu{
 	border-left: 1px solid #EEEEEE;
 	float: right;
-	height: 480px;
+	height: 550px;
 	overflow: scroll;
 	width: 60%;
 }
@@ -144,6 +168,7 @@ footer{
 }
 #updater{
 	margin: auto;
+	margin: 10px 0 0 0;
 }
 #addMenuItems{
 	width: 100%;
@@ -155,6 +180,18 @@ footer{
 	text-align: left;
 	margin: 10px 0 0 0;
 }
+.input-group{
+	width: 49%;
+	margin: 3px auto;
+	float: left;
+}
+.input-group span{
+	border-radius: 0px;
+	padding: 2px 4px;
+}
+.input-group input{
+	margin-left: 3px;
+}
 /* Kitchen */
 
 #listkitchenItems{
@@ -164,6 +201,9 @@ footer{
 	float: left;
 	border-right: 1px solid #EEEEEE;
 	margin-left: 15px;
+}
+.kitchenTable{
+	width: 95%;
 }
 .kitchenTable .panel-heading{
 	height: 60px;
@@ -183,22 +223,23 @@ footer{
 	float: left;
 }
 #addItems{
-	width: 50%;
 	margin-left: 25px;
 	float: left;
 }
 .showResults {
-    width: 300px;
+    width: 45%;
+    margin: auto;
     height: 100px;
     overflow-y: scroll;
-    border: aquamarine 1px solid;
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 /* Grocery List Page */
 .paper{
 	float: left;
-	width: 40%;
-	margin-left: 25px;
+	width: 95%;
+	margin: auto;
 }
 .paperHead{
 	height: 10px;

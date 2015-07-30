@@ -31,6 +31,15 @@
           "quanityType": "item(s)",
           "go": "Grocery",
           "fromMenu": true
+        },
+        {
+          "id": 54,
+          "item": "pickles",
+          "quanityNum": 1,
+          "quanityType": "item(s)",
+          "price": 1.99,
+          "go": "Grocery",
+          "fromMenu": true
         }
       ],
       "dinner": [
@@ -44,15 +53,46 @@
           "fromMenu": true
         }
       ]
+    },
+    {
+      "id": 20150730,
+      "breakfast": [],
+      "lunch": [],
+      "dinner": []
+    },
+    {
+      "id": 20150728,
+      "breakfast": [
+        {
+          "id": 14,
+          "item": "orange juice",
+          "quanityNum": 6,
+          "quanityType": "ounce(s)",
+          "price": 2.5,
+          "go": "Grocery",
+          "fromMenu": true
+        }
+      ],
+      "lunch": [],
+      "dinner": []
     }
   ],
   "groceryList": [
     {
       "id": 53,
       "item": "eggs",
-      "quanityNum": 6,
+      "quanityNum": 0,
       "quanityType": "item(s)",
       "price": 4.98,
+      "go": "Grocery",
+      "fromMenu": true
+    },
+    {
+      "id": 15,
+      "item": "apple juice",
+      "quanityNum": 6,
+      "quanityType": "ounce(s)",
+      "price": 1.98,
       "go": "Grocery",
       "fromMenu": true
     }
