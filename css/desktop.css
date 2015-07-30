@@ -11,7 +11,7 @@ table, th, td, tr{
 	margin: 0px;
 }
 h4{
-	color: grey;
+	color: #3d3d3d;
 	margin: 0px;
 }
 h5{
@@ -25,7 +25,6 @@ button{
 }
 .panel{
 	text-align: right;
-	width: 45%;
 	float: left;
 	margin: 20px;
 	border: none;
@@ -36,6 +35,7 @@ button{
 	background-color: #fcb794 !important;
 }
 .panel-body{
+	background-color: #efefef;
 	border: none;
 }
 .panel-default{
@@ -60,7 +60,7 @@ button{
 header{
 	width: 100%;
 	height: 100px;
-	background-image: url('../img/42header.png');
+	background-image: url('../img/42headerNew.png');
 	background-color: #F37431;
 	background-repeat: no-repeat;
 	text-align: right;
@@ -88,7 +88,7 @@ header h2{
 }
 .page-header h3{
 	text-align: right;
-	color: white;
+	color: black;
 }
 
 /* Footer */
@@ -205,6 +205,7 @@ footer{
 }
 .kitchenTable{
 	width: 95%;
+	overflow-y: scroll;
 }
 .kitchenTable .panel-heading{
 	height: 60px;
@@ -222,11 +223,11 @@ footer{
 	padding: 5px 0 0 0;
 	width: 20%;
 	height: 40px;
+	border-bottom: 1px solid #EEEEEE;
 	float: left;
 	
 }
 #addItems{
-	margin-left: 25px;
 	float: left;
 }
 .showResults {
@@ -234,8 +235,8 @@ footer{
     margin: auto;
     height: 100px;
     overflow-y: scroll;
-    border-top: 1px solid #EEEEEE;
-    border-bottom: 1px solid #EEEEEE;
+    background-color: white;
+    border: grey;
 }
 
 /* Grocery List Page */

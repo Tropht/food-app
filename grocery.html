@@ -31,8 +31,8 @@
     <div class="rightPanel">
         <div class="rightPanelAlign">
             <section id="updateItems" ng-hide="hideUpdate">
-                <div class="panel panel-default">
-                    <div class="tableHeader"><h4>Update Items</h4></div>
+                <br>
+                    <div class="tableHeader"><h4>Edit Items</h4></div>
                     <div class="panel-body">
 
                         <div class="input-edit">
@@ -60,14 +60,12 @@
                             <span class="input-group-addon" id="basic-addon1">Price: $</span>
                             <input class="form-input" type="text" name="price" ng-model="updatedItem.price">
                         </div>
-                        <button class="btn btn-success" ng-click="update('groceryList', updatedItem.id)">Update</button>
+                        <button ng-click="update('groceryList', updatedItem.id)">Update</button>
                     </div>
-                </div>
             </section>
 
             <section id="addItems" ng-hide="!hideUpdate">
-
-                <div class="panel panel-default">
+                <br>
                     <div class="tableHeader"><h4>Add new item</h4></div>
                     <div class="panel-body">
 
@@ -94,7 +92,7 @@
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon" id="basic-addon1">Item:</span>
-                            <input class="form-input" type="text" name="item" ng-model="newItem.item">
+                            <h4>{{ newItem.item }}</h4>
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon" id="basic-addon1">Quantity:</span>
@@ -110,9 +108,8 @@
                             <span class="input-group-addon" id="basic-addon1">Price: $</span>
                             <input class="form-input" type="text" name="price" ng-model="newItem.price">
                         </div>
-                        <button class="btn btn-success" ng-click="create('groceryList')">Add</button>
+                        <button class="addButton" ng-click="create('groceryList')">Add</button>
                     </div>
-                </div>
 
             </section>
         </div>

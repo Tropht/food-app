@@ -3,15 +3,15 @@ html, body{
 	height: 100%;
 }
 body{
-	background-color: #F6F9FD;
 	overflow: hidden;
+	background-color: #f7fcf7;
 }
 table, th, td, tr{
 	padding: 0px !important;
 	margin: 0px;
 }
 h4{
-	color: grey;
+	color: #3d3d3d;
 	margin: 0px;
 }
 h5{
@@ -20,24 +20,49 @@ h5{
 	font-size: 14px;
 	font-family: arial;
 }
+button{
+	float: right;
+}
 .panel{
 	text-align: right;
-	width: 45%;
 	float: left;
 	margin: 20px;
+	border: none;
 }
 .panel-heading{
-	background-image: url('../img/sectionHeaderGreen.jpg');
+	background-image: url('../img/INSERTHERE');
 	background-repeat: no-repeat;
-	background-color: #e8fce8!important;
+	background-color: #fcb794 !important;
 }
-
+.panel-body{
+	background-color: #efefef;
+	border: none;
+}
+.panel-default{
+	border-style: none;
+}
+.leftPanel{
+	width: 40%;
+	float: left;
+}
+.rightPanel{
+	width: 60%;
+	float: left;
+	border-left: 1px solid #EEEEEE;
+	height: 550px;
+}
+.rightPanelAlign{
+	width: 80%;
+	margin: auto;
+}
 /* Content */
 	/* Overall Header */
 header{
 	width: 100%;
 	height: 100px;
-	background-image: url('../img/headerLargeGreen.jpg');
+	background-image: url('../img/42headerNew.png');
+	background-color: #F37431;
+	background-repeat: no-repeat;
 	text-align: right;
 }
 header h2{
@@ -48,9 +73,10 @@ header h2{
 	/* Container */
 .container{
 	background-color: #FFFFFF;
-	margin: auto;
-	width: 100%;
 	height: 85%;
+	width: 100%;
+	border-right: 1px solid #EEEEEE;
+	border-left: 1px solid #EEEEEE;
 }
 	/* Each Pages Header */
 
@@ -60,14 +86,15 @@ header h2{
 	border: none;
 }
 .page-header h3{
-	color: white;
+	text-align: right;
+	color: black;
 }
 
 /* Footer */
 footer{
 	position: absolute;
 	margin-left: -16px;
-	width: 100%;
+	width: 1241px;
 	background-color: #FFFFFF;
 	border-right: 1px solid #EEEEEE;
 	bottom: 0px;
@@ -75,7 +102,7 @@ footer{
 	/*Footer Navigation */
 .active{
 	text-align: center;
-	width: 100px;
+	width: 120px;
 }
 
 /* Menu Page */
@@ -83,14 +110,14 @@ footer{
 	display: none;
 }
 .monthview-selected{
-	background-color: #9ed39e;
+	background-color: #FCB794;
 }
 .monthview-primary-with-event{
 	background-color: #4292b7;
 }
 .calContainer{
 	float: left;
-	width: 40%;
+	width: 100%;
 	margin: auto;
 	overflow-x: hidden;
 	padding: 5px;
@@ -108,7 +135,7 @@ footer{
 #listmenu{
 	border-left: 1px solid #EEEEEE;
 	float: right;
-	height: 480px;
+	height: 550px;
 	overflow: scroll;
 	width: 60%;
 }
@@ -122,9 +149,9 @@ footer{
 }
 .tableHeader{
 	padding: 10px;
-	background-image: url('../img/sectionHeaderGreen.jpg');
+	background-image: url('../img/untensilsSmall.png');
 	background-repeat: no-repeat;
-	background-color: #e8fce8;
+	background-color: #FCB794;
 	text-align: right;
 }
 .repeatedItems{
@@ -140,6 +167,7 @@ footer{
 }
 #updater{
 	margin: auto;
+	margin: 10px 0 0 0;
 }
 #addMenuItems{
 	width: 100%;
@@ -151,7 +179,19 @@ footer{
 	text-align: left;
 	margin: 10px 0 0 0;
 }
-/* Ktichen */
+.input-group{
+	width: 49%;
+	margin: 3px auto;
+	float: left;
+}
+.input-group span{
+	border-radius: 0px;
+	padding: 2px 4px;
+}
+.input-group input{
+	margin-left: 3px;
+}
+/* Kitchen */
 
 #listkitchenItems{
 	width: 40%;
@@ -160,6 +200,10 @@ footer{
 	float: left;
 	border-right: 1px solid #EEEEEE;
 	margin-left: 15px;
+}
+.kitchenTable{
+	width: 95%;
+	overflow-y: scroll;
 }
 .kitchenTable .panel-heading{
 	height: 60px;
@@ -176,25 +220,26 @@ footer{
 	padding: 5px 0 0 0;
 	width: 20%;
 	height: 40px;
+	border-bottom: 1px solid #EEEEEE;
 	float: left;
 }
 #addItems{
-	width: 50%;
-	margin-left: 25px;
 	float: left;
 }
 .showResults {
-    width: 300px;
+    width: 45%;
+    margin: auto;
     height: 100px;
     overflow-y: scroll;
-    border: aquamarine 1px solid;
+    background-color: white;
+    border: grey;
 }
 
 /* Grocery List Page */
 .paper{
 	float: left;
-	width: 40%;
-	margin-left: 25px;
+	width: 95%;
+	margin: auto;
 }
 .paperHead{
 	height: 10px;

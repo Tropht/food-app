@@ -553,6 +553,10 @@ $(document).ready(function(){
 		$scope.selectedDate = parseInt(year + month + selectDay[0].innerText);
 		$scope.getDailyMenu($scope.selectedDate);
 		console.log($scope.selectedDate);
+	});
+	$(document).on('click', 'button', function(){
+		console.log("hello");
+		document.getElementsByClassName("form-control").value = "";
 	})
 });
 

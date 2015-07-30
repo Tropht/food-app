@@ -1,6 +1,7 @@
 {
   "kitchenItems": [
     {
+<<<<<<< HEAD
       "id": 1,
       "item": "eggs",
       "quanityNum": 12,
@@ -27,11 +28,25 @@
     {
       "id": 4,
       "item": "pineapple chunks",
+=======
+      "id": 17,
+      "item": "banana",
       "quanityNum": 1,
-      "quanityType": "item(s)",
-      "baseQuanity": "item"
+      "quanityType": "ounce(s)",
+      "price": 0.29,
+      "menuQuanityNum": 0
     },
     {
+      "id": 4,
+      "item": "garlic",
+>>>>>>> origin/blakes
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.19,
+      "menuQuanityNum": 0
+    },
+    {
+<<<<<<< HEAD
       "id": 5,
       "item": "corn",
       "quanityNum": 3,
@@ -42,11 +57,17 @@
       "id": 6,
       "item": "artichoke hearts",
       "quanityNum": 3,
+=======
+      "id": 1,
+      "item": "bread",
+      "quanityNum": 1,
+>>>>>>> origin/blakes
       "quanityType": "item(s)",
-      "baseQuanity": "item",
-      "price": 5.99
+      "price": 2.99,
+      "menuQuanityNum": 0
     },
     {
+<<<<<<< HEAD
       "id": 7,
       "item": "meat pasta sauce",
       "quanityNum": 0,
@@ -128,9 +149,34 @@
           "quanityType": "item(s)"
         }
       ]
+=======
+      "id": 8,
+      "item": "bacon",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.98,
+      "menuQuanityNum": 0
+    },
+    {
+      "id": 52,
+      "item": "frozen pizza",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 4.98,
+      "menuQuanityNum": 0
+    }
+  ],
+  "menu": [
+    {
+      "id": 20150729,
+      "breakfast": [],
+      "lunch": [],
+      "dinner": []
+>>>>>>> origin/blakes
     },
     {
       "id": 20150728,
+<<<<<<< HEAD
       "breakfast": [
         {
           "id": 7,
@@ -168,6 +214,8 @@
     },
     {
       "id": 20150730,
+=======
+>>>>>>> origin/blakes
       "breakfast": [],
       "lunch": [],
       "dinner": []
@@ -175,6 +223,7 @@
   ],
   "groceryList": [
     {
+<<<<<<< HEAD
       "id": 1,
       "item": "pickles",
       "quanityNum": 5,
@@ -230,6 +279,21 @@
       "price": 2.98,
       "quanityNum": null,
       "quanityType": "ounce(s)",
+=======
+      "id": 15,
+      "item": "apple juice",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.98,
+      "go": "Grocery"
+    },
+    {
+      "id": 14,
+      "item": "orange juice",
+      "quanityNum": 0,
+      "quanityType": "ounce(s)",
+      "price": 2.5,
+>>>>>>> origin/blakes
       "go": "Grocery",
       "fromMenu": true
     }
