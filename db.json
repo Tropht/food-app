@@ -1,0 +1,761 @@
+{
+  "kitchenItems": [
+    {
+      "id": 17,
+      "item": "banana",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 0.29,
+      "menuQuanityNum": 0
+    },
+    {
+      "id": 4,
+      "item": "garlic",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.19,
+      "menuQuanityNum": 0
+    }
+  ],
+  "menu": [
+    {
+      "id": 20150729,
+      "breakfast": [],
+      "lunch": [],
+      "dinner": []
+    },
+    {
+      "id": 20150730,
+      "breakfast": [],
+      "lunch": [],
+      "dinner": []
+    },
+    {
+      "id": 20150728,
+      "breakfast": [],
+      "lunch": [],
+      "dinner": []
+    }
+  ],
+  "groceryList": [
+    {
+      "id": 15,
+      "item": "apple juice",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.98,
+      "go": "Grocery"
+    },
+    {
+      "id": 14,
+      "item": "orange juice",
+      "quanityNum": 0,
+      "quanityType": "ounce(s)",
+      "price": 2.5,
+      "go": "Grocery",
+      "fromMenu": true
+    }
+  ],
+  "foodDB": [
+    {
+      "id": 1,
+      "item": "bread",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 2.99
+    },
+    {
+      "id": 2,
+      "item": "ketchup",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.99
+    },
+    {
+      "id": 3,
+      "item": "onion",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.49
+    },
+    {
+      "id": 4,
+      "item": "garlic",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.19
+    },
+    {
+      "id": 5,
+      "item": "cheese",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 3.99
+    },
+    {
+      "id": 6,
+      "item": "chocolate",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 1.98
+    },
+    {
+      "id": 7,
+      "item": "lettuce",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.79
+    },
+    {
+      "id": 8,
+      "item": "bacon",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.98
+    },
+    {
+      "id": 9,
+      "item": "chicken broth",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.99
+    },
+    {
+      "id": 10,
+      "item": "ice cream",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 4.98
+    },
+    {
+      "id": 11,
+      "item": "noodles",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 0.99
+    },
+    {
+      "id": 12,
+      "item": "milk",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.98
+    },
+    {
+      "id": 13,
+      "item": "greek yogurt",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.49
+    },
+    {
+      "id": 14,
+      "item": "orange juice",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.5
+    },
+    {
+      "id": 15,
+      "item": "apple juice",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.98
+    },
+    {
+      "id": 16,
+      "item": "strawberries",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.5
+    },
+    {
+      "id": 17,
+      "item": "banana",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 0.29
+    },
+    {
+      "id": 18,
+      "item": "Quaker Oats Old Fashioned Oats",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.79
+    },
+    {
+      "id": 19,
+      "item": "Barilla Gluten Free Penne Pasta",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2
+    },
+    {
+      "id": 20,
+      "item": "Barilla Spaghetti",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.42
+    },
+    {
+      "id": 21,
+      "item": "Folgers Classic Roast Medium Ground Coffee",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 8.7
+    },
+    {
+      "id": 22,
+      "item": "Great Value: French Vanilla Cappuccino",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 3.45
+    },
+    {
+      "id": 23,
+      "item": "Great Value Unsalted Roasted Peanuts",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.15
+    },
+    {
+      "id": 24,
+      "item": "Sun-Maid Natural California Raisins",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 3.65
+    },
+    {
+      "id": 25,
+      "item": "Great Value Cashew Halves & Pieces",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 5.48
+    },
+    {
+      "id": 26,
+      "item": "Cheetos Crunchy Cheddar Jalapeno Cheese Flavored Snacks",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.5
+    },
+    {
+      "id": 27,
+      "item": "Lucky Charms Cereal",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 4.48
+    },
+    {
+      "id": 28,
+      "item": "Kellogg's Froot Loops Cereal",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 4.58
+    },
+    {
+      "id": 29,
+      "item": "Wheaties Cereal",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 3.68
+    },
+    {
+      "id": 30,
+      "item": "Great Value: Long Grain Enriched Rice",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.5
+    },
+    {
+      "id": 31,
+      "item": "Botan U.S. No. 1 Extra Fancy Calrose Rice",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 19.28
+    },
+    {
+      "id": 32,
+      "item": "Kraft Family Size Velveeta Shells & Cheese",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 4.48
+    },
+    {
+      "id": 33,
+      "item": "Idahoan Original Mashed Potatoes",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.98
+    },
+    {
+      "id": 34,
+      "item": "Hidden Valley Pasta Salad, Homestyle Italian",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.86
+    },
+    {
+      "id": 35,
+      "item": "Old El Paso Hard & Soft Taco Kit",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.5
+    },
+    {
+      "id": 36,
+      "item": "Thai Kitchen Pad Thai Rice Noodle Cart",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.42
+    },
+    {
+      "id": 37,
+      "item": "Welch's Mixed Fruit Fat Free Fruit Snacks",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 3.98
+    },
+    {
+      "id": 38,
+      "item": "Campbell's Chunky Classic Chicken Noodle Soup",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2
+    },
+    {
+      "id": 39,
+      "item": "Campbell's Chunky Mushroom Swiss Burger Soup",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2
+    },
+    {
+      "id": 40,
+      "item": "Campbell's Chunky Healthy Request Old Fashioned Vegetable Beef Soup",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2
+    },
+    {
+      "id": 41,
+      "item": "Great Value Natural Unsweetened Applesauce",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.48
+    },
+    {
+      "id": 42,
+      "item": "Tree Top Mango Apple Sauce",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.98
+    },
+    {
+      "id": 43,
+      "item": "Crystal Light On The Go Fruit Punch Drink Mix",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.48
+    },
+    {
+      "id": 44,
+      "item": "Del Monte: Sweet Cream Style Corn",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 0.98
+    },
+    {
+      "id": 45,
+      "item": "Vlasic: Hot Jalapeno Slices",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 3.78
+    },
+    {
+      "id": 46,
+      "item": "Del Monte: Blue Lake Fancy Cut Green Beans",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 3.97
+    },
+    {
+      "id": 47,
+      "item": "Vlasic: Mild Stackers Banana Pepper Rings",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 4.56
+    },
+    {
+      "id": 48,
+      "item": "Great Value 100% Pure Canola Oil",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 5.98
+    },
+    {
+      "id": 49,
+      "item": "Crisco Pure All Natural Vegetable Oil",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.84
+    },
+    {
+      "id": 50,
+      "item": "Gold Medal: All Purpose Flour",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.48
+    },
+    {
+      "id": 51,
+      "item": "King Arthur Unbleached Flour",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 3.98
+    },
+    {
+      "id": 52,
+      "item": "frozen pizza",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 4.98
+    },
+    {
+      "id": 53,
+      "item": "eggs",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 4.98
+    },
+    {
+      "id": 54,
+      "item": "pickles",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.99
+    },
+    {
+      "id": 55,
+      "item": "peach",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.48
+    },
+    {
+      "id": 56,
+      "item": "tomato sauce",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.99
+    },
+    {
+      "id": 57,
+      "item": "red wine",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 12.99
+    },
+    {
+      "id": 58,
+      "item": "corn",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 0.29
+    },
+    {
+      "id": 59,
+      "item": "kiwi",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.29
+    },
+    {
+      "id": 60,
+      "item": "gum",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 0.99
+    },
+    {
+      "id": 61,
+      "item": "spinach",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.49
+    },
+    {
+      "id": 62,
+      "item": "salt",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.99
+    },
+    {
+      "id": 63,
+      "item": "cereal",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.75
+    },
+    {
+      "id": 64,
+      "item": "granola",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 3.49
+    },
+    {
+      "id": 65,
+      "item": "coffee beans",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 11.98
+    },
+    {
+      "id": 66,
+      "item": "orange",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.29
+    },
+    {
+      "id": 67,
+      "item": "grapes",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 3.49
+    },
+    {
+      "id": 68,
+      "item": "oatmeal",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.99
+    },
+    {
+      "id": 69,
+      "item": "salad dressing",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.99
+    },
+    {
+      "id": 70,
+      "item": "asparagus",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.99
+    },
+    {
+      "id": 71,
+      "item": "white wine",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 11.98
+    },
+    {
+      "id": 72,
+      "item": "tortilla chips",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 2.69
+    },
+    {
+      "id": 73,
+      "item": "tomato",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.49
+    },
+    {
+      "id": 74,
+      "item": "peanut butter",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.99
+    },
+    {
+      "id": 75,
+      "item": "sugar",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 4.98
+    },
+    {
+      "id": 76,
+      "item": "grape jelly",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.98
+    },
+    {
+      "id": 77,
+      "item": "alfredo sauce",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.99
+    },
+    {
+      "id": 78,
+      "item": "spaghetti sauce",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.99
+    },
+    {
+      "id": 79,
+      "item": "gnocchi",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.99
+    },
+    {
+      "id": 80,
+      "item": "pie crust",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 3.99
+    },
+    {
+      "id": 81,
+      "item": "basil",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 2.99
+    },
+    {
+      "id": 82,
+      "item": "avocado",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.98
+    },
+    {
+      "id": 83,
+      "item": "blueberries",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 3.98
+    },
+    {
+      "id": 84,
+      "item": "chocolate chips",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.99
+    },
+    {
+      "id": 85,
+      "item": "sundried tomatoes",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.99
+    },
+    {
+      "id": 86,
+      "item": "cilantro bunch",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.99
+    },
+    {
+      "id": 87,
+      "item": "bellpepper",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.69
+    },
+    {
+      "id": 88,
+      "item": "butternut squash",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 0.98
+    },
+    {
+      "id": 89,
+      "item": "kale bunch",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.98
+    },
+    {
+      "id": 90,
+      "item": "mushrooms",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.98
+    },
+    {
+      "id": 91,
+      "item": "deli meat",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.98
+    },
+    {
+      "id": 92,
+      "item": "lime",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.29
+    },
+    {
+      "id": 93,
+      "item": "lemon",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.49
+    },
+    {
+      "id": 94,
+      "item": "pear",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.49
+    },
+    {
+      "id": 95,
+      "item": "sweet potatoes",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 2.98
+    },
+    {
+      "id": 96,
+      "item": "cucumber",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 0.29
+    },
+    {
+      "id": 97,
+      "item": "chicken breast",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 6.99
+    },
+    {
+      "id": 98,
+      "item": "tilapia",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 7.49
+    },
+    {
+      "id": 99,
+      "item": "celery",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "price": 1.99
+    },
+    {
+      "id": 100,
+      "item": "carrots",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.99
+    }
+  ]
+}

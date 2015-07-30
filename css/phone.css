@@ -15,7 +15,9 @@ table, th, td, tr{
 header{
 	width: 100%;
 	height: 100px;
-	background-image: url('../img/42header.png');
+	background-image: url('../img/utensilsLarge.png');
+	background-color: #F37431;
+	background-repeat: no-repeat;
 	text-align: right;
 }
 header h2{
@@ -42,7 +44,7 @@ button{
 	margin: 20px auto;
 }
 .panel-heading{
-	background-image: url('../img/INSERTHERE');
+	background-image: url('../img/utensilsSmall.png');
 	background-repeat: no-repeat;
 	background-color: #fcb794 !important;
 }
@@ -65,6 +67,7 @@ button{
 .page-header{
 	margin: 0px;
 	margin-top: -55px;
+	text-align: right;
 	border: none;
 }
 .page-header h3{
