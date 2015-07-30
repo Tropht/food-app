@@ -56,6 +56,21 @@
                 <div class="panel panel-default">
                   <div class="panel-heading"><h4>Add new item</h4></div>
                   <div class="panel-body">
+                  
+                  <section id="searchsearchItems">
+                        <div class="input-group">
+                            <input class="form-control" type="text" ng-model="searchinput" placeholder="Search" ng-keyup="search(searchinput)">
+                        </div>
+                        
+                        <div class="showResults">
+                            <div ng-repeat="result in searchResults">
+                                <div ng-click="populateNewItem(result)">
+                                    {{result.item}}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon1">When?</span>
                         <select name="menuSelection" id="select" ng-model="menuSelection">
