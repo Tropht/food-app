@@ -7,7 +7,83 @@
       "quanityType": "item(s)",
       "price": 2.99,
       "menuQuanityNum": 4
-    }
+    },
+    { 
+      "id": 2,
+      "item": "eggs",
+      "quanityNum": 12,
+      "quanityType": "item(s)",
+      "baseQuanity": "item",
+      "price": 1.99,
+      "menuQuanityNum": 0,
+      "menuQuanityType": "item(s)"
+    },
+    {
+      "id": 3,
+      "item": "green beans",
+      "quanityNum": 4,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "id": 4,
+      "item": "peaches",
+      "quanityNum": 4,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "id": 5,
+      "item": "pineapple chunks",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "id": 6,
+      "item": "corn",
+      "quanityNum": 3,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "item": "artichoke hearts",
+      "quanityNum": 3,
+      "id": 7,
+      "quanityType": "item(s)",
+      "baseQuanity": "item",
+      "price": 5.99
+    },
+    {
+      "id": 8,
+      "item": "meat pasta sauce",
+      "quanityNum": 1,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "id": 9,
+      "item": "crushed tomatoes",
+      "quanityNum": 12,
+      "quanityType": "item(s)",
+      "baseQuanity": "item"
+    },
+    {
+      "id": 10,
+      "item": "diced tomatoes (rosemary)",
+      "quanityNum": 3,
+      "quanityType": "item(s)",
+      "baseQuanity": "item",
+      "price": 0.86
+    },
+    {
+      "id": 11,
+      "item": "updated (rosemary)",
+      "quanityNum": 2,
+      "quanityType": "item(s)",
+      "baseQuanity": "item",
+      "price": 8.77
+    },
   ],
   "menu": [
     {
