@@ -12,31 +12,9 @@
                 <a class="groceryHeaderList" ng-click="setFilter('price')"><h4>Price</h4></a>
 			    <a class="groceryHeaderList"><h4>Edit</h4></a>
 			</div>
-            <div ng-hide="hideUpdate">
-                <div class="input-edit">
-                <select name="go" id="select" ng-model="updatedItem.go">
-                    <option value="Grocery" selected>Grocery</option>
-                    <option value="Other">Other</option>
-                </select>
-                </div>
-                <div class="input-edit">
-                    <input class="form-input" type="text" name="item" ng-model="updatedItem.item">
-                </div>
-                <div class="input-edit">
-                    <input class="form-input" type="text" name="quanityNum" ng-model="updatedItem.quanityNum">
-                    <select name="quanityType" id="select" ng-model="updatedItem.quanityType">
-                    <option ng-repeat="units in unitOptions">{{ units }}</option>
-                </div>
-                <div class="input-edit">
-                    <input class="form-input" type="text" name="price" ng-model="updatedItem.price">
-                </div>
-                <div class="input-edit">
-                    <button class="btn btn-success" ng-click="update('groceryList', updatedItem.id)">Update</button>
-                </div>
-            </div>
 			<div class="line" ng-repeat="items in groceries | orderBy: filterBy">
 			    <div class="special groceryListItem">{{ items.go }}<span ng-hide="!items.fromMenu"> ** </span></div>
-			    <div class="groceryListItem">#{{ items.id }} {{ items.item }}</div>
+			    <div class="groceryListItem">{{ items.item }}</div>
 			    <div class="groceryListItem">{{ items.quanityNum }} {{ items.quanityType }}</div>
 			    <div class="groceryListItem"> ${{ items.price }}</div>
 			    <div class="groceryListItem">
@@ -49,15 +27,17 @@
     </section>
 
     <section id="updateItems" ng-hide="hideUpdate">
-
         <div class="panel panel-default">
             <div class="panel-heading"><h4>Update Items</h4></div>
             <div class="panel-body">
-                
-                <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">ID:</span>
-                    <input class="form-input" type="text" name="item" ng-model="updatedItem.item">
+
+                <div class="input-edit">
+                <select name="go" id="select" ng-model="updatedItem.go">
+                    <option value="Grocery" selected>Grocery</option>
+                    <option value="Other">Other</option>
+                </select>
                 </div>
+
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">Item:</span>
                     <input class="form-input" type="text" name="quanityNum" ng-model="updatedItem.quanityNum">
@@ -79,27 +59,6 @@
                 <button class="btn btn-success" ng-click="update('groceryList', updatedItem.id)">Update</button>
             </div>
         </div>
-
-        <!-- <h3>Update</h3>
-        <div class="input-group">
-            <label for="item">item:</label>
-            <input class="form-input" type="text" name="item" ng-model="updatedItem.item">
-        </div>
-        <div class="input-group">
-            <label for="quanityNum">Quanity:</label>
-            <input class="form-input" type="text" name="quanityNum" ng-model="updatedItem.quanityNum">
-        </div>
-        <div class="input-group">
-            <label for="quanityType">unit:</label>
-            <select name="quanityType" id="select" ng-model="updatedItem.quanityType">
-                <option ng-repeat="units in unitOptions">{{ units }}</option>
-            </select>
-        </div>
-        <div class="input-group">
-            <label for="price">price: $</label>
-            <input class="form-input" type="text" name="price" ng-model="updatedItem.price">
-        </div>
-        <button class="btn btn-success" ng-click="update('groceryList', updatedItem.id)">Update</button> -->
     </section>
 
     <section id="addItems" ng-hide="!hideUpdate">
@@ -122,10 +81,6 @@
                     </div>
                 </section>
                 
-                <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">ID:</span>
-                    <input class="form-input" type="number" name="id" ng-model="newItem.id">
-                </div>
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">List Type:</span>
                     <select name="go" id="select" ng-model="newItem.go">
@@ -155,39 +110,5 @@
             </div>
         </div>
 
-
-
-        <!-- <h3>Add new item</h3>
-        <div class="input-group">
-            <label for="id">id:</label>
-            <input class="form-input" type="number" name="id" ng-model="newItem.id">
-        </div>
-        <div class="input-group">
-            <label for="go">List Type:</label>
-            <select name="go" id="select" ng-model="newItem.go">
-                <option value="Grocery" selected>Grocery</option>
-                <option value="Other">Other</option>
-            </select>
-        </div>
-        <div class="input-group">
-            <label for="item">item:</label>
-            <input class="form-input" type="text" name="item" ng-model="newItem.item">
-        </div>
-        <div class="input-group">
-            <label for="quanityNum">Quanity:</label>
-            <input class="form-input" type="text" name="quanityNum" ng-model="newItem.quanityNum">
-        </div>
-        <div class="input-group">
-            <label for="quanityType">unit:</label>
-            <select name="quanityType" id="select" ng-model="newItem.quanityType">
-                <option ng-repeat="units in unitOptions">{{ units }}</option>
-            </select>
-        </div>
-        <div class="input-group">
-            <label for="price">price: $</label>
-            <input class="form-input" type="text" name="price" ng-model="newItem.price">
-        </div>
-
-        <button class="btn btn-success" ng-click="create('groceryList')">Add</button> -->
     </section>
 </div>
