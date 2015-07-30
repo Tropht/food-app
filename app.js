@@ -171,6 +171,7 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 
 //Is the item in the kitchen
 	$scope.checkKitchen = function(item, oldQuantityNum){
+		console.log("checking Kitchen list for " + item.item);
 		dbItem.getKitchen().success(function(data){
 			$scope.kitchen = data;
 		});
@@ -214,7 +215,8 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 				break;
 			}
 		}
-		if(updateKitchen == {}) //The item is not located in the Kitchen so adding to grocery list
+		console.log("kitchen status is " + updateKitchen);
+		if(!updateKitchen.id) //The item is not located in the Kitchen so adding to grocery list
 		{
 			console.log("Item was not found in the Kitchen, adding to GroceryList");
 			updateGrocery.quanityNum = item.quanityNum - oldQuantityNum + groceryQuanity; //subtract orig quanity
@@ -232,6 +234,7 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 			$scope.updatedItem.quanityNum = $scope.getBaseQuantity($scope.updatedItem);
 			$scope.newItem.quanityType = "ounce(s)";
 		}
+		console.log("called menu selection " + $scope.menuSelection);
 		switch($scope.menuSelection){
 			case "breakfast":
 				for(var i = 0; i < $scope.updatedMenuItem.breakfast.length; i++){
@@ -273,7 +276,7 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 			case "breakfast":
 				for(var i = 0; i < $scope.updatedMenuItem.breakfast.length; i++){
 					if($scope.updatedMenuItem.breakfast[i].id == id){
-						//$scope.updatedMenuItem.breakfast[i] = need to delete;
+						$scope.updatedMenuItem.breakfast.splice(i, 1);
 						break;
 					}
 				}
@@ -281,7 +284,7 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 			case "lunch":
 				for(var i = 0; i < $scope.updatedMenuItem.lunch.length; i++){
 					if($scope.updatedMenuItem.lunch[i].id == id){
-						//$scope.updatedMenuItem.lunch[i] = need to delete;
+						$scope.updatedMenuItem.lunch.splice(i, 1);
 						break;
 					}
 				}
@@ -289,7 +292,7 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 			case "dinner":
 				for(var i = 0; i < $scope.updatedMenuItem.dinner.length; i++){
 					if($scope.updatedMenuItem.dinner[i].id == id){
-						//$scope.updatedMenuItem.dinner[i] = need to delete;
+						$scope.updatedMenuItem.dinner.splice(i, 1);
 						break;
 					}
 				}

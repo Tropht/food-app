@@ -3,37 +3,31 @@
     {
       "id": 1,
       "item": "bread",
-      "quanityNum": 10,
+      "quanityNum": 8,
       "quanityType": "item(s)",
       "price": 2.99,
-      "menuQuanityNum": 2
+      "menuQuanityNum": 4
     }
   ],
   "menu": [
     {
       "id": 20150729,
-      "breakfast": [],
-      "lunch": [
+      "breakfast": [
         {
-          "id": 57,
-          "item": "red wine",
-          "quanityNum": 1,
-          "quanityType": "ounce(s)",
-          "price": 12.99,
+          "id": 53,
+          "item": "eggs",
+          "quanityNum": 6,
+          "quanityType": "item(s)",
+          "price": 4.98,
           "go": "Grocery",
           "fromMenu": true
-        },
-        {
-          "id": 2,
-          "item": "ketchup",
-          "quanityNum": 4,
-          "quanityType": "ounce(s)",
-          "price": 1.99
-        },
+        }
+      ],
+      "lunch": [
         {
           "id": 1,
           "item": "bread",
-          "quanityNum": 2,
+          "quanityNum": 4,
           "quanityType": "item(s)",
           "go": "Grocery",
           "fromMenu": true
@@ -54,12 +48,13 @@
   ],
   "groceryList": [
     {
-      "id": 2,
-      "item": "ketchup",
-      "quanityNum": 1,
-      "quanityType": "ounce(s)",
-      "price": 1.99,
-      "go": "Grocery"
+      "id": 53,
+      "item": "eggs",
+      "quanityNum": 6,
+      "quanityType": "item(s)",
+      "price": 4.98,
+      "go": "Grocery",
+      "fromMenu": true
     }
   ],
   "foodDB": [
