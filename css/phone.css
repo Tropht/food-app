@@ -25,7 +25,7 @@ header h2{
 }
 h4{
 	margin: 0px;
-	color: grey;
+	color: #3d3d3d;
 }
 h5{
 	color: grey;
@@ -68,7 +68,7 @@ button{
 	border: none;
 }
 .page-header h3{
-	color: white;
+	color: black;
 }
 	/* Footer */
 
