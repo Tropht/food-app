@@ -25,7 +25,6 @@ button{
 }
 .panel{
 	text-align: right;
-	width: 45%;
 	float: left;
 	margin: 20px;
 	border: none;
@@ -36,6 +35,7 @@ button{
 	background-color: #fcb794 !important;
 }
 .panel-body{
+	background-color: #efefef;
 	border: none;
 }
 .panel-default{
@@ -220,10 +220,10 @@ footer{
 	padding: 5px 0 0 0;
 	width: 20%;
 	height: 40px;
+	border-bottom: 1px solid #EEEEEE;
 	float: left;
 }
 #addItems{
-	margin-left: 25px;
 	float: left;
 }
 .showResults {
@@ -231,8 +231,8 @@ footer{
     margin: auto;
     height: 100px;
     overflow-y: scroll;
-    border-top: 1px solid #EEEEEE;
-    border-bottom: 1px solid #EEEEEE;
+    background-color: white;
+    border: grey;
 }
 
 /* Grocery List Page */

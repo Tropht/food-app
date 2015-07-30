@@ -15,7 +15,7 @@ table, th, td, tr{
 header{
 	width: 100%;
 	height: 100px;
-	background-image: url('../img/headerLargeGreen.jpg');
+	background-image: url('../img/42header.png');
 	text-align: right;
 }
 header h2{
@@ -33,15 +33,22 @@ h5{
 	font-size: 14px;
 	font-family: arial;
 }
+button{
+	float: right;
+}
 .panel{
 	text-align: right;
 	width: 90%;
 	margin: 20px auto;
 }
 .panel-heading{
-	background-image: url('../img/sectionHeaderGreen.jpg');
+	background-image: url('../img/INSERTHERE');
 	background-repeat: no-repeat;
-	background-color: #e8fce8!important;
+	background-color: #fcb794 !important;
+}
+.panel-body{
+	background-color: #efefef;
+	border: none;
 }
 #mobileScroll{
 	height: 500px;
@@ -76,14 +83,14 @@ footer{
 	/* Footer Navigation */
 .active{
 	text-align: center;
-	width: 100px;
+	width: 120px;
 }
 footer ul{
 	bottom: 0px;
 	margin-top: 12px;
 }
 footer ul li{
-	width: 50px;
+	width: 110px;
 }
 footer ul li:hover{
 	text-align: center;
@@ -99,7 +106,7 @@ footer ul li a{
 	display: none;
 }
 .monthview-selected{
-	background-color: #9ed39e;
+	background-color: #FCB794;
 }
 .monthview-primary-with-event{
 	background-color: #4292b7;
@@ -121,18 +128,16 @@ footer ul li a{
 
 
 #listmenu{
-	border-left: 1px solid #EEEEEE;
 	float: right;
-	width: 100%;
 }
 #theMenu{
 	border-left: 1px solid #EEEEEE;
 }
 .tableHeader{
 	padding: 10px;
-	background-image: url('../img/sectionHeaderGreen.jpg');
+	background-image: url('../img/INSERTHERE');
 	background-repeat: no-repeat;
-	background-color: #e8fce8;
+	background-color: #fcb794;
 	text-align: right;
 }
 .repeatedItems{
@@ -179,16 +184,18 @@ footer ul li a{
 	padding: 5px 0 0 0;
 	width: 20%;
 	height: 40px;
+	border-bottom: 1px solid #EEEEEE;
 	float: left;
 }
 #addItems{
+	float: left;
 	width: 100%;
 }
 .showResults {
-    width: 300px;
+    width: 90%;
     height: 100px;
+    background-color: white;
     overflow-y: scroll;
-    border: aquamarine 1px solid;
 }
 
 
@@ -224,6 +231,9 @@ footer ul li a{
 .groceryListItem{
 	float: left;
 	width: 20%;
+}
+#updateItems{
+	float: left;
 }
 
 

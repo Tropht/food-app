@@ -1,12 +1,20 @@
 {
   "kitchenItems": [
     {
-      "id": 1,
-      "item": "bread",
-      "quanityNum": 8,
+      "id": 17,
+      "item": "banana",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 0.29,
+      "menuQuanityNum": 0
+    },
+    {
+      "id": 4,
+      "item": "garlic",
+      "quanityNum": 1,
       "quanityType": "item(s)",
-      "price": 2.99,
-      "menuQuanityNum": 4
+      "price": 0.19,
+      "menuQuanityNum": 0
     }
   ],
   "menu": [
@@ -66,7 +74,7 @@
         {
           "id": 14,
           "item": "orange juice",
-          "quanityNum": 6,
+          "quanityNum": 0,
           "quanityType": "ounce(s)",
           "price": 2.5,
           "go": "Grocery",
@@ -79,20 +87,19 @@
   ],
   "groceryList": [
     {
-      "id": 53,
-      "item": "eggs",
-      "quanityNum": 0,
-      "quanityType": "item(s)",
-      "price": 4.98,
-      "go": "Grocery",
-      "fromMenu": true
-    },
-    {
       "id": 15,
       "item": "apple juice",
-      "quanityNum": 6,
+      "quanityNum": 1,
       "quanityType": "ounce(s)",
       "price": 1.98,
+      "go": "Grocery"
+    },
+    {
+      "id": 14,
+      "item": "orange juice",
+      "quanityNum": 0,
+      "quanityType": "ounce(s)",
+      "price": 2.5,
       "go": "Grocery",
       "fromMenu": true
     }
