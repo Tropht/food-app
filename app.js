@@ -540,6 +540,10 @@ app.controller('myCtrl', ['$scope', 'dbItem', function ($scope, dbItem) {
 		}
 	];
 
+	$scope.removeFromSearch = function(){
+		document.getElementById("searchField").value = "";
+	};
+
 //jQuery
 
 $(document).ready(function(){
@@ -556,7 +560,8 @@ $(document).ready(function(){
 	});
 	$(document).on('click', 'button', function(){
 		console.log("hello");
-		document.getElementsByClassName("form-control").value = "";
+		$scope.removeFromSearch();
+		$scope.searchResults = [];
 	})
 });
 

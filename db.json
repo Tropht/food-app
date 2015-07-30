@@ -1,46 +1,5 @@
 {
-  "kitchenItems": [
-    {
-      "id": 17,
-      "item": "banana",
-      "quanityNum": 1,
-      "quanityType": "ounce(s)",
-      "price": 0.29,
-      "menuQuanityNum": 0
-    },
-    {
-      "id": 4,
-      "item": "garlic",
-      "quanityNum": 1,
-      "quanityType": "item(s)",
-      "price": 0.19,
-      "menuQuanityNum": 0
-    },
-    {
-      "id": 1,
-      "item": "bread",
-      "quanityNum": 1,
-      "quanityType": "item(s)",
-      "price": 2.99,
-      "menuQuanityNum": 0
-    },
-    {
-      "id": 8,
-      "item": "bacon",
-      "quanityNum": 1,
-      "quanityType": "ounce(s)",
-      "price": 2.98,
-      "menuQuanityNum": 0
-    },
-    {
-      "id": 52,
-      "item": "frozen pizza",
-      "quanityNum": 1,
-      "quanityType": "item(s)",
-      "price": 4.98,
-      "menuQuanityNum": 0
-    }
-  ],
+  "kitchenItems": [],
   "menu": [
     {
       "id": 20150729,
@@ -61,15 +20,7 @@
       "dinner": []
     }
   ],
-  "groceryList": [
-    {
-      "id": 13,
-      "item": "greek yogurt",
-      "quanityNum": 1,
-      "quanityType": "ounce(s)",
-      "price": 1.49
-    }
-  ],
+  "groceryList": [],
   "foodDB": [
     {
       "id": 1,
