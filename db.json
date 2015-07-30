@@ -5,29 +5,28 @@
       "item": "green beans",
       "quanityNum": 2,
       "quanityType": "item(s)",
-      "baseQuanity": "item",
-      "menuQuanityNum": null
+      "menuQuanityNum": 0
     },
     {
       "id": 3,
       "item": "peaches",
       "quanityNum": 4,
       "quanityType": "item(s)",
-      "baseQuanity": "item"
+      "menuQuanityNum": 0
     },
     {
       "id": 5,
       "item": "corn",
       "quanityNum": 3,
       "quanityType": "item(s)",
-      "baseQuanity": "item"
+      "menuQuanityNum": 0
     },
     {
       "item": "artichoke hearts",
       "quanityNum": 3,
       "id": 6,
       "quanityType": "item(s)",
-      "baseQuanity": "item",
+      "menuQuanityNum": 0,
       "price": 5.99
     },
     {
@@ -35,21 +34,21 @@
       "item": "meat pasta sauce",
       "quanityNum": 1,
       "quanityType": "item(s)",
-      "baseQuanity": "item"
+      "menuQuanityNum": 0
     },
     {
       "id": 9,
       "item": "crushed tomatoes",
       "quanityNum": 12,
       "quanityType": "item(s)",
-      "baseQuanity": "item"
+      "menuQuanityNum": 0
     },
     {
       "id": 10,
       "item": "diced tomatoes (rosemary)",
       "quanityNum": 3,
       "quanityType": "item(s)",
-      "baseQuanity": "item",
+      "menuQuanityNum": 0,
       "price": 0.86
     },
     {
@@ -57,7 +56,7 @@
       "item": "updated (rosemary)",
       "quanityNum": 2,
       "quanityType": "item(s)",
-      "baseQuanity": "item",
+      "menuQuanityNum": 0,
       "price": 8.77
     },
     {
@@ -66,161 +65,56 @@
       "quanityNum": 1,
       "quanityType": "item(s)",
       "price": 1.99,
-      "baseQuanity": "item"
+      "menuQuanityNum": 0
+    },
+    {
+      "id": 53,
+      "item": "eggs",
+      "quantityNum": 1,
+      "quantityType": "once(s)",
+      "price": 4.98,
+      "quanityNum": 0,
+      "quanityType": "item(s)",
+      "menuQuanityNum": 4
     }
   ],
   "menu": [
     {
-      "id": 20150727,
-      "breakfast": [
-        {
-          "id": 17,
-          "item": "pancakes",
-          "quanityNum": "5",
-          "quanityType": "item(s)",
-          "price": 1.99
-        },
-        {
-          "id": 99,
-          "item": "beer",
-          "quanityNum": "99",
-          "quanityType": "item(s)"
-        }
-      ],
-      "lunch": [
-        {
-          "id": 18,
-          "item": "test 2",
-          "quanityNum": "8",
-          "quanityType": "ounce(s)",
-          "price": 1.99
-        }
-      ],
-      "dinner": [
-        {
-          "id": 22,
-          "item": "steak",
-          "quanityNum": 6,
-          "quanityType": "ounce(s)",
-          "price": 7.99
-        },
-        {
-          "id": 44,
-          "item": "23",
-          "quanityNum": 11.5,
-          "quanityType": "TableSpoon(s)",
-          "price": "23"
-        },
-        {
-          "id": 33,
-          "item": "crepes",
-          "quanityNum": "2",
-          "quanityType": "item(s)"
-        }
-      ]
-    },
-    {
-      "id": 20150728,
-      "breakfast": [
-        {
-          "id": 7,
-          "item": "waffles",
-          "quanityNum": 1,
-          "quanityType": "ounce(s)",
-          "price": 1.99
-        },
-        {
-          "id": 17,
-          "item": "milk",
-          "quanityNum": 16,
-          "quanityType": "ounce(s)",
-          "price": 1.99
-        }
-      ],
-      "lunch": [
-        {
-          "id": 18,
-          "item": "salad",
-          "quanityNum": 1,
-          "quanityType": "ounce(s)",
-          "price": 1.99
-        }
-      ],
-      "dinner": [
-        {
-          "id": 22,
-          "item": "steak",
-          "quanityNum": 6,
-          "quanityType": "ounce(s)",
-          "price": 7.99
-        }
-      ]
-    },
-    {
       "id": 20150729,
       "breakfast": [
         {
-          "id": 2,
-          "item": "4",
-          "quanityNum": 2,
-          "quanityType": "ounce(s)",
-          "price": 3
+          "id": 53,
+          "item": "eggs",
+          "quanityNum": 4,
+          "quanityType": "item(s)",
+          "go": "Grocery",
+          "fromMenu": true
         }
       ],
       "lunch": [],
-      "dinner": []
+      "dinner": [
+        {
+          "id": 57,
+          "item": "red wine",
+          "quantityNum": 1,
+          "quantityType": "once(s)",
+          "price": 12.99,
+          "quanityNum": 6,
+          "quanityType": "ounce(s)",
+          "go": "Grocery",
+          "fromMenu": true
+        }
+      ]
     }
   ],
   "groceryList": [
     {
-      "id": 1,
-      "item": "pickles",
-      "quanityNum": 5,
+      "id": 53,
+      "item": "eggs",
+      "quanityNum": 4,
       "quanityType": "item(s)",
-      "price": 1.99,
-      "baseQuanity": "item"
-    },
-    {
-      "id": 2,
-      "item": "something",
-      "quanityNum": 2,
-      "quanityType": "item(s)",
-      "baseQuanity": "item",
       "go": "Grocery",
       "fromMenu": true
-    },
-    {
-      "go": "Grocery",
-      "id": 3,
-      "item": "stuff",
-      "quanityNum": 1,
-      "quanityType": "item(s)",
-      "baseQuanity": "item"
-    },
-    {
-      "id": 4,
-      "go": "Grocery",
-      "item": "new item",
-      "quanityNum": 5,
-      "quanityType": "cup(s)",
-      "price": 2.99,
-      "baseQuanity": 40
-    },
-    {
-      "id": 5,
-      "item": "jelly",
-      "quanityNum": 1,
-      "quanityType": "item(s)",
-      "price": 2.99,
-      "baseQuanity": "item"
-    },
-    {
-      "baseQuanity": "item",
-      "id": 6
-    },
-    {
-      "baseQuanity": "item",
-      "id": 7
     }
   ],
   "foodDB": [
