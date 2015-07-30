@@ -201,6 +201,7 @@ footer{
 	float: left;
 	border-right: 1px solid #EEEEEE;
 	margin-left: 15px;
+
 }
 .kitchenTable{
 	width: 95%;
@@ -215,6 +216,7 @@ footer{
 }
 .kitchenList{
 	padding: 10px 15px;
+
 }
 .kitchenItem{
 	margin: 5px 0px;
@@ -223,6 +225,7 @@ footer{
 	height: 40px;
 	border-bottom: 1px solid #EEEEEE;
 	float: left;
+	
 }
 #addItems{
 	float: left;

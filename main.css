@@ -16,6 +16,7 @@ body{
 	height: 100%;
 	width: 970px;
 	box-shadow: 0px 0px 10px #888888;
+	overflow-y: scroll;
 }
 
 	/* Footer */
@@ -42,6 +43,7 @@ footer ul li{
 #listKitchen, #updateItems, #addItems{
 	display: inline-block;
 	vertical-align: top;
+
 }
 
 .input-edit{
