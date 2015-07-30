@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="kitchenList" ng-repeat="items in kitchen | orderBy: filterBy">
-                <h5 class="kitchenItem">#{{ items.id }} {{ items.item }}</h5>
+                <h5 class="kitchenItem">{{ items.item }}</h5>
                 <h5 class="kitchenItem">{{ items.quanityNum }} {{ items.quanityType }}</h5>
                 <h5 class="kitchenItem">{{ items.menuQuanityNum }} {{ items.quanityType }}</h5>
                 <h5 class="kitchenItem">${{ items.price }}</h5>
@@ -81,10 +81,6 @@
         </section>
 
         <h3>Add new item</h3>
-        <div class="input-group">
-            <label for="id">id:</label>
-            <input class="form-input" type="number" name="id" ng-model="newItem.id">
-        </div>
         <div class="input-group">
             <label for="item">item:</label>
             <input class="form-input" type="text" name="item" ng-model="newItem.item">

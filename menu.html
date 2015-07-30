@@ -18,7 +18,7 @@
                     <h4>Breakfast</h4>
                 </div>
                 <div ng-repeat="items in menu.breakfast" class="repeatedItems">
-                    <div><h5>#{{ items.id }} {{ items.item }}</h5></div>
+                    <div><h5>{{ items.item }}</h5></div>
                     <div><h5>{{ items.quanityNum }} {{ items.quanityType }}</h5></div>
                     <div><h5>${{ items.price }}</h5></div>
                     <div>
@@ -30,7 +30,7 @@
                     <h4>Lunch</h4>
                 </div>
                 <div ng-repeat="items in menu.lunch" class="repeatedItems">
-                    <div><h5>#{{ items.id }} {{ items.item }}</h5></div>
+                    <div><h5>{{ items.item }}</h5></div>
                     <div><h5>{{ items.quanityNum }} {{ items.quanityType }}</h5></div>
                     <div><h5>${{ items.price }}</h5></div>
                     <div>
@@ -42,7 +42,7 @@
                     <h4>Dinner</h4>
                 </div>
                 <div ng-repeat="items in menu.dinner" class="repeatedItems">
-                    <div><h5>#{{ items.id }} {{ items.item }}</h5></div>
+                    <div><h5>{{ items.item }}</h5></div>
                     <div><h5>{{ items.quanityNum }} {{ items.quanityType }}</h5></div>
                     <div><h5> ${{ items.price }}</h5></div>
                     <div>
