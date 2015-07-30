@@ -1,10 +1,44 @@
 {
-  "kitchenItems": [],
+  "kitchenItems": [
+    {
+      "id": 1,
+      "item": "bread",
+      "quanityNum": 10,
+      "quanityType": "item(s)",
+      "price": 2.99,
+      "menuQuanityNum": 2
+    }
+  ],
   "menu": [
     {
       "id": 20150729,
       "breakfast": [],
-      "lunch": [],
+      "lunch": [
+        {
+          "id": 57,
+          "item": "red wine",
+          "quanityNum": 1,
+          "quanityType": "ounce(s)",
+          "price": 12.99,
+          "go": "Grocery",
+          "fromMenu": true
+        },
+        {
+          "id": 2,
+          "item": "ketchup",
+          "quanityNum": 4,
+          "quanityType": "ounce(s)",
+          "price": 1.99
+        },
+        {
+          "id": 1,
+          "item": "bread",
+          "quanityNum": 2,
+          "quanityType": "item(s)",
+          "go": "Grocery",
+          "fromMenu": true
+        }
+      ],
       "dinner": [
         {
           "id": 57,
@@ -18,13 +52,22 @@
       ]
     }
   ],
-  "groceryList": [],
+  "groceryList": [
+    {
+      "id": 2,
+      "item": "ketchup",
+      "quanityNum": 1,
+      "quanityType": "ounce(s)",
+      "price": 1.99,
+      "go": "Grocery"
+    }
+  ],
   "foodDB": [
     {
       "id": 1,
       "item": "bread",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 2.99
     },
     {
@@ -38,7 +81,7 @@
       "id": 3,
       "item": "onion",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 0.49
     },
     {
@@ -381,7 +424,7 @@
       "id": 52,
       "item": "frozen pizza",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 4.98
     },
     {
@@ -402,7 +445,7 @@
       "id": 55,
       "item": "peach",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 0.48
     },
     {
@@ -430,7 +473,7 @@
       "id": 59,
       "item": "kiwi",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 0.29
     },
     {
@@ -479,7 +522,7 @@
       "id": 66,
       "item": "orange",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 0.29
     },
     {
@@ -577,21 +620,21 @@
       "id": 80,
       "item": "pie crust",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 3.99
     },
     {
       "id": 81,
       "item": "basil",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 2.99
     },
     {
       "id": 82,
       "item": "avocado",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 0.98
     },
     {
@@ -619,14 +662,14 @@
       "id": 86,
       "item": "cilantro bunch",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 0.99
     },
     {
       "id": 87,
       "item": "bellpepper",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 0.69
     },
     {
@@ -640,7 +683,7 @@
       "id": 89,
       "item": "kale bunch",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 0.98
     },
     {
@@ -661,21 +704,21 @@
       "id": 92,
       "item": "lime",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 0.29
     },
     {
       "id": 93,
       "item": "lemon",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 0.49
     },
     {
       "id": 94,
       "item": "pear",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 0.49
     },
     {
@@ -689,7 +732,7 @@
       "id": 96,
       "item": "cucumber",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 0.29
     },
     {
@@ -710,7 +753,7 @@
       "id": 99,
       "item": "celery",
       "quanityNum": 1,
-      "quanityType": "item",
+      "quanityType": "item(s)",
       "price": 1.99
     },
     {
