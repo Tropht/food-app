@@ -270,5 +270,8 @@ footer{
 	float: left;
 	width: 20%;
 }
+.showResultsList:hover{
+	background-color: #FCB794;
+}
 
 }

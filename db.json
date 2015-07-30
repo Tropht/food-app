@@ -63,21 +63,11 @@
   ],
   "groceryList": [
     {
-      "id": 15,
-      "item": "apple juice",
+      "id": 13,
+      "item": "greek yogurt",
       "quanityNum": 1,
       "quanityType": "ounce(s)",
-      "price": 1.98,
-      "go": "Grocery"
-    },
-    {
-      "id": 14,
-      "item": "orange juice",
-      "quanityNum": 0,
-      "quanityType": "ounce(s)",
-      "price": 2.5,
-      "go": "Grocery",
-      "fromMenu": true
+      "price": 1.49
     }
   ],
   "foodDB": [
