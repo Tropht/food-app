@@ -16,7 +16,7 @@
         {
           "id": 53,
           "item": "eggs",
-          "quanityNum": 6,
+          "quanityNum": 2,
           "quanityType": "item(s)",
           "price": 4.98,
           "go": "Grocery",
